@@ -1,0 +1,101 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Tests/Game_TSCN.gd" type="Script" id=1]
+[ext_resource path="res://Assets/GFX/BG/blue-white.png" type="Texture" id=2]
+[ext_resource path="res://Tests/Game.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/GFX/Environment/high_mountain_BG.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Environment/medium_mountain_middle.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Environment/small_mountain_forground.png" type="Texture" id=6]
+[ext_resource path="res://Tests/Camera2D.gd" type="Script" id=7]
+[ext_resource path="res://Tests/DayNight.gd" type="Script" id=8]
+[ext_resource path="res://Assets/GFX/Environment/test.PNG" type="Texture" id=9]
+
+[node name="Test" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 1140, 540 )
+current = true
+script = ExtResource( 7 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Camera2D"]
+rotation = -0.523599
+scale = Vector2( 1, 1 )
+transform = Transform2D( 0.866025, -0.5, 0.5, 0.866025, 0, 0 )
+
+[node name="ParallaxLayer1" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_mirroring = Vector2( 2665, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer1"]
+self_modulate = Color( 0.556863, 0.25098, 0.25098, 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.3, 1 )
+motion_mirroring = Vector2( 2280, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer2"]
+margin_right = 40.0
+margin_bottom = 40.0
+texture = ExtResource( 4 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 7260, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer3"]
+margin_left = 7.55078
+margin_top = 151.02
+margin_right = 7267.55
+margin_bottom = 1080.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 0.5, 1 )
+motion_mirroring = Vector2( 500, 0 )
+
+[node name="icon" type="Sprite" parent="Camera2D/ParallaxBackground/ParallaxLayer5"]
+position = Vector2( 789.765, 427.447 )
+rotation = 0.520671
+texture = ExtResource( 9 )
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="Camera2D/ParallaxBackground"]
+motion_scale = Vector2( 3, 1 )
+motion_mirroring = Vector2( 8000, 0 )
+
+[node name="TextureRect" type="TextureRect" parent="Camera2D/ParallaxBackground/ParallaxLayer4"]
+margin_left = 5.65674
+margin_top = 845.195
+margin_right = 8005.66
+margin_bottom = 1080.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Game_TSCN" type="TextureRect" parent="Camera2D"]
+margin_left = -1140.0
+margin_top = -540.0
+margin_right = 1140.0
+margin_bottom = 540.0
+flip_v = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="Camera2D/Game_TSCN"]
+size = Vector2( 2280, 1080 )
+transparent_bg = true
+
+[node name="Game" parent="Camera2D/Game_TSCN/Viewport" instance=ExtResource( 3 )]

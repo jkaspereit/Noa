@@ -1,0 +1,45 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Characters/FollowCharacter.gd" type="Script" id=1]
+
+[sub_resource type="Animation" id=1]
+resource_name = "RotateSun"
+length = 72.0
+loop = true
+step = 2.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("DirectionalLight:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 72 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -90, 0, 0 ), Vector3( -270, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("DirectionalLight:light_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 18, 54 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.0, 0.0 ]
+}
+
+[node name="Sunlight" type="Spatial"]
+script = ExtResource( 1 )
+offset = Vector3( 0, 15, 0 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -1, -8.74228e-08, 0, 8.74228e-08, -1, 0, 0, 0 )
+light_energy = 0.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RotateSun"
+anims/RotateSun = SubResource( 1 )
