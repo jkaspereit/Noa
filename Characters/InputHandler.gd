@@ -11,9 +11,9 @@ func _input(event):
 		var distance = pressed_pos.distance_to(released_pos)
 		if distance < SWIPE_DISTANCE:
 			get_tree().call_group('Character','jump')
-#		else: 
-#			var angle = to_deg((released_pos - pressed_pos).angle())
-#			calculate_swipe(angle)
+		else: 
+			var angle = to_deg((released_pos - pressed_pos).angle())
+			calculate_swipe(angle)
 
 func calculate_swipe(angle):
 	if angle > 0 and angle < 90:

@@ -28,6 +28,8 @@ InputHandler="*res://Characters/InputHandler.gd"
 ObjectFactory="*res://Generator/EnvObjects/ObjectFactory.gd"
 Forks="*res://Generator/Pathfinder/Forks.gd"
 ColorfulWorld="*res://World/ColorWorlds/ColorfulWorld.gd"
+ObstacleRng="*res://Generator/Obstacles/ObstacleRng.gd"
+Gamestate="*res://Gamestate.gd"
 
 [display]
 

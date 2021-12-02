@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Generator/Coin/Coin.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Generator/Obstacles/Obstacle.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/GFX/Material/Red.material" type="Material" id=2]
 [ext_resource path="res://Generator/MapElements/MapElement.gd" type="Script" id=3]
 [ext_resource path="res://Generator/MapElements/Forks/PathChanger/PathChanger.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Generator/Coin/CoinsV1.tscn" type="PackedScene" id=5]
 
 [sub_resource type="SpatialMaterial" id=1]
 params_cull_mode = 2
@@ -30,61 +31,63 @@ surfaces/0 = {
 [node name="Fork1" type="Spatial"]
 script = ExtResource( 3 )
 
-[node name="Cubes" type="Spatial" parent="."]
+[node name="Mesh" type="Spatial" parent="."]
 
-[node name="Cube" type="MeshInstance" parent="Cubes"]
+[node name="Main" type="Spatial" parent="Mesh"]
+
+[node name="Cube" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 1.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.5, -1.5 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="Cubes/Cube"]
+[node name="StaticBody" type="StaticBody" parent="Mesh/Main/Cube"]
 collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="Cubes/Cube/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/Cube/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Cube2" type="MeshInstance" parent="Cubes"]
+[node name="Cube2" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1.5, 1, -0.5, -3.5 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="Cubes/Cube2"]
+[node name="StaticBody" type="StaticBody" parent="Mesh/Main/Cube2"]
 collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="Cubes/Cube2/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/Cube2/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Cube3" type="MeshInstance" parent="Cubes"]
+[node name="Cube3" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1.5, -1, -0.5, -3.5 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="Cubes/Cube3"]
+[node name="StaticBody" type="StaticBody" parent="Mesh/Main/Cube3"]
 collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="Cubes/Cube3/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/Cube3/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Cube4" type="MeshInstance" parent="Cubes"]
+[node name="Cube4" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 1, 0, -0.5, -5 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="Cubes/Cube4"]
+[node name="StaticBody" type="StaticBody" parent="Mesh/Main/Cube4"]
 collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="Cubes/Cube4/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/Cube4/StaticBody"]
 shape = SubResource( 3 )
 
-[node name="Cube5" type="MeshInstance" parent="Cubes"]
+[node name="Cube5" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.5, -0.5 )
 mesh = SubResource( 2 )
 material/0 = ExtResource( 2 )
 
-[node name="StaticBody" type="StaticBody" parent="Cubes/Cube5"]
+[node name="StaticBody" type="StaticBody" parent="Mesh/Main/Cube5"]
 collision_mask = 2
 
-[node name="CollisionShape" type="CollisionShape" parent="Cubes/Cube5/StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/Cube5/StaticBody"]
 shape = SubResource( 3 )
 
 [node name="Next" type="Position3D" parent="."]
@@ -135,16 +138,22 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.5 )
 [node name="Position3D5" type="Position3D" parent="PathRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -5.5 )
 
-[node name="Coins" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -1.5 )
-
-[node name="Coin" parent="Coins" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -1 )
-
-[node name="Coin2" parent="Coins" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -1.5 )
-
-[node name="Coin3" parent="Coins" instance=ExtResource( 1 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.25, -2 )
-
 [node name="PathChanger" parent="." instance=ExtResource( 4 )]
+
+[node name="Coins" type="Spatial" parent="."]
+
+[node name="CoinsV1" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, -0.25, -3 )
+
+[node name="CoinsV2" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, -0.25, -3 )
+
+[node name="Obstacles" type="Spatial" parent="."]
+
+[node name="Obstacle" parent="Obstacles" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, -2.75 )
+q = 0.4
+
+[node name="Obstacle2" parent="Obstacles" instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1, 0, -2.75 )
+q = 0.4

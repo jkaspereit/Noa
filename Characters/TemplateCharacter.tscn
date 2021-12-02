@@ -25,6 +25,7 @@ collision_layer = 2
 script = ExtResource( 2 )
 
 [node name="CollisionSphere" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0 )
 shape = SubResource( 1 )
 
 [node name="CollisionRay" type="CollisionShape" parent="."]

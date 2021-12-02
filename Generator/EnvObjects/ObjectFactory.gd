@@ -2,8 +2,8 @@ extends Node
 
 const FOREST_TSCN = preload("res://Generator/EnvObjects/Forest/Forest1.tscn")
 
-var x_min = 0
-var x_range = 4
+var x_min = -5
+var x_range = 6
 var y_min = 4
 var y_range = 8
 
@@ -26,7 +26,7 @@ func init():
 func calculate_next_position():
 	var x = x_min - randi() % x_range
 	var y = y_min - randi() % y_range
-	var z = last_plattform_zpos - (randi() % z_range)
+	var z = last_plattform_zpos - (randi() % z_range) -2
 	return Vector3(x,y,z)
 
 

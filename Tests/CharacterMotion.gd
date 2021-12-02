@@ -16,9 +16,14 @@ var gravity = 0
 
 var can_double_jump = false
 
+var is_crashed = false
+
 func _physics_process(delta):
-	look_forward()
-	move()
+	if is_dead():
+		Gamestate.game_over()
+	else:
+		look_forward()
+		move()
 
 func move():
 	# we can only move, if ther is a path
@@ -53,6 +58,8 @@ func get_direction():
 	# when we are close, we go on with the next waypoint
 	if abs(length_2d) < 0.25:
 		path.remove(0)
+		# Give the player some score points
+		Gamestate.raise_score(1)
 	# don't divide by zero
 	if not length_2d == 0 and not direction.length() == 0:
 		# normalize x, z as in 2d, so that jumping doesn't affect the velocity
@@ -70,3 +77,18 @@ func look_forward():
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_LEFT
 	else: 
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_FORWARD
+
+
+func is_dead():
+	return has_fallen() or is_crashed
+
+func has_fallen():
+	if path.size() > 0:
+		var CharHeight = translation.y
+		var PathHeight = Pathfinder.path[0].y
+		if PathHeight - CharHeight > 5:
+			return true
+	return false
+
+func is_crashed():
+	is_crashed = true

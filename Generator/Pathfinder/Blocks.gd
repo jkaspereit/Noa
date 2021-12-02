@@ -22,31 +22,30 @@ const Bridge1x9H = preload("res://Generator/MapElements/Blocks/Bridge1x9H.tscn")
 
 # ------ Probabilities -------- 
 
-# Type: Cube - P = 0.8
-const P_Cube1x1H_V1 = 0.025
-const P_Cube1x1H_V2 = 0.05
-const P_Cube1x1L_V1 = 0.35
-const P_Cube1x1L_V2 = 0.60
-const P_Cube1x1L_V3 = 0.75
-const P_Cube1x5H_V1 = 0.80
+# Type: Cube - P = 0.825
+const P_Cube1x1H_V1 = 0
+const P_Cube1x1H_V2 = 0.5
+const P_Cube1x1L_V1 = 0.825
+const P_Cube1x1L_V2 = 0
+const P_Cube1x1L_V3 = 0
+const P_Cube1x5H_V1 = 0
 
-# Type: Tower - P = 0.825
-const P_Tower1x1H_V1 = 0.825
+# Type: Tower - P = 0.85
+const P_Tower1x1H_V1 = 0.85
 
 # Type: Tunnel - P = 0.90
 const P_Tunnel1x5H = 0.90
 
 # Type: Bridge - P = 1.00
-const P_Bridge1x5H = 0.95
-const P_Bridge1x9H = 1.00
+const P_Bridge1x5H = 0
+const P_Bridge1x9H = 0
 
 func _ready():
 	randomize()
 
 func create():
-	ElementFactory.new_element(Bridge1x5H)
 	var q = randf()
-	# Cubes - P = 0.75
+	# Cubes - P = 0.8
 	if q <= P_Cube1x1H_V1:
 		ElementFactory.new_element(Cube1x1H_V1)
 	elif q <= P_Cube1x1H_V2:

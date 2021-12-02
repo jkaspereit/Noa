@@ -17,7 +17,8 @@ onready var env_elements = get_tree().get_root().find_node('EnvElements', true, 
 func ink_background():
 	pass
 	
-func ink_element(map_element):
+func ink_element(map_element): 
+	reload()
 	var meshes = map_element.get_meshes()
 	if meshes == null:
 		return
@@ -39,3 +40,8 @@ func set_material(node,material):
 		# Process Subfolders 
 		else:
 			set_material(child, material)
+
+func reload():
+	StartingArea = get_tree().get_root().find_node('StartingArea',true,false)
+	map_elements = get_tree().get_root().find_node('MapElements', true, false)
+	env_elements = get_tree().get_root().find_node('EnvElements', true, false)

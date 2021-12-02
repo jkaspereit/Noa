@@ -1,7 +1,8 @@
-[gd_scene load_steps=69 format=2]
+[gd_scene load_steps=70 format=2]
 
 [ext_resource path="res://Generator/MapElements/MapElement.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Mat.material" type="Material" id=2]
+[ext_resource path="res://Generator/Coin/CoinsV2.tscn" type="PackedScene" id=3]
 
 [sub_resource type="ArrayMesh" id=1]
 surfaces/0 = {
@@ -1331,4 +1332,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1 )
 [node name="Path" type="Spatial" parent="."]
 
 [node name="Position3D" type="Position3D" parent="Path"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
+
+[node name="CoinsV2" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )

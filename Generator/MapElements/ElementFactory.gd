@@ -56,8 +56,9 @@ func new_element(element_tscn):
 			reposition(element)
 		# Don't forget to extend the path...  
 		Pathfinder.add_path(element)
-		# and update current position
+		# update current position
 		update_current_position(element)
+		# We demand a ColorfulWorld.
 		ColorfulWorld.ink_element(element)
 
 # Checks if there is enough space for a new element.
