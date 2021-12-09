@@ -1,6 +1,7 @@
 extends Spatial
 
 func _ready():
+	Pathfinder.init()
 	ElementFactory.init()
 	ElementCollector.init()
 	ObjectFactory.init()

@@ -4,15 +4,11 @@ extends Node
 const P_SINGLE = 0.4
 const P_CURVE = 0.7
 const P_STAIRS = 0.8
-const P_GAP = 0.9
+const P_GAP = 1
 const P_FORK = 0.9
 
 # Path for the character
 var path = []
-
-func _ready():
-	randomize()
-	path.append(Vector3(0,0,-2.5))
 
 # Process this method to find a path for the character. 
 func find_path():
@@ -35,12 +31,11 @@ func add_path(path_element):
 
 func reset():
 	path = []
-	path.append(Vector3(0,0,-2.5))
 
 # Process this method to find a path for the character. 
 func find_test_path():
 	var p_SINGLE = 0.4
-	var p_CURVE = 0.6
+	var p_CURVE = 0.7
 	var p_STAIRS = 0
 	var p_GAP = 0
 	var p_FORK = 0
@@ -56,3 +51,12 @@ func find_test_path():
 		Gaps.create()
 	elif q <= p_FORK:
 		Forks.create()
+
+
+func init():
+	randomize()
+	# find the node that contains the starting path
+	var start_path = get_tree().get_root().find_node("StartPath",true,false)
+	# add the waypoints of the start path
+	for waypoint in start_path.get_children():
+		path.append(waypoint.translation)

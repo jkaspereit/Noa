@@ -34,7 +34,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 24, 48, 72, 96, 120 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0.0941176, 0.105882, 0.870588, 1 ), Color( 1, 1, 1, 1 ), Color( 0.823529, 1, 0.541176, 1 ), Color( 0.541176, 1, 0.901961, 1 ), Color( 0.541176, 0.752941, 1, 1 ), Color( 0.847059, 0.541176, 1, 1 ) ]
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 0.823529, 1, 0.541176, 1 ), Color( 0.541176, 1, 0.901961, 1 ), Color( 0.541176, 0.752941, 1, 1 ), Color( 0.847059, 0.541176, 1, 1 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:rotation_degrees")

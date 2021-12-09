@@ -3,7 +3,9 @@ extends Node
 var pressed_pos = Vector2(0,0)
 const SWIPE_DISTANCE = 20
 
-func _input(event):	
+func _input(event):
+	if not Gamestate.game_running:
+		return
 	if event.is_action_pressed("click"):
 		pressed_pos = event.position
 	if event.is_action_released("click"):

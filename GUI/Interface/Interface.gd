@@ -1,16 +1,18 @@
 extends CanvasLayer
 
-onready var ScoreValue = $Control/VBoxContainer/HBoxContainer/ScoreValue
-onready var CoinValue = $Control/VBoxContainer/HBoxContainer2/CoinValue
+onready var ScoreValue = $DeadScreen/VBoxContainer/HBoxContainer/ScoreValue
+onready var CoinValue = $DeadScreen/VBoxContainer/HBoxContainer2/CoinValue
 
-func show_interface(score, coins):
+func show_StartingArea():
+	$StartingArea.visible = true
+
+func hide_StartingArea():
+	$StartingArea.visible  = false
+
+func show_DeadScreen(score, coins):
 	ScoreValue.text = str(score)
 	CoinValue.text = str(coins)
-	$Control.visible = true
+	$DeadScreen.visible = true
 
-func hide_interface():
-	$Control.visible  = false
-
-func _on_Button_pressed():
-	hide_interface()
-	Gamestate.restart()
+func hide_DeadScreen():
+	$DeadScreen.visible = false
