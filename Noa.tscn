@@ -20,6 +20,7 @@ script = ExtResource( 6 )
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 10, 10, 5 )
 projection = 1
+current = true
 size = 7.0
 near = 0.01
 far = 200.0

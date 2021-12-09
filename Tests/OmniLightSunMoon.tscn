@@ -25,10 +25,10 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 36 ),
+"times": PoolRealArray( 0, 18 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 2.0, 0.25 ]
+"values": [ 1.0, 0.5 ]
 }
 tracks/2/type = "value"
 tracks/2/path = NodePath("Moon:light_energy")
@@ -37,10 +37,10 @@ tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0, 36 ),
+"times": PoolRealArray( 0, 18 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
-"values": [ 0.25, 1.25 ]
+"values": [ 0.25, 1.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath("Sun:light_color")
@@ -49,7 +49,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 9, 18, 36, 54 ),
+"times": PoolRealArray( 0, 4.5, 9, 18, 27 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 0,
 "values": [ Color( 1, 1, 0.878431, 1 ), Color( 1, 1, 0.878431, 1 ), Color( 0.964706, 0.552941, 0.596078, 1 ), Color( 0, 0, 0, 1 ), Color( 0.988235, 0.956863, 0.596078, 1 ) ]
@@ -61,7 +61,7 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 36 ),
+"times": PoolRealArray( 0, 18 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 0,
 "values": [ 40.0, 20.0 ]
@@ -73,10 +73,10 @@ tracks/5/loop_wrap = true
 tracks/5/imported = false
 tracks/5/enabled = true
 tracks/5/keys = {
-"times": PoolRealArray( 0, 27, 36, 54 ),
-"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"times": PoolRealArray( 0, 18, 27 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ Color( 0, 0, 0, 1 ), Color( 0.360784, 0.92549, 1, 1 ), Color( 0.631373, 0.913725, 1, 1 ), Color( 0, 0.0392157, 0.25098, 1 ) ]
+"values": [ Color( 0, 0, 0, 1 ), Color( 0.67451, 0.960784, 1, 1 ), Color( 0, 0.0392157, 0.25098, 1 ) ]
 }
 tracks/6/type = "value"
 tracks/6/path = NodePath("Moon:omni_range")
@@ -85,31 +85,32 @@ tracks/6/loop_wrap = true
 tracks/6/imported = false
 tracks/6/enabled = true
 tracks/6/keys = {
-"times": PoolRealArray( 0, 36 ),
-"transitions": PoolRealArray( 1, 1 ),
+"times": PoolRealArray( 0, 18, 36 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
 "update": 0,
-"values": [ 20.0, 40.0 ]
+"values": [ 20.0, 40.0, 40.0 ]
 }
 
 [node name="Pivot" type="Spatial"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 script = ExtResource( 1 )
 offset = Vector3( 0, 5, 0 )
 
 [node name="Sun" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0 )
-light_color = Color( 1, 1, 0.878431, 1 )
-light_energy = 2.0
+light_color = Color( 0, 0, 0, 1 )
+light_energy = 0.25
 light_indirect_energy = 0.0
 light_specular = 0.0
 light_bake_mode = 0
-omni_range = 40.0
+omni_range = 20.0
 
 [node name="Moon" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -5, 0 )
-light_color = Color( 0, 0, 0, 1 )
-light_energy = 0.25
+light_color = Color( 0.249774, 0.65279, 0.769532, 1 )
+light_energy = 0.75
 light_specular = 0.0
-omni_range = 20.0
+omni_range = 40.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Rotate"
