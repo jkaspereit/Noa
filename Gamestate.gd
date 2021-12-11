@@ -12,16 +12,13 @@ func raise_score(value):
 	score += value
 
 func start_game():
-	get_tree().call_group('Camera','focus_char')
-	yield(get_tree().create_timer(3), "timeout")
+#	get_tree().call_group('Camera','focus_char')
 	game_running = true;
-	
 
 func game_over():
 	game_running = false;
 	get_tree().call_group('World','enable_blur')
 	get_tree().call_group('Interface','show_DeadScreen',score,coins)
-	
 
 func restart():
 	Pathfinder.reset()

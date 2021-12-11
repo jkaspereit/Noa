@@ -3,7 +3,7 @@ extends Camera
 export var offset = Vector3(0,0,0)
 export var smooth_speed: float
 
-onready var Character = get_tree().get_root().find_node("Character",true,false)
+onready var Character = get_tree().get_root().find_node("Char",true,false)
 
 # we don't won't to start with rain
 var its_raining = true

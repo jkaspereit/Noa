@@ -1,14 +1,14 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://World/ColorWorlds/ColorWorldMaterials.gd" type="Script" id=1]
-[ext_resource path="res://World/ColorWorlds/StartingAreaOld/Tiles.material" type="Material" id=2]
-[ext_resource path="res://World/ColorWorlds/StartingAreaOld/Background.material" type="Material" id=3]
+[ext_resource path="res://World/ColorWorlds/StartingArea/Tiles.material" type="Material" id=2]
+[ext_resource path="res://World/ColorWorlds/StartingArea/Background.material" type="Material" id=3]
 [ext_resource path="res://World/ColorWorlds/StartingAreaOld/Bricks.material" type="Material" id=4]
-[ext_resource path="res://World/ColorWorlds/StartingAreaOld/Ring.material" type="Material" id=5]
+[ext_resource path="res://World/ColorWorlds/StartingArea/Ring.material" type="Material" id=5]
 [ext_resource path="res://World/ColorWorlds/StartingAreaOld/Main.material" type="Material" id=6]
 [ext_resource path="res://World/ColorWorlds/StartingAreaOld/Leaves.material" type="Material" id=7]
-[ext_resource path="res://World/ColorWorlds/StartingAreaOld/Plattform.material" type="Material" id=8]
-[ext_resource path="res://World/ColorWorlds/StartingAreaOld/Trunk.material" type="Material" id=9]
+[ext_resource path="res://World/ColorWorlds/StartingArea/Plattform.material" type="Material" id=8]
+[ext_resource path="res://World/ColorWorlds/StartingArea/Trunk.material" type="Material" id=9]
 
 [node name="StartingArea" type="Node"]
 script = ExtResource( 1 )
