@@ -4,7 +4,7 @@ var TEXTURE_FORWARD = preload("res://Assets/GFX/Characters/2DCharacterTemplate/W
 var TEXTURE_LEFT = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Walk_Left.tres")
 var TEXTURE_RIGHT = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Walk_Right.tres")
 
-const SPEED = 6.5
+const SPEED = 4
 
 const STARTING_POS = Vector3(-6,-1,15.5)
 

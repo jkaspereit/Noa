@@ -5,12 +5,12 @@
 [ext_resource path="res://Generator/MapElements/MapElement.gd" type="Script" id=3]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles.material" type="Material" id=4]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_002.material" type="Material" id=5]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_001.material" type="Material" id=6]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_002.material" type="Material" id=7]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles_001.material" type="Material" id=8]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_003.material" type="Material" id=9]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_003.material" type="Material" id=10]
-[ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_004.material" type="Material" id=11]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_002.material" type="Material" id=6]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles_001.material" type="Material" id=7]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_003.material" type="Material" id=8]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_001.material" type="Material" id=9]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_004.material" type="Material" id=10]
+[ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_003.material" type="Material" id=11]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles_002.material" type="Material" id=12]
 
 [sub_resource type="BoxShape" id=1]
@@ -41,7 +41,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 504,
-"material": ExtResource( 6 ),
+"material": ExtResource( 9 ),
 "name": "Brick.001",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -73,7 +73,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1320,
-"material": ExtResource( 9 ),
+"material": ExtResource( 11 ),
 "name": "Sand.003",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -89,7 +89,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 504,
-"material": ExtResource( 7 ),
+"material": ExtResource( 6 ),
 "name": "Brick.002",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -105,7 +105,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1080,
-"material": ExtResource( 8 ),
+"material": ExtResource( 7 ),
 "name": "Tiles.001",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -121,7 +121,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 1320,
-"material": ExtResource( 11 ),
+"material": ExtResource( 10 ),
 "name": "Sand.004",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -137,7 +137,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 504,
-"material": ExtResource( 10 ),
+"material": ExtResource( 8 ),
 "name": "Brick.003",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -251,7 +251,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 
 [node name="CoinsV2" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
-q = 0.33
+q = 0.5
 
 [node name="Obstacle" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.25 )

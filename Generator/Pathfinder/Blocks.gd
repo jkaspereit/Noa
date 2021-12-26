@@ -31,8 +31,8 @@ const P_Tower = 0.85
 const P_Tunnel= 0.90
 
 # Type: Bridge - P = 1.00
-const P_Bridge = 1
-const P_BridgeLong = 0
+const P_Bridge = 0.95
+const P_BridgeLong = 1
 
 func _ready():
 	randomize()
