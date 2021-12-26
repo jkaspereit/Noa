@@ -6,7 +6,7 @@ var TEXTURE_RIGHT = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Wal
 
 const SPEED = 6.5
 
-var path = Pathfinder.path
+const STARTING_POS = Vector3(-6,-1,15.5)
 
 var time_start
 var time_elapsed 
@@ -30,15 +30,13 @@ func _physics_process(delta):
 		move()
 
 func move():
-	# we can only move, if ther is a path
-	if path.size() > 0:
-		var direction = get_direction()
-		# apply speed
-		velocity = direction * SPEED
-		# apply jump and gravity
-		apply_gravity()
-		# move
-		move_and_slide(velocity,Vector3.UP)
+	var direction = get_direction()
+	# apply speed
+	velocity = direction * SPEED
+	# apply jump and gravity
+	apply_gravity()
+	# move
+	move_and_slide(velocity,Vector3.UP)
 
 func jump():
 	if is_on_floor():
@@ -53,7 +51,7 @@ func apply_gravity():
 
 func get_direction():
 	# direction is where we want to go
-	var direction = path[0] - translation
+	var direction = Pathfinder.path[0] - translation
 	# normalize = v / v.length
 	# but jumping shouldn't affect the distance to the next point
 	# because it might seem like we are far away while being very close
@@ -61,7 +59,7 @@ func get_direction():
 	var length_2d = Vector2(direction.x,direction.z).length()
 	# when we are close, we go on with the next waypoint
 	if abs(length_2d) < 0.25:
-		path.remove(0)
+		Pathfinder.path.remove(0)
 		# Give the player some score points
 		Gamestate.raise_score(1)
 	# don't divide by zero
@@ -87,15 +85,14 @@ func is_dead():
 	return has_fallen() or is_crashed
 
 func has_fallen():
-	if path.size() > 0:
-		var CharHeight = translation.y
-		var PathHeight = Pathfinder.path[0].y
-		if PathHeight - CharHeight > 5:
-			return true
+	var CharHeight = translation.y
+	var PathHeight = Pathfinder.path[0].y
+	if PathHeight - CharHeight > 5:
+		return true
 	return false
 
 func is_crashed():
 	is_crashed = true
 
-func hello_world():
-	print(translation)
+func reset():
+	set_translation(STARTING_POS)

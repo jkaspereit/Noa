@@ -17,6 +17,9 @@ var current_direction
 # Prepares the factory for production.
 func init():
 	map_elements = get_tree().get_root().find_node("MapElements",true,false)
+	# empty map_elements
+	for child in map_elements.get_children():
+		map_elements.remove_child(child)
 	current_position = get_start_pos()
 	current_direction = FORWARD
 

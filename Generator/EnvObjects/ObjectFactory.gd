@@ -20,6 +20,9 @@ var env_elements
 func init():
 	last_plattform_zpos = 0
 	env_elements = get_tree().get_root().find_node("EnvElements",true,false)
+	# empty environment elements
+	for child in env_elements.get_children():
+		env_elements.remove_child(child)
 
 
 

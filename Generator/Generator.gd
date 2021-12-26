@@ -1,22 +1,14 @@
-extends Spatial
+extends Node
 
-func _ready():
+var OBJECTIVES = 1000
+var PATH_ELEMENTS = 1200
+
+func generate():
 	Pathfinder.init()
 	ElementFactory.init()
-	ElementCollector.init()
 	ObjectFactory.init()
-
-func _process(delta):
-	if is_test_mode():
-		Pathfinder.find_test_path()
-	else: 
+	for i in OBJECTIVES:
+		ObjectFactory.new_object()
+	for i in PATH_ELEMENTS:
 		Pathfinder.find_path()
-	ObjectFactory.new_object()
-#	ElementCollector.collect_map_elements()
 
-
-func is_test_mode():
-	var test_node_exist = get_tree().get_root().find_node('NoaEndless',true,false)
-	if test_node_exist == null:
-		return false
-	return true
