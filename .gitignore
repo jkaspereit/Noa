@@ -10,3 +10,6 @@ data_*/
 
 # Don't push apk files.
 .apk
+
+# Don't push api key
+firebase.gd

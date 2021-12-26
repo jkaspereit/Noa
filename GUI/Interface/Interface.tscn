@@ -19,7 +19,27 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Register" type="Button" parent="StartingArea"]
+margin_right = 71.0
+margin_bottom = 20.0
+rect_scale = Vector2( 4, 4 )
+text = "REGISTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Button" parent="StartingArea"]
+margin_left = 350.0
+margin_right = 405.0
+margin_bottom = 20.0
+rect_scale = Vector2( 4, 4 )
+text = "LOGIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Button" type="Button" parent="StartingArea"]
+visible = false
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 2280.0
 margin_bottom = 1080.0
@@ -27,4 +47,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Username" type="LineEdit" parent="StartingArea"]
+margin_left = 2.66965
+margin_top = 89.4342
+margin_right = 302.67
+margin_bottom = 113.434
+rect_scale = Vector2( 4, 4 )
+text = "Enter Username"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password" type="LineEdit" parent="StartingArea"]
+margin_top = 200.0
+margin_right = 300.0
+margin_bottom = 224.0
+rect_scale = Vector2( 4, 4 )
+text = "Enter Password"
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="StartingArea"]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="StartingArea"]
+
+[connection signal="button_down" from="StartingArea/Register" to="StartingArea" method="_on_Register_button_down"]
+[connection signal="button_down" from="StartingArea/Login" to="StartingArea" method="_on_Login_button_down"]
 [connection signal="button_up" from="StartingArea/Button" to="StartingArea" method="_on_Button_button_up"]
+[connection signal="request_completed" from="StartingArea/HTTPRequest" to="StartingArea" method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="StartingArea/HTTPRequest2" to="StartingArea" method="_on_HTTPRequest2_request_completed"]

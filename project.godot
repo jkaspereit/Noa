@@ -31,6 +31,7 @@ ColorfulWorld="*res://World/ColorWorlds/ColorfulWorld.gd"
 ObstacleRng="*res://Generator/Obstacles/ObstacleRng.gd"
 Gamestate="*res://Gamestate.gd"
 Generator="*res://Generator/Generator.gd"
+Firebase="*res://GUI/Interface/firebase.gd"
 
 [display]
 
