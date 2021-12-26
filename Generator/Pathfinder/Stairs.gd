@@ -12,6 +12,6 @@ func _ready():
 func create():
 	var q = randf()
 	if q <= P_DownstairsH_V1:
-		ElementFactory.new_element(DownstairsH_V1)
+		ElementFactory.new_downstairs(DownstairsH_V1)
 	elif q <= P_UpstairsH_V1:
-		ElementFactory.new_element(UpstairsH_V1)
+		ElementFactory.new_upstairs(UpstairsH_V1)

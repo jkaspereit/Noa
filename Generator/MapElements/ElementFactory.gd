@@ -1,5 +1,8 @@
 extends Node
 
+const MAX_HEIGHT = 4
+const MIN_HEIGHT = -4
+
 # Necessary Direction
 const LEFT = 90
 const RIGHT = -90
@@ -40,13 +43,22 @@ func new_curve(block, curve_direction):
 		Pathfinder.add_path(element)
 		update_current_position(element)
 		update_current_direction(curve_direction)
-#		ColorfulWorld.ink_element(element)
 
 # Adds an fork element to the scene, if it's possible.
 func new_fork(fork_tscn):
 	# restriction - place forks only forwards
 	if current_direction == FORWARD:
 		new_element(fork_tscn)
+
+func new_upstairs(stairs_tscn):
+	# Stairs shouldn't be out of MAX_HEIGHT
+	if current_position.y + 1.5 < MAX_HEIGHT:
+		 new_element(stairs_tscn)
+
+func new_downstairs(stairs_tscn):
+	# Stairs shouldn't be out of MAX_HEIGHT
+	if current_position.y - 1.5 > MIN_HEIGHT:
+		 new_element(stairs_tscn)
 
 # Adds an element to the scene, if it's possible.
 func new_element(element_tscn):
@@ -61,8 +73,6 @@ func new_element(element_tscn):
 		Pathfinder.add_path(element)
 		# update current position
 		update_current_position(element)
-		# We demand a ColorfulWorld.
-		ColorfulWorld.ink_element(element)
 
 # Checks if there is enough space for a new element.
 func there_is_free_space():
@@ -83,7 +93,6 @@ func instantiate(element_tscn):
 
 # Repositions the given map_element to fit it into the boundrys. 
 func reposition(map_element):
-#	print('reposition')
 	# Step 1: Translate the map_element 
 	if current_direction == LEFT:
 		map_element.translation.x -= 0.5

@@ -4,7 +4,7 @@
 [ext_resource path="res://Assets/GFX/Material/Red.material" type="Material" id=2]
 [ext_resource path="res://Generator/Coin/CoinsV1.tscn" type="PackedScene" id=3]
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=1]
 resource_name = "Cube.001"
 surfaces/0 = {
 "aabb": AABB( -1, -1, -1, 2, 2.00001, 2 ),
@@ -19,7 +19,7 @@ surfaces/0 = {
 "vertex_count": 24
 }
 
-[sub_resource type="ConcavePolygonShape" id=6]
+[sub_resource type="ConcavePolygonShape" id=2]
 data = PoolVector3Array( -1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, 1, -1, -1, 1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, -1, 1, -1, -1, 1, -1, 1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, 1, -1, 1, 1, 1, -1, 1, 1, 1, 1, 1, -1, -1, 1, -1, 1, 1, -1, 1, 1, -1, -1, -1, -1, 1, -1, 1, -1, -1, -1, -1, 1, 1, -1, 1, 1, 1, -1, 1, -1, 1, 1, 1, 1, -1, 1, -1, 1, -1, -1, 1, 1, -1 )
 
 [sub_resource type="ArrayMesh" id=3]
@@ -62,14 +62,14 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.5 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.5, -2.5 )
-mesh = SubResource( 5 )
+mesh = SubResource( 1 )
 material/0 = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="Mesh/Main/MeshInstance2"]
-collision_mask = 2
+collision_mask = 6
 
 [node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/MeshInstance2/StaticBody"]
-shape = SubResource( 6 )
+shape = SubResource( 2 )
 
 [node name="MeshInstance1" type="MeshInstance" parent="Mesh/Main"]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, -0.5, -0.5 )
@@ -77,7 +77,7 @@ mesh = SubResource( 3 )
 material/0 = ExtResource( 2 )
 
 [node name="StaticBody" type="StaticBody" parent="Mesh/Main/MeshInstance1"]
-collision_mask = 2
+collision_mask = 6
 
 [node name="CollisionShape" type="CollisionShape" parent="Mesh/Main/MeshInstance1/StaticBody"]
 shape = SubResource( 4 )

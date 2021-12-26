@@ -2,7 +2,7 @@ extends Spatial
 
 export var offset = Vector3(0,0,0)
 
-onready var Character = get_tree().get_root().find_node("Character",true,false)
+onready var Character = get_tree().get_root().find_node("Char",true,false)
 onready var LetItRain = get_tree().get_root().find_node("LetItRain",true,false)
 
 # we don't won't to start with rain

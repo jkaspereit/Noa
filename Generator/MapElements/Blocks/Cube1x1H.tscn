@@ -16,7 +16,7 @@
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.5, 4, 0.5 )
 
-[sub_resource type="ArrayMesh" id=214]
+[sub_resource type="ArrayMesh" id=2]
 resource_name = "Main.003"
 surfaces/0 = {
 "aabb": AABB( -50, -2100, -50, 100, 2510, 100 ),
@@ -32,7 +32,7 @@ surfaces/0 = {
 "vertex_count": 402
 }
 
-[sub_resource type="ArrayMesh" id=215]
+[sub_resource type="ArrayMesh" id=3]
 resource_name = "Brick"
 surfaces/0 = {
 "aabb": AABB( -50.3715, -1395.29, -45.8773, 102.565, 2410.44, 102.517 ),
@@ -48,7 +48,7 @@ surfaces/0 = {
 "vertex_count": 4536
 }
 
-[sub_resource type="ArrayMesh" id=216]
+[sub_resource type="ArrayMesh" id=4]
 resource_name = "Tile.003"
 surfaces/0 = {
 "aabb": AABB( -34.181, -0.732031, -46.3698, 69.0927, 1.30184, 93.2812 ),
@@ -64,7 +64,7 @@ surfaces/0 = {
 "vertex_count": 654
 }
 
-[sub_resource type="ArrayMesh" id=217]
+[sub_resource type="ArrayMesh" id=5]
 resource_name = "Main.005"
 surfaces/0 = {
 "aabb": AABB( -50, -2100, -50, 100, 2510, 100 ),
@@ -80,7 +80,7 @@ surfaces/0 = {
 "vertex_count": 389
 }
 
-[sub_resource type="ArrayMesh" id=218]
+[sub_resource type="ArrayMesh" id=6]
 resource_name = "Brick.002"
 surfaces/0 = {
 "aabb": AABB( -50.3715, -1381.28, -45.8773, 102.565, 2382.43, 102.517 ),
@@ -96,7 +96,7 @@ surfaces/0 = {
 "vertex_count": 4536
 }
 
-[sub_resource type="ArrayMesh" id=219]
+[sub_resource type="ArrayMesh" id=7]
 resource_name = "Tile.005"
 surfaces/0 = {
 "aabb": AABB( -34.3933, -0.732031, -41.0609, 66.212, 1.30184, 81.1904 ),
@@ -112,7 +112,7 @@ surfaces/0 = {
 "vertex_count": 648
 }
 
-[sub_resource type="ArrayMesh" id=220]
+[sub_resource type="ArrayMesh" id=8]
 resource_name = "Main.007"
 surfaces/0 = {
 "aabb": AABB( -50, -2100, -50, 100, 2510, 100 ),
@@ -128,7 +128,7 @@ surfaces/0 = {
 "vertex_count": 400
 }
 
-[sub_resource type="ArrayMesh" id=221]
+[sub_resource type="ArrayMesh" id=9]
 resource_name = "Brick.004"
 surfaces/0 = {
 "aabb": AABB( -50.3715, -1532.81, -50.8306, 102.565, 2369.53, 102.517 ),
@@ -144,7 +144,7 @@ surfaces/0 = {
 "vertex_count": 4536
 }
 
-[sub_resource type="ArrayMesh" id=222]
+[sub_resource type="ArrayMesh" id=10]
 resource_name = "Tile.007"
 surfaces/0 = {
 "aabb": AABB( -34.1245, -0.732031, -44.7866, 65.6743, 1.30184, 87.4246 ),
@@ -174,7 +174,7 @@ shape = SubResource( 1 )
 transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -4, -0.5 )
 
 [node name="Main" type="MeshInstance" parent="StaticBody/Mesh"]
-mesh = SubResource( 214 )
+mesh = SubResource( 2 )
 material/0 = null
 
 [node name="Bricks" type="Spatial" parent="StaticBody/Mesh"]
@@ -182,7 +182,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1918, 344.952, -1.63812 )
 
 [node name="Brick" type="MeshInstance" parent="StaticBody/Mesh/Bricks"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.1505, -978.693, -3.77408 )
-mesh = SubResource( 215 )
+mesh = SubResource( 3 )
 material/0 = null
 
 [node name="Tiles" type="Spatial" parent="StaticBody/Mesh"]
@@ -190,7 +190,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64314, 400.14, 0 )
 
 [node name="Tile" type="MeshInstance" parent="StaticBody/Mesh/Tiles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.457571, -0.256525, 0.215931 )
-mesh = SubResource( 216 )
+mesh = SubResource( 4 )
 material/0 = null
 
 [node name="MeshRight" type="Spatial" parent="StaticBody"]
@@ -198,7 +198,7 @@ transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10
 visible = false
 
 [node name="Main" type="MeshInstance" parent="StaticBody/MeshRight"]
-mesh = SubResource( 217 )
+mesh = SubResource( 5 )
 material/0 = null
 
 [node name="Bricks" type="Spatial" parent="StaticBody/MeshRight"]
@@ -206,7 +206,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1918, 344.952, -1.63812 )
 
 [node name="Brick" type="MeshInstance" parent="StaticBody/MeshRight/Bricks"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.1505, -964.685, -3.77408 )
-mesh = SubResource( 218 )
+mesh = SubResource( 6 )
 material/0 = null
 
 [node name="Tiles" type="Spatial" parent="StaticBody/MeshRight"]
@@ -214,7 +214,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.746, 400.14, 0 )
 
 [node name="Tile" type="MeshInstance" parent="StaticBody/MeshRight/Tiles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.04847, -0.256525, 6.99789 )
-mesh = SubResource( 219 )
+mesh = SubResource( 7 )
 material/0 = null
 
 [node name="MeshLeft" type="Spatial" parent="StaticBody"]
@@ -222,7 +222,7 @@ transform = Transform( -4.37114e-10, 0, 0.01, 0, 0.01, 0, -0.01, 0, -4.37114e-10
 visible = false
 
 [node name="Main" type="MeshInstance" parent="StaticBody/MeshLeft"]
-mesh = SubResource( 220 )
+mesh = SubResource( 8 )
 material/0 = null
 
 [node name="Bricks" type="Spatial" parent="StaticBody/MeshLeft"]
@@ -230,7 +230,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1918, 344.952, -1.63812 )
 
 [node name="Brick" type="MeshInstance" parent="StaticBody/MeshLeft/Bricks"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -47.1505, -800.254, 1.17926 )
-mesh = SubResource( 221 )
+mesh = SubResource( 9 )
 material/0 = null
 
 [node name="Tiles" type="Spatial" parent="StaticBody/MeshLeft"]
@@ -238,7 +238,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64314, 400.14, 0 )
 
 [node name="Tile" type="MeshInstance" parent="StaticBody/MeshLeft/Tiles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.31731, -0.256525, 4.48937 )
-mesh = SubResource( 222 )
+mesh = SubResource( 10 )
 material/0 = null
 
 [node name="Next" type="Position3D" parent="."]

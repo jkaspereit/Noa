@@ -1,6 +1,6 @@
 extends Node
 
-var OBJECTIVES = 1000
+var OBJECTIVES = 200
 var PATH_ELEMENTS = 1200
 
 func generate():
@@ -11,4 +11,6 @@ func generate():
 		ObjectFactory.new_object()
 	for i in PATH_ELEMENTS:
 		Pathfinder.find_path()
+
+
 

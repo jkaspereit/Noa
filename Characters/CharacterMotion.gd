@@ -96,3 +96,4 @@ func is_crashed():
 
 func reset():
 	set_translation(STARTING_POS)
+	is_crashed = false

@@ -13,10 +13,10 @@
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_004.material" type="Material" id=11]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles_002.material" type="Material" id=12]
 
-[sub_resource type="BoxShape" id=1]
+[sub_resource type="BoxShape" id=11]
 extents = Vector3( 0.5, 0.5, 0.5 )
 
-[sub_resource type="ArrayMesh" id=2]
+[sub_resource type="ArrayMesh" id=12]
 resource_name = "Main"
 surfaces/0 = {
 "aabb": AABB( -50, -50, -50, 100, 110, 100 ),
@@ -32,7 +32,7 @@ surfaces/0 = {
 "vertex_count": 402
 }
 
-[sub_resource type="ArrayMesh" id=3]
+[sub_resource type="ArrayMesh" id=13]
 resource_name = " Brick"
 surfaces/0 = {
 "aabb": AABB( -51.1534, -36.3459, -51.1426, 102.307, 72.6917, 102.285 ),
@@ -48,7 +48,7 @@ surfaces/0 = {
 "vertex_count": 336
 }
 
-[sub_resource type="ArrayMesh" id=4]
+[sub_resource type="ArrayMesh" id=14]
 resource_name = "Tile"
 surfaces/0 = {
 "aabb": AABB( -34.181, -0.732031, -46.3698, 69.0927, 1.30184, 93.2812 ),
@@ -64,7 +64,7 @@ surfaces/0 = {
 "vertex_count": 654
 }
 
-[sub_resource type="ArrayMesh" id=5]
+[sub_resource type="ArrayMesh" id=15]
 resource_name = "Main.001"
 surfaces/0 = {
 "aabb": AABB( -50, -50, -50, 100, 110, 100 ),
@@ -80,7 +80,7 @@ surfaces/0 = {
 "vertex_count": 382
 }
 
-[sub_resource type="ArrayMesh" id=6]
+[sub_resource type="ArrayMesh" id=16]
 resource_name = " Brick "
 surfaces/0 = {
 "aabb": AABB( -51.1534, -36.3459, -51.1426, 102.307, 72.6917, 102.285 ),
@@ -96,7 +96,7 @@ surfaces/0 = {
 "vertex_count": 336
 }
 
-[sub_resource type="ArrayMesh" id=7]
+[sub_resource type="ArrayMesh" id=17]
 resource_name = "Tile.001"
 surfaces/0 = {
 "aabb": AABB( -36.377, -0.728276, -40.3311, 70.5527, 1.30184, 80.4605 ),
@@ -168,13 +168,13 @@ collision_mask = 6
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, -0.5 )
-shape = SubResource( 1 )
+shape = SubResource( 11 )
 
 [node name="Mesh" type="Spatial" parent="StaticBody"]
 transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.5, -0.5 )
 
 [node name="Main" type="MeshInstance" parent="StaticBody/Mesh"]
-mesh = SubResource( 2 )
+mesh = SubResource( 12 )
 material/0 = null
 
 [node name="Bricks " type="Spatial" parent="StaticBody/Mesh"]
@@ -182,7 +182,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1918, -5.04796, -1.63812 )
 
 [node name=" Brick" type="MeshInstance" parent="StaticBody/Mesh/Bricks "]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1534, 0.114952, 1.6889 )
-mesh = SubResource( 3 )
+mesh = SubResource( 13 )
 material/0 = null
 
 [node name="Tiles" type="Spatial" parent="StaticBody/Mesh"]
@@ -190,7 +190,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64314, 50.1404, 0 )
 
 [node name="Tile" type="MeshInstance" parent="StaticBody/Mesh/Tiles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.457571, -0.256525, 0.215931 )
-mesh = SubResource( 4 )
+mesh = SubResource( 14 )
 material/0 = null
 
 [node name="MeshRight" type="Spatial" parent="StaticBody"]
@@ -198,7 +198,7 @@ transform = Transform( -4.37114e-10, 0, -0.01, 0, 0.01, 0, 0.01, 0, -4.37114e-10
 visible = false
 
 [node name="Main" type="MeshInstance" parent="StaticBody/MeshRight"]
-mesh = SubResource( 5 )
+mesh = SubResource( 15 )
 material/0 = null
 
 [node name="Bricks " type="Spatial" parent="StaticBody/MeshRight"]
@@ -206,7 +206,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 46.1918, -5.04796, -1.63812 )
 
 [node name=" Brick " type="MeshInstance" parent="StaticBody/MeshRight/Bricks "]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -46.1534, 0.114952, 1.6889 )
-mesh = SubResource( 6 )
+mesh = SubResource( 16 )
 material/0 = null
 
 [node name="Tiles" type="Spatial" parent="StaticBody/MeshRight"]
@@ -214,7 +214,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.81061, 50.1404, 0 )
 
 [node name="Tile" type="MeshInstance" parent="StaticBody/MeshRight/Tiles"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9476, -0.26028, 6.99789 )
-mesh = SubResource( 7 )
+mesh = SubResource( 17 )
 material/0 = null
 
 [node name="MeshLeft" type="Spatial" parent="StaticBody"]

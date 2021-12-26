@@ -3,9 +3,9 @@ extends Node
 # Probabilities for map elements.
 const P_SINGLE = 0.4
 const P_CURVE = 0.7
-const P_STAIRS = 0.8
-const P_GAP = 1
-const P_FORK = 0.9
+const P_STAIRS = 1
+const P_GAP = 0
+const P_FORK = 0
 
 # Path for the character
 var path
