@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 
@@ -19,6 +19,9 @@ tracks/0/keys = {
 "values": [ Vector3( 2.5, 8, 25 ), Vector3( 2.5, 8, 25 ) ]
 }
 
+[sub_resource type="Animation" id=2]
+resource_name = "MoveToMenu"
+
 [node name="Camera" type="Camera"]
 transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 2.5, 8, 25 )
 projection = 1
@@ -32,3 +35,4 @@ smooth_speed = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FocusChar = SubResource( 1 )
+anims/MoveToMenu = SubResource( 2 )

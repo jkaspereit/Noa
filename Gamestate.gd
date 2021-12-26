@@ -21,8 +21,8 @@ func game_over():
 	get_tree().call_group('Interface','show_DeadScreen',score,coins)
 
 func restart():
-	Pathfinder.reset()
+	Generator.generate()
+	get_tree().call_group('Character','reset')
 	get_tree().call_group('World','disable_blur')
 	score = 0
 	coins = 0
-	get_tree().reload_current_scene()

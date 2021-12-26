@@ -8,7 +8,7 @@ const P_GAP = 1
 const P_FORK = 0.9
 
 # Path for the character
-var path = []
+var path
 
 # Process this method to find a path for the character. 
 func find_path():
@@ -28,9 +28,6 @@ func find_path():
 # Every new map element has a path that must be added.
 func add_path(path_element):
 	path.append_array(path_element.get_path())
-
-func reset():
-	path = []
 
 # Process this method to find a path for the character. 
 func find_test_path():
@@ -55,8 +52,11 @@ func find_test_path():
 
 func init():
 	randomize()
+	# empty path
+	path = []
 	# find the node that contains the starting path
 	var start_path = get_tree().get_root().find_node("StartPath",true,false)
 	# add the waypoints of the start path
 	for waypoint in start_path.get_children():
 		path.append(waypoint.translation)
+	print(path)
