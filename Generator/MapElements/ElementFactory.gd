@@ -37,7 +37,7 @@ func new_curve(block, curve_direction):
 		Pathfinder.add_path(element)
 		update_current_position(element)
 		update_current_direction(curve_direction)
-		ColorfulWorld.ink_element(element)
+#		ColorfulWorld.ink_element(element)
 
 # Adds an fork element to the scene, if it's possible.
 func new_fork(fork_tscn):
