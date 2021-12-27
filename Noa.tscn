@@ -7,25 +7,25 @@
 [ext_resource path="res://StartArea/StartArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TestInsert.gd" type="Script" id=6]
 [ext_resource path="res://GUI/Interface/Interface.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Assets/GFX/BG/Dunkler_Waldgott_ 2.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GFX/BG/DunklerWaldgott.png" type="Texture" id=8]
 [ext_resource path="res://Camera/ForestGod.gd" type="Script" id=9]
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1]
 albedo_texture = ExtResource( 2 )
 
-[sub_resource type="PlaneMesh" id=3]
-material = SubResource( 2 )
+[sub_resource type="PlaneMesh" id=2]
+material = SubResource( 1 )
 size = Vector2( 10, 10 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=3]
 flags_transparent = true
 albedo_texture = ExtResource( 8 )
 
 [sub_resource type="PlaneMesh" id=4]
-material = SubResource( 5 )
+material = SubResource( 3 )
 size = Vector2( 10, 10 )
 
-[sub_resource type="ViewportTexture" id=1]
+[sub_resource type="ViewportTexture" id=5]
 viewport_path = NodePath("TryMenü/Viewport")
 
 [node name="Noa" type="Spatial"]
@@ -41,11 +41,11 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 15.5 )
 ] instance=ExtResource( 4 )]
 transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577344, -0.707107, -0.408244, 0.577353, 2.5, 8, 25 )
 size = 5.0
-offset = Vector3( 10, 10, 8 )
+offset = Vector3( 10, 10, 9 )
 
 [node name="Background" type="MeshInstance" parent="Camera"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -40 )
-mesh = SubResource( 3 )
+mesh = SubResource( 2 )
 material/0 = null
 
 [node name="ForestGod" type="MeshInstance" parent="Camera"]
@@ -65,6 +65,7 @@ script = ExtResource( 9 )
 
 [node name="TryMenü" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.99777, 6.32118, 8.70997 )
+visible = false
 
 [node name="Viewport" type="Viewport" parent="TryMenü"]
 size = Vector2( 200, 200 )
@@ -77,4 +78,4 @@ text = "Hallo Welt"
 
 [node name="Sprite3D" type="Sprite3D" parent="TryMenü"]
 transform = Transform( 0.707107, 0.707107, -3.09086e-08, 0, -4.37114e-08, -1, -0.707107, 0.707107, -3.09086e-08, -4, -7.5, 2 )
-texture = SubResource( 1 )
+texture = SubResource( 5 )

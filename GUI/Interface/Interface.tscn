@@ -39,7 +39,6 @@ __meta__ = {
 }
 
 [node name="Button" type="Button" parent="StartingArea"]
-visible = false
 modulate = Color( 1, 1, 1, 0 )
 margin_right = 2280.0
 margin_bottom = 1080.0

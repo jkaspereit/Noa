@@ -9,7 +9,8 @@ export_presets.cfg
 data_*/
 
 # Don't push apk files.
-*.apk*
+*.apk
+*.idsig
 
 # Don't push api key
 firebase.gd

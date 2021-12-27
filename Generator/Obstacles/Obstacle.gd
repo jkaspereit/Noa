@@ -10,3 +10,4 @@ func _ready():
 func _on_Area_body_entered(body):
 	if body is KinematicBody:
 		body.is_crashed()
+		print("crashed")
