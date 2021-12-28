@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Assets/GFX/Blocks/Curves/Tiles_012.material" type="Material" id=1]
 [ext_resource path="res://Generator/MapElements/MapElement.gd" type="Script" id=2]
-[ext_resource path="res://Generator/Obstacles/Obstacle.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Generator/Obstacles/Spikes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/GFX/Blocks/Curves/Sand_016.material" type="Material" id=4]
 [ext_resource path="res://Assets/GFX/Blocks/Curves/Sand_015.material" type="Material" id=5]
 [ext_resource path="res://Assets/GFX/Blocks/Curves/Tiles_013.material" type="Material" id=6]

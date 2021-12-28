@@ -1,9 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Generator/MapElements/MapElement.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Brick_013.material" type="Material" id=2]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Tiles_013.material" type="Material" id=3]
 [ext_resource path="res://Assets/GFX/Blocks/Singles/Sand_014.material" type="Material" id=4]
+[ext_resource path="res://Generator/Coin/Coin.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Generator/MapElements/Blocks/TunnelCoinFlip.gd" type="Script" id=6]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 0.5, 4, 2.5 )
@@ -151,3 +153,51 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5 )
 
 [node name="Position3D2" type="Position3D" parent="Path"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.5 )
+
+[node name="Coins" type="Spatial" parent="."]
+script = ExtResource( 6 )
+
+[node name="Coin1" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.75 )
+
+[node name="Coin2" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.75 )
+
+[node name="Coin3" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.75 )
+
+[node name="Coin4" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.75 )
+
+[node name="Coin5" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -1.75 )
+
+[node name="Coin6" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="Coin7" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="Coin8" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="Coin9" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="Coin10" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -2.5 )
+
+[node name="Coin11" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.25 )
+
+[node name="Coin12" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.25 )
+
+[node name="Coin13" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.25 )
+
+[node name="Coin14" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.25 )
+
+[node name="Coin15" parent="Coins" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -3.25 )
