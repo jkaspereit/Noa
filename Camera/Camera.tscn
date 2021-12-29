@@ -21,12 +21,38 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "MoveToMenu"
+length = 3.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 0.5, 1 ),
+"update": 0,
+"values": [ Vector3( 1.5, 6.4, 25 ), Vector3( -2.9, 6, 17.7 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1.5, 1 ),
+"update": 0,
+"values": [ 5.2, 1.8 ]
+}
 
 [node name="Camera" type="Camera"]
-transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 2.5, 8, 25 )
+transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 1.5, 6.4, 25 )
 projection = 1
 current = true
-size = 7.0
+size = 5.2
 near = 0.01
 far = 200.0
 script = ExtResource( 1 )

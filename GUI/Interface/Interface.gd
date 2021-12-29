@@ -4,10 +4,10 @@ onready var ScoreValue = $DeadScreen/VBoxContainer/HBoxContainer/ScoreValue
 onready var CoinValue = $DeadScreen/VBoxContainer/HBoxContainer2/CoinValue
 
 func show_StartingArea():
-	$StartingArea.visible = true
+	$StartArea.visible = true
 
 func hide_StartingArea():
-	$StartingArea.visible  = false
+	$StartArea.visible  = false
 
 func show_DeadScreen(score, coins):
 	ScoreValue.text = str(score)

@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://World/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Generator/Generator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Noa/Noa.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://StartArea/StartArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://TestInsert.gd" type="Script" id=6]
 [ext_resource path="res://GUI/Interface/Interface.tscn" type="PackedScene" id=7]
@@ -19,15 +18,10 @@ script = ExtResource( 6 )
 [node name="Char" parent="." instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6, -1, 15.5 )
 
-[node name="Camera" parent="." groups=[
-"Camera",
-] instance=ExtResource( 4 )]
-
-[node name="CameraStart" parent="." groups=[
-"Camera",
-] instance=ExtResource( 4 )]
-transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 1.5, 6.4, 25 )
-size = 5.2
+[node name="CameraMenu" type="Camera" parent="."]
+transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577344, -0.707107, -0.408244, 0.577353, -2.9, 6, 17.7 )
+projection = 1
+size = 2.3
 
 [node name="World" parent="." instance=ExtResource( 1 )]
 
