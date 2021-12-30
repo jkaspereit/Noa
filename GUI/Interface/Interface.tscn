@@ -1,16 +1,18 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://GUI/Interface/DeadScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/Interface/Interface.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Interface/Login.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Tests/InterfaceHelper.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI/Interface/StartArea.gd" type="Script" id=5]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/MamoruShop.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Characters/Mamoru/ButtonNormalTexture.png" type="Texture" id=6]
 [ext_resource path="res://Assets/Fonts/ZenMaruGothic-Regular.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://Assets/Fonts/ZenMaruGothic-Bold.ttf" type="DynamicFontData" id=8]
 [ext_resource path="res://Assets/GFX/Interface/Return.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GFX/Interface/Next.png" type="Texture" id=10]
 [ext_resource path="res://Assets/GFX/Interface/Previous.png" type="Texture" id=11]
+[ext_resource path="res://GUI/Interface/CharacterSelection.gd" type="Script" id=12]
+[ext_resource path="res://Assets/GFX/Interface/Disabled.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 72
@@ -33,9 +35,13 @@ script = ExtResource( 2 )
 [node name="Login" parent="." instance=ExtResource( 3 )]
 visible = false
 
-[node name="CharacterSelection" type="Control" parent="."]
+[node name="CharacterSelection" type="Control" parent="." groups=[
+"Interface",
+]]
+visible = false
 margin_right = 2280.0
 margin_bottom = 1080.0
+script = ExtResource( 12 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -134,6 +140,7 @@ margin_top = 830.0
 margin_right = 2180.0
 margin_bottom = 980.0
 texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 13 )
 
 [node name="Previous" type="TextureButton" parent="CharacterSelection"]
 margin_left = 100.0
@@ -141,9 +148,9 @@ margin_top = 830.0
 margin_right = 250.0
 margin_bottom = 980.0
 texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 13 )
 
 [node name="StartArea" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 5 )
@@ -159,6 +166,13 @@ position = Vector2( 60.5811, -163.925 )
 polygon = PoolVector2Array( 573.55, 679.504, 573.55, 642.086, 702.73, 419.362, 915.655, 541.415, 1040.38, 615.359, 1043.05, 659.014, 792.711, 803.339 )
 
 [node name="InterfaceHelper" parent="." instance=ExtResource( 4 )]
+visible = false
 z_index = -1
 
+[connection signal="pressed" from="CharacterSelection/CharButtonLeft" to="CharacterSelection" method="_on_CharButtonLeft_pressed"]
+[connection signal="pressed" from="CharacterSelection/CharButtonMid" to="CharacterSelection" method="_on_CharButtonMid_pressed"]
+[connection signal="pressed" from="CharacterSelection/CharButtonRight" to="CharacterSelection" method="_on_CharButtonRight_pressed"]
+[connection signal="pressed" from="CharacterSelection/Return" to="CharacterSelection" method="_on_Return_pressed"]
+[connection signal="pressed" from="CharacterSelection/Next" to="CharacterSelection" method="_on_Next_pressed"]
+[connection signal="pressed" from="CharacterSelection/Previous" to="CharacterSelection" method="_on_Previous_pressed"]
 [connection signal="input_event" from="StartArea/CharacterSelection" to="StartArea" method="_on_CharacterSelection_input_event"]

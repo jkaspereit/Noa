@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MamoruShop.png-7380fa602147c9f2b18dde5e88875f52.stex"
+path="res://.import/ButtonNormalTexture.png-1ea97cd3f541c9d8b1e6f85a9181d29b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Characters/Mamoru/MamoruShop.png"
-dest_files=[ "res://.import/MamoruShop.png-7380fa602147c9f2b18dde5e88875f52.stex" ]
+source_file="res://Assets/GFX/Characters/Mamoru/ButtonNormalTexture.png"
+dest_files=[ "res://.import/ButtonNormalTexture.png-1ea97cd3f541c9d8b1e6f85a9181d29b.stex" ]
 
 [params]
 

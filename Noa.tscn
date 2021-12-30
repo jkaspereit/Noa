@@ -32,6 +32,7 @@ script = ExtResource( 6 )
 
 [node name="Camera" parent="." groups=[
 "Camera",
+"Interface",
 ] instance=ExtResource( 4 )]
 transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577344, -0.707107, -0.408244, 0.577353, 1.5, 6.4, 25 )
 current = false
@@ -42,7 +43,9 @@ transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -
 mesh = SubResource( 2 )
 material/0 = null
 
-[node name="ForestGod" type="MeshInstance" parent="Camera"]
+[node name="ForestGod" type="MeshInstance" parent="Camera" groups=[
+"Interface",
+]]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, -35 )
 mesh = SubResource( 4 )
 material/0 = null

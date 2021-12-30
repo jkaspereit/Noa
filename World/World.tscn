@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://World/WorldEnvironment.gd" type="Script" id=2]
-[ext_resource path="res://World/Rain/Rain.tscn" type="PackedScene" id=3]
 [ext_resource path="res://World/NewWorldEnv.tres" type="Environment" id=5]
 
 [node name="World" type="Spatial"]
@@ -11,8 +10,6 @@
 ]]
 environment = ExtResource( 5 )
 script = ExtResource( 2 )
-
-[node name="Rain" parent="." instance=ExtResource( 3 )]
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( 0.11189, -0.278909, 0.953777, -0.0834447, 0.953777, 0.288698, -0.990211, -0.11189, 0.0834445, 11.4111, 3.06871, 16.9204 )

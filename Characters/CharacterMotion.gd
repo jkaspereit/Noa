@@ -21,12 +21,12 @@ var is_crashed = false
 var pauseCharacter = false
 
 func _physics_process(delta):
+	look_forward()
 	if not Gamestate.game_running:
 		return
 	if is_dead():
 		Gamestate.game_over()
 	else:
-		look_forward()
 		move()
 
 func move():
