@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/tower.dae-0c66e73bd6bad861aa9f830ad301415f.scn"
+path="res://.import/Tower.dae-5dc30f34cc0b4f2b8e8a8846cd6c9e68.scn"
 
 [deps]
 
-source_file="res://Assets/GFX/Blocks/Singles/tower.dae"
-dest_files=[ "res://.import/tower.dae-0c66e73bd6bad861aa9f830ad301415f.scn" ]
+source_file="res://Assets/GFX/Blocks/Singles/Tower.dae"
+dest_files=[ "res://.import/Tower.dae-5dc30f34cc0b4f2b8e8a8846cd6c9e68.scn" ]
 
 [params]
 

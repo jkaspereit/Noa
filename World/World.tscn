@@ -18,3 +18,4 @@ light_energy = 0.5
 light_specular = 0.0
 shadow_enabled = true
 shadow_color = Color( 0.513726, 0.513726, 0.513726, 1 )
+directional_shadow_depth_range = 1
