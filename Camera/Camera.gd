@@ -7,8 +7,10 @@ export var smooth_speed: float
 
 onready var Character = get_tree().get_root().find_node("Char",true,false)
 
+var processing_enabled = false;
+
 func _physics_process(delta):
-	if Gamestate.game_running:
+	if processing_enabled:
 		focus_char(delta)
 
 
@@ -16,6 +18,9 @@ func focus_char(delta):
 	var target = offset + Character.translation
 	var lerp_value = lerp(get_translation(),target,smooth_speed*delta)
 	set_translation(Vector3(lerp_value.x,lerp_value.y,target.z))
+
+func play():
+	processing_enabled = true;
 
 func to_settings():
 	$AnimationPlayer.play("ToSettings");

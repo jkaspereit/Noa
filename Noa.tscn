@@ -59,5 +59,7 @@ script = ExtResource( 9 )
 
 [node name="MapElements" type="Node" parent="."]
 
-[node name="Char" parent="." instance=ExtResource( 3 )]
+[node name="Char" parent="." groups=[
+"Interface",
+] instance=ExtResource( 3 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1, 18 )

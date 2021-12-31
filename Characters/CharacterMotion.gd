@@ -1,8 +1,13 @@
 extends KinematicBody
 
-var TEXTURE_FORWARD = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Walk_Forward.tres")
-var TEXTURE_LEFT = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Walk_Left.tres")
-var TEXTURE_RIGHT = preload("res://Assets/GFX/Characters/2DCharacterTemplate/Walk_Right.tres")
+var TEXTURE_FORWARD = preload("res://Characters/Noa/WalkForward.tres")
+var TEXTURE_FORWARD_JUMP = preload("res://Characters/Noa/WalkForwardJump.tres")
+var TEXTURE_LEFT = preload("res://Characters/Noa/WalkLeft.tres")
+var TEXTURE_LEFT_JUMP = preload("res://Characters/Noa/WalkLeftJump.tres")
+var TEXTURE_RIGHT = preload("res://Characters/Noa/WalkRight.tres")
+var TEXTURE_RIGHT_JUMP = preload("res://Characters/Noa/WalkRightJump.tres")
+var TEXTURE_HOME = preload("res://Characters/Noa/Home.tres")
+var DEATH = preload("res://Characters/Noa/Death.tres")
 
 const SPEED = 6.5
 
@@ -14,20 +19,16 @@ var time_elapsed
 var velocity = Vector3.ZERO
 var gravity = 0
 
-var can_double_jump = false
-
-var is_crashed = false
-
-var pauseCharacter = false
+var processing_enabled = false
 
 func _physics_process(delta):
-	look_forward()
-	if not Gamestate.game_running:
-		return
-	if is_dead():
-		Gamestate.game_over()
-	else:
+	if processing_enabled:
 		move()
+		look_forward()
+
+func _input(event):
+	if processing_enabled and event.is_action_pressed('click'):
+		jump()
 
 func move():
 	var direction = get_direction()
@@ -37,6 +38,9 @@ func move():
 	apply_gravity()
 	# move
 	move_and_slide(velocity,Vector3.UP)
+	# call it a game, when noa has fallen
+	if has_fallen():
+		get_tree().call_group('Interface','game_over')
 
 func jump():
 	if is_on_floor():
@@ -71,7 +75,6 @@ func get_direction():
 		direction.y = direction.y / direction.length()
 	return direction
 
-
 func look_forward():
 	if velocity.x > SPEED:
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_RIGHT
@@ -80,10 +83,6 @@ func look_forward():
 	else: 
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_FORWARD
 
-
-func is_dead():
-	return has_fallen() or is_crashed
-
 func has_fallen():
 	var CharHeight = translation.y
 	var PathHeight = Pathfinder.path[0].y
@@ -91,9 +90,16 @@ func has_fallen():
 		return true
 	return false
 
-func is_crashed():
-	is_crashed = true
+func play():
+	processing_enabled = true
+
+func game_over():
+	reset()
+	processing_enabled = false
 
 func reset():
+	load_home_texture()
 	set_translation(STARTING_POS)
-	is_crashed = false
+
+func load_home_texture():
+	$MeshInstance.mesh.material.albedo_texture = TEXTURE_HOME
