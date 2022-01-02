@@ -14,3 +14,6 @@ data_*/
 
 # Don't push api key
 firebase.gd
+
+# Don't push project configuration, due to apk keys
+project.godot
