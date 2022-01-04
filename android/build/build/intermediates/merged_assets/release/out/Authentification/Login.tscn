@@ -1,0 +1,105 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Authentification/Login.gd" type="Script" id=1]
+[ext_resource path="res://Authentification/AuthFont.tres" type="DynamicFont" id=2]
+
+[node name="Login" type="Control"]
+margin_right = 2280.0
+margin_bottom = 1080.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="HTTPRequest2" type="HTTPRequest" parent="."]
+
+[node name="ManualLogin" type="VBoxContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -270.0
+margin_top = -50.0
+margin_right = 270.0
+margin_bottom = 50.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 19
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="LineEdit" parent="ManualLogin"]
+margin_right = 540.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = ExtResource( 2 )
+text = "Enter Username"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password" type="LineEdit" parent="ManualLogin"]
+margin_top = 67.0
+margin_right = 540.0
+margin_bottom = 115.0
+rect_min_size = Vector2( 0, 40 )
+custom_fonts/font = ExtResource( 2 )
+text = "Enter Password"
+align = 1
+secret = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="ManualLogin"]
+margin_top = 134.0
+margin_right = 540.0
+margin_bottom = 178.0
+rect_min_size = Vector2( 0, 40 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 12
+
+[node name="Register" type="Button" parent="ManualLogin/HBoxContainer"]
+margin_right = 264.0
+margin_bottom = 44.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "REGISTER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Login" type="Button" parent="ManualLogin/HBoxContainer"]
+margin_left = 276.0
+margin_right = 540.0
+margin_bottom = 44.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 2 )
+text = "LOGIN"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorLabel" type="Label" parent="ManualLogin"]
+margin_top = 197.0
+margin_right = 540.0
+margin_bottom = 235.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Test"
+align = 1
+
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
+[connection signal="button_down" from="ManualLogin/HBoxContainer/Register" to="." method="_on_Register_button_down"]
+[connection signal="button_down" from="ManualLogin/HBoxContainer/Login" to="." method="_on_Login_button_down"]
