@@ -1,0 +1,143 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Assets/Fonts/ZenMaruGothic-Bold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/ZenMaruGothic-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/Interface/CharacterSelection.gd" type="Script" id=3]
+[ext_resource path="res://Assets/GFX/Characters/Mamoru/ButtonNormalTexture.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Interface/Disabled.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Interface/Next.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Interface/Return.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GFX/Interface/Previous.png" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 72
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 48
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="CharacterSelection" type="Control" groups=[
+"Interface",
+]]
+visible = false
+margin_right = 2280.0
+margin_bottom = 1080.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 740.0
+margin_top = 200.0
+margin_right = 1540.0
+margin_bottom = 340.0
+custom_fonts/font = SubResource( 1 )
+text = "Wähle deinen Character!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharButtonLeft" type="TextureButton" parent="."]
+margin_left = 615.0
+margin_top = 340.0
+margin_right = 865.0
+margin_bottom = 740.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharButtonMid" type="TextureButton" parent="."]
+margin_left = 1015.0
+margin_top = 340.0
+margin_right = 1265.0
+margin_bottom = 740.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharButtonRight" type="TextureButton" parent="."]
+margin_left = 1415.0
+margin_top = 340.0
+margin_right = 1665.0
+margin_bottom = 740.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharLabelLeft" type="Label" parent="."]
+margin_left = 615.0
+margin_top = 740.0
+margin_right = 865.0
+margin_bottom = 840.0
+custom_fonts/font = SubResource( 2 )
+text = "FillText"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CharLabelMid" type="Label" parent="."]
+margin_left = 1015.0
+margin_top = 740.0
+margin_right = 1265.0
+margin_bottom = 840.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "FillText"
+align = 1
+valign = 1
+
+[node name="CharLabelRight" type="Label" parent="."]
+margin_left = 1415.0
+margin_top = 740.0
+margin_right = 1665.0
+margin_bottom = 840.0
+custom_fonts/font = SubResource( 2 )
+text = "FillText"
+align = 1
+valign = 1
+
+[node name="Return" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 250.0
+margin_bottom = 250.0
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 2030.0
+margin_top = 830.0
+margin_right = 2180.0
+margin_bottom = 980.0
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 5 )
+
+[node name="Previous" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 830.0
+margin_right = 250.0
+margin_bottom = 980.0
+texture_normal = ExtResource( 8 )
+texture_disabled = ExtResource( 5 )
+
+[connection signal="pressed" from="CharButtonLeft" to="." method="_on_CharButtonLeft_pressed"]
+[connection signal="pressed" from="CharButtonMid" to="." method="_on_CharButtonMid_pressed"]
+[connection signal="pressed" from="CharButtonRight" to="." method="_on_CharButtonRight_pressed"]
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
+[connection signal="pressed" from="Next" to="." method="_on_Next_pressed"]
+[connection signal="pressed" from="Previous" to="." method="_on_Previous_pressed"]

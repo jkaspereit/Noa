@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Characters/Noa/WalkForward.tres" type="Texture" id=1]
+[ext_resource path="res://Characters/CharacterMotion.gd" type="Script" id=2]
+
+[sub_resource type="SphereShape" id=1]
+radius = 0.25
+
+[sub_resource type="RayShape" id=2]
+length = 0.75
+
+[sub_resource type="SpatialMaterial" id=3]
+flags_transparent = true
+params_billboard_mode = 1
+albedo_texture = ExtResource( 1 )
+
+[sub_resource type="QuadMesh" id=4]
+material = SubResource( 3 )
+
+[node name="TemplateCharacter" type="KinematicBody" groups=[
+"Character",
+]]
+input_ray_pickable = false
+collision_layer = 2
+script = ExtResource( 2 )
+
+[node name="CollisionSphere" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.125, 0 )
+shape = SubResource( 1 )
+
+[node name="CollisionRay" type="CollisionShape" parent="."]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0.25, 0 )
+shape = SubResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 4 )
+material/0 = null
+
+[node name="DoubleJumpTimeWindow" type="Timer" parent="."]
+wait_time = 0.25
+one_shot = true

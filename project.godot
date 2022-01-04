@@ -31,6 +31,7 @@ ObstacleRng="*res://Generator/Obstacles/SpikeRng.gd"
 Gamestate="*res://Gamestate.gd"
 Generator="*res://Generator/Generator.gd"
 Firebase="*res://GUI/Interface/firebase.gd"
+PlayIntegration="*res://GUI/Interface/PlayIntegration.gd"
 
 [display]
 
