@@ -1,4 +1,5 @@
 extends Spatial
 
 func _ready():
-	Generator.generate()
+	Gamestate.load_playerData();
+	Generator.generate();

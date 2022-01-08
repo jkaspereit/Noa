@@ -39,7 +39,7 @@ margin_right = 540.0
 margin_bottom = 48.0
 rect_min_size = Vector2( 0, 40 )
 custom_fonts/font = ExtResource( 2 )
-text = "Enter Username"
+text = "test@test.de"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -51,7 +51,7 @@ margin_right = 540.0
 margin_bottom = 115.0
 rect_min_size = Vector2( 0, 40 )
 custom_fonts/font = ExtResource( 2 )
-text = "Enter Password"
+text = "test1234"
 align = 1
 secret = true
 __meta__ = {
