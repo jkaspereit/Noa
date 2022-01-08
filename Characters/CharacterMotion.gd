@@ -11,7 +11,7 @@ var DEATH = preload("res://Characters/Noa/Death.tres")
 
 const SPEED = 6.5
 
-const STARTING_POS = Vector3(-6,-1,15.5)
+const STARTING_POS = Vector3(-5.5,-1,17)
 
 var time_start
 var time_elapsed 
@@ -65,7 +65,7 @@ func get_direction():
 	if abs(length_2d) < 0.25:
 		Pathfinder.path.remove(0)
 		# Give the player some score points
-		Gamestate.raise_score(1)
+		Gamestate.raise_score()
 	# don't divide by zero
 	if not length_2d == 0 and not direction.length() == 0:
 		# normalize x, z as in 2d, so that jumping doesn't affect the velocity

@@ -38,3 +38,8 @@ func activate_mesh(type):
 
 func can_switch_mesh():
 	return MeshDefault != null and MeshRight != null and MeshLeft != null
+
+
+func _on_GapPassed_body_entered(body):
+	if body is KinematicBody:
+		Gamestate.gap_passed()

@@ -13,7 +13,6 @@ func _physics_process(delta):
 	if processing_enabled:
 		focus_char(delta)
 
-
 func focus_char(delta):
 	var target = offset + Character.translation
 	var lerp_value = lerp(get_translation(),target,smooth_speed*delta)
@@ -21,6 +20,9 @@ func focus_char(delta):
 
 func play():
 	processing_enabled = true;
+
+func game_over():
+	processing_enabled = false;
 
 func to_settings():
 	$AnimationPlayer.play("ToSettings");

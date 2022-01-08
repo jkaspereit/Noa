@@ -1,15 +1,28 @@
 extends Node
 
+var player_level = 0;
+var player_coins = 0;
+var player_highscore = 0;
+var player_chars = 0;
+
 var score = 0
 var coins = 0
+var spikes = 0
+var gaps = 0
 
 var game_running = false;
 
 func coin_collected():
 	coins += 1
 
-func raise_score(value):
-	score += value
+func raise_score():
+	score += 1;
+
+func spike_passed():
+	spikes += 1;
+
+func gap_passed():
+	gaps += 1;
 
 func start_game():
 #	get_tree().call_group('Camera','focus_char')

@@ -12,4 +12,10 @@ func _ready():
 		queue_free()
 
 func _on_Area_body_entered(body):
-	get_tree().call_group('Interface','game_over');
+	if body is KinematicBody:
+		get_tree().call_group('Interface','game_over');
+
+
+func _on_SpikesPassed_body_entered(body):
+	if body is KinematicBody:
+		Gamestate.spike_passed()

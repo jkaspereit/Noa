@@ -1,8 +1,8 @@
 extends WorldEnvironment
 
 
-func enable_blur():
-	environment.dof_blur_near_enabled = true
+func game_over():
+	environment.dof_blur_far_enabled = true
 
-func disable_blur():
-	environment.dof_blur_near_enabled = false
+func to_home():
+	environment.dof_blur_far_enabled = false

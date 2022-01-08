@@ -6,7 +6,7 @@
 [node name="World" type="Spatial"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
-"World",
+"Interface",
 ]]
 environment = ExtResource( 5 )
 script = ExtResource( 2 )

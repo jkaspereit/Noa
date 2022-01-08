@@ -69,4 +69,4 @@ script = ExtResource( 9 )
 [node name="Char" parent="." groups=[
 "Interface",
 ] instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -7, -1, 18 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -1, 17 )
