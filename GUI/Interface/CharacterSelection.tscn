@@ -23,7 +23,6 @@ font_data = ExtResource( 2 )
 [node name="CharacterSelection" type="Control" groups=[
 "Interface",
 ]]
-visible = false
 margin_right = 2280.0
 margin_bottom = 1080.0
 script = ExtResource( 3 )

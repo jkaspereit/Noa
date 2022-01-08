@@ -10,7 +10,6 @@ var play_services
 func _ready():
 	init_play_services();
 	gplay_sign_in();
-	
 
 func _on_Register_button_down():
 	if username.text.empty() or password.text.empty():
