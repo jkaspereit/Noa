@@ -1,5 +1,11 @@
 extends Control
 
+class LeaderboardSorter:
+	static func sort_descending(a, b):
+		if a.highscore < b.highscore:
+			return true
+		return false
+
 onready var highscore_array = [
 	$TextureRect/VBoxContainer/Rang1/Highscore,
 	$TextureRect/VBoxContainer/Rang2/Highscore,
@@ -96,6 +102,7 @@ func _on_FetchData_request_completed(result, response_code, headers, body):
 				'highscore': entry.highscore.integerValue,
 				'username': entry.username.stringValue,
 			})
+			display_data.sort_custom(LeaderboardSorter,"sort_descending")
 	else:
 		print('Error fetching leaderboard data:')
 		print(result_body);
