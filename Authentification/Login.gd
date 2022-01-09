@@ -3,6 +3,7 @@ extends Control
 onready var http: HTTPRequest = $HTTPRequest
 onready var http2: HTTPRequest = $HTTPRequest2
 onready var username: LineEdit = $ManualLogin/Username
+onready var email: LineEdit = $ManualLogin/Email
 onready var password: LineEdit = $ManualLogin/Password
 
 var play_services
@@ -12,17 +13,17 @@ func _ready():
 	gplay_sign_in();
 
 func _on_Register_button_down():
-	if username.text.empty() or password.text.empty():
+	if email.text.empty() or password.text.empty():
 		$ManualLogin/ErrorLabel.set_text('invalid input')
 		return
-	Firebase.register(username.text,password.text,http)
+	Firebase.register(username.text,email.text,password.text,http)
 
 
 func _on_Login_button_down():
-	if username.text.empty() or password.text.empty():
+	if email.text.empty() or password.text.empty():
 		$ManualLogin/ErrorLabel.set_text('invalid input')
 		return
-	Firebase.login(username.text,password.text,http2)
+	Firebase.login(email.text,password.text,http2)
 
 
 func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray):
