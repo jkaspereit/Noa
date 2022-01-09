@@ -20,6 +20,8 @@ const ButtonTextureNormalIsra = preload("res://Assets/GFX/Characters/Isra/Button
 const ButtonTextureNormalKaida = preload("res://Assets/GFX/Characters/Kaida/ButtonNormalTexture.png")
 const ButtonTextureNormalMamoru = preload("res://Assets/GFX/Characters/Mamoru/ButtonNormalTexture.png")
 
+const ButtonTextureCharLocked = preload("res://Assets/GFX/Interface/CharacterPngs/CharLocked.png") 
+
 const texture_array = [
 	ButtonTextureNormalNoa,
 	ButtonTextureNormalArun,
@@ -40,15 +42,24 @@ var index = 0
 
 func _ready():
 	$Previous.disabled = true;
+	$CharButtonLeft.texture_disabled = ButtonTextureCharLocked
+	$CharButtonMid.texture_disabled = ButtonTextureCharLocked
+	$CharButtonRight.texture_disabled = ButtonTextureCharLocked
 	display_chars();
 
 func display_chars():
+	# load button textures
 	$CharButtonLeft.texture_normal = texture_array[index];
 	$CharButtonMid.texture_normal = texture_array[index+1];
 	$CharButtonRight.texture_normal = texture_array[index+2];
+	# load descriptions
 	$CharLabelLeft.text = description_array[index]
 	$CharLabelMid.text = description_array[index+1]
 	$CharLabelRight.text = description_array[index+2]
+	# only enable chars the player owns
+	$CharButtonLeft.disabled = not Gamestate.player_chars[index];
+	$CharButtonMid.disabled = not Gamestate.player_chars[index+1];
+	$CharButtonRight.disabled = not Gamestate.player_chars[index+2];
 
 func _on_Return_pressed():
 	get_tree().call_group("Interface", "to_home");
