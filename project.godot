@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Noa"
-run/main_scene="res://Noa.tscn"
+run/main_scene="res://Authentification/Authentification.tscn"
 config/icon="res://icon.png"
 
 [autoload]

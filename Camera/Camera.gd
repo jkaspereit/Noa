@@ -30,6 +30,10 @@ func to_settings():
 func to_home():
 	$AnimationPlayer.play("ToHome")
 
-func reset(delta):
-	var lerp_value = lerp(get_translation(),STARTING_POS,smooth_speed*delta)
-	set_translation(lerp_value)
+func play_again():
+	$Tween.interpolate_property(self,"translation",
+		translation, STARTING_POS,2,Tween.TRANS_LINEAR,Tween.EASE_IN_OUT)
+	$Tween.start()
+
+func _on_Tween_tween_completed(object, key):
+	get_tree().call_group('Interface','at_home');

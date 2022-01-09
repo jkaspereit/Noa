@@ -26,6 +26,9 @@ func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx
 func is_valid(event):
 	return processing_enabled and event.is_action("click") and event.is_pressed()
 
+func game_over():
+	processing_enabled = true
+
 func to_home():
 	processing_enabled = true
 

@@ -7,7 +7,7 @@ func game_over():
 	
 func _on_Button_pressed():
 	visible = false
-	get_tree().call_group('Interface','to_home')
+	get_tree().call_group('Interface','play_again')
 
 func update():
 	$VBoxContainer/HBoxContainer/DistanceValue.text = str(Gamestate.distance)

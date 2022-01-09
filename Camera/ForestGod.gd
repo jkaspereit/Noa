@@ -13,14 +13,14 @@ func _process(delta):
 	var section_pos = int(Character.translation.z) % section_range
 	if is_forestgod_section(section_pos):
 		visible = true
-#	else:
-#		visible = false
+	else:
+		visible = false
 
 func is_forestgod_section(z_pos: float):
 	return abs(int(z_pos) % section_range) > section_range - visible_range
 
-func to_settings():
-	processing_enabled = false;
+func play():
+	processing_enabled = true;
 
-func to_home():
+func game_over():
 	processing_enabled = false

@@ -4,7 +4,7 @@
 [ext_resource path="res://Generator/Generator.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Characters/Noa/Noa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://StartArea/StartArea.tscn" type="PackedScene" id=5]
-[ext_resource path="res://TestInsert.gd" type="Script" id=6]
+[ext_resource path="res://Noa.gd" type="Script" id=6]
 [ext_resource path="res://GUI/Interface/Interface.tscn" type="PackedScene" id=7]
 [ext_resource path="res://World/NewWorldEnv.tres" type="Environment" id=8]
 

@@ -45,13 +45,15 @@ func spike_passed():
 func gap_passed():
 	gaps += 1;
 
+func play():
+	# reset values for a new run
+	reset_values();
+
 func game_over():
 	# update players values based on the last run
 	update_player();
 	# store progress in firestore
 	save_progress();
-	# reset values due playing
-	reset_values();
 
 func update_player():
 	var score = calculate_score()

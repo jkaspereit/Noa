@@ -4,5 +4,5 @@ extends WorldEnvironment
 func game_over():
 	environment.dof_blur_far_enabled = true
 
-func to_home():
+func at_home():
 	environment.dof_blur_far_enabled = false
