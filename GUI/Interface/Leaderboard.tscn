@@ -1,0 +1,357 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Assets/GFX/Interface/MenuPngs/TextField.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GFX/Interface/Disabled.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GFX/Interface/Next.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GFX/Interface/Return.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Interface/Previous.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Fonts/ZenMaruGothic-Black.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://GUI/Interface/LeaderboardFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://GUI/Interface/Leaderboard.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 54
+use_filter = true
+font_data = ExtResource( 6 )
+
+[node name="Leaderboard" type="Control" groups=[
+"Interface",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 540.0
+margin_top = 150.0
+margin_right = 1740.0
+margin_bottom = 950.0
+grow_horizontal = 2
+rect_min_size = Vector2( 1200, 800 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+anchor_right = 1.0
+margin_left = 50.0
+margin_top = 25.0
+margin_right = -50.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_right = 1100.0
+margin_bottom = 100.0
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Header"]
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 250, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Rang"
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Header"]
+margin_left = 254.0
+margin_right = 704.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 450, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Highscore"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Header"]
+margin_left = 708.0
+margin_right = 910.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Player"
+valign = 1
+uppercase = true
+
+[node name="Rang1" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 104.0
+margin_right = 1100.0
+margin_bottom = 204.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Rang1"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "1."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Rang1"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Rang1"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "filler"
+valign = 1
+uppercase = true
+
+[node name="Rang2" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 208.0
+margin_right = 1100.0
+margin_bottom = 308.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Rang2"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "2."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Rang2"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Rang2"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "filler"
+valign = 1
+uppercase = true
+
+[node name="Rang3" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 312.0
+margin_right = 1100.0
+margin_bottom = 412.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Rang3"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "3."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Rang3"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Rang3"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "filler"
+valign = 1
+uppercase = true
+
+[node name="Rang4" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 416.0
+margin_right = 1100.0
+margin_bottom = 516.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Rang4"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "4."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Rang4"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Rang4"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "filler"
+valign = 1
+uppercase = true
+
+[node name="Rang5" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 520.0
+margin_right = 1100.0
+margin_bottom = 620.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Rang5"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "5."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Rang5"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Rang5"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "filler"
+valign = 1
+uppercase = true
+
+[node name="Player" type="HBoxContainer" parent="TextureRect/VBoxContainer"]
+margin_top = 624.0
+margin_right = 1100.0
+margin_bottom = 724.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Player"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "X."
+align = 1
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="TextureRect/VBoxContainer/Player"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="TextureRect/VBoxContainer/Player"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Player"
+valign = 1
+
+[node name="Return" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 100.0
+margin_right = 250.0
+margin_bottom = 250.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 2030.0
+margin_top = 830.0
+margin_right = 2180.0
+margin_bottom = 980.0
+texture_normal = ExtResource( 3 )
+texture_disabled = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Previous" type="TextureButton" parent="."]
+margin_left = 100.0
+margin_top = 830.0
+margin_right = 250.0
+margin_bottom = 980.0
+texture_normal = ExtResource( 5 )
+texture_disabled = ExtResource( 2 )
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
