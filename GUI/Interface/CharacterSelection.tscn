@@ -97,6 +97,9 @@ custom_fonts/font = SubResource( 2 )
 text = "FillText"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CharLabelRight" type="Label" parent="."]
 margin_left = 1415.0

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/KaidaCharacter.png-37ddc43e43e8a0685b4a7a657914a6db.stex"
+path="res://.import/CoinPrice150.PNG-29a37c7680971a457ec1323d2a382e60.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Interface/CharacterPngs/KaidaCharacter.png"
-dest_files=[ "res://.import/KaidaCharacter.png-37ddc43e43e8a0685b4a7a657914a6db.stex" ]
+source_file="res://Assets/GFX/Interface/Shop/CoinPrice150.PNG"
+dest_files=[ "res://.import/CoinPrice150.PNG-29a37c7680971a457ec1323d2a382e60.stex" ]
 
 [params]
 

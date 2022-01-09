@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ArunCharacter.png-d59edabdd680acb5a6662765a4b6c2a2.stex"
+path="res://.import/Isra.png-8283eea673348e1faf9678b8410c2338.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Interface/CharacterPngs/ArunCharacter.png"
-dest_files=[ "res://.import/ArunCharacter.png-d59edabdd680acb5a6662765a4b6c2a2.stex" ]
+source_file="res://Assets/GFX/Interface/CharacterPngs/Isra.png"
+dest_files=[ "res://.import/Isra.png-8283eea673348e1faf9678b8410c2338.stex" ]
 
 [params]
 
