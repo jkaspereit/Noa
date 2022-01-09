@@ -17,7 +17,8 @@ func _on_Shop_input_event(camera, event, click_position, click_normal, shape_idx
 
 func _on_Settings_input_event(camera, event, click_position, click_normal, shape_idx):
 	if is_valid(event):
-		get_tree().call_group('Interface','to_settings')
+#		get_tree().call_group('Interface','to_settings')
+		get_tree().call_group('Interface','to_leaderboard')
 
 func _on_Area_input_event(camera, event, click_position, click_normal, shape_idx):
 	if is_valid(event):
@@ -39,6 +40,9 @@ func to_selection():
 	processing_enabled = false
 
 func to_settings():
+	processing_enabled = false
+
+func to_leaderboard():
 	processing_enabled = false
 
 func play():

@@ -19,6 +19,8 @@ font_data = ExtResource( 6 )
 ]]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 2.37842
+margin_right = 2.37842
 script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -108,7 +110,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "777"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -119,7 +121,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "filler"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -148,7 +150,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "777"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -159,7 +161,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "filler"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -188,7 +190,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "777"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -199,7 +201,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "filler"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -228,7 +230,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "777"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -239,7 +241,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "filler"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -268,7 +270,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "777"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -279,7 +281,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "filler"
+text = "-"
 valign = 1
 uppercase = true
 
@@ -289,14 +291,14 @@ margin_right = 1100.0
 margin_bottom = 724.0
 custom_constants/separation = 100
 
-[node name="Rang" type="Label" parent="TextureRect/VBoxContainer/Player"]
+[node name="Rank" type="Label" parent="TextureRect/VBoxContainer/Player"]
 margin_top = 12.0
 margin_right = 150.0
 margin_bottom = 87.0
 rect_min_size = Vector2( 150, 75 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "X."
+text = "-"
 align = 1
 valign = 1
 uppercase = true
@@ -319,7 +321,7 @@ margin_bottom = 100.0
 rect_min_size = Vector2( 350, 100 )
 custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "Player"
+text = "Username"
 valign = 1
 
 [node name="Return" type="TextureButton" parent="."]
@@ -351,7 +353,10 @@ margin_bottom = 980.0
 texture_normal = ExtResource( 5 )
 texture_disabled = ExtResource( 2 )
 
-[node name="HTTPRequest" type="HTTPRequest" parent="."]
+[node name="FetchData" type="HTTPRequest" parent="."]
+
+[node name="UpdateHighscore" type="HTTPRequest" parent="."]
 
 [connection signal="pressed" from="Return" to="." method="_on_Return_pressed"]
-[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
+[connection signal="request_completed" from="FetchData" to="." method="_on_FetchData_request_completed"]
+[connection signal="request_completed" from="UpdateHighscore" to="." method="_on_UpdateHighscore_request_completed"]

@@ -75,7 +75,6 @@ func reset_values():
 
 # save player progress to firestore
 func save_progress():
-	print(player_coins,player_chars,player_exp)
 	# firestore has a special structure
 	# therefore you have to add value types to the dictonary
 	player.exp = {
@@ -106,6 +105,7 @@ func save_progress():
 # Called when the HTTP request is completed.
 func _http_request_completed(result, response_code, headers, body):
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
+	print('Response Player Progress:')
 	print(result_body)
 	match response_code:
 		404:
