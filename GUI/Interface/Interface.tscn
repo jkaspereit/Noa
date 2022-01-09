@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://GUI/Interface/DeadScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/Interface/Interface.gd" type="Script" id=2]
+[ext_resource path="res://GUI/Interface/CharacterShop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GUI/Interface/CharacterSelection.tscn" type="PackedScene" id=6]
 
 [node name="Interface" type="CanvasLayer" groups=[
@@ -13,3 +14,5 @@ script = ExtResource( 2 )
 
 [node name="CharacterSelection" parent="." instance=ExtResource( 6 )]
 visible = false
+
+[node name="CharacterShop" parent="." instance=ExtResource( 3 )]

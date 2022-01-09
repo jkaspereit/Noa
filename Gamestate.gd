@@ -75,6 +75,7 @@ func reset_values():
 
 # save player progress to firestore
 func save_progress():
+	print(player_coins,player_chars,player_exp)
 	# firestore has a special structure
 	# therefore you have to add value types to the dictonary
 	player.exp = {
@@ -114,8 +115,8 @@ func _http_request_completed(result, response_code, headers, body):
 		200:
 			self.player = result_body.fields
 			player_exp = int(player.exp.integerValue)
-			player_coins = int(player.exp.integerValue)
-			player_highscore = int(player.exp.integerValue)
+			player_coins = int(player.coins.integerValue)
+			player_highscore = int(player.highscore.integerValue)
 			player_chars[0] = player.chars.arrayValue.values[0].booleanValue;
 			player_chars[1] = player.chars.arrayValue.values[1].booleanValue;
 			player_chars[2] = player.chars.arrayValue.values[2].booleanValue;

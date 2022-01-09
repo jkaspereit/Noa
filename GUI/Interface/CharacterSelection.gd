@@ -45,7 +45,6 @@ func _ready():
 	$CharButtonLeft.texture_disabled = ButtonTextureCharLocked
 	$CharButtonMid.texture_disabled = ButtonTextureCharLocked
 	$CharButtonRight.texture_disabled = ButtonTextureCharLocked
-	display_chars();
 
 func display_chars():
 	# load button textures
@@ -67,8 +66,10 @@ func _on_Return_pressed():
 func to_home():
 	visible = false;
 
-func to_settings():
+func to_selection():
+	display_chars();
 	visible = true;
+
 
 func _on_Next_pressed():
 	index += 1;

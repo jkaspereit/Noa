@@ -24,6 +24,12 @@ func play():
 func game_over():
 	processing_enabled = false;
 
+func to_shop():
+	$AnimationPlayer.play("ToSettings");
+
+func to_selection():
+	$AnimationPlayer.play("ToSettings");
+
 func to_settings():
 	$AnimationPlayer.play("ToSettings");
 

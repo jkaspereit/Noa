@@ -46,7 +46,6 @@ func _ready():
 	$PriceLeft.texture_disabled = Unlocked;
 	$PriceMid.texture_disabled = Unlocked;
 	$PriceRight.texture_disabled = Unlocked;
-	display();
 
 func display():
 	# load description
@@ -73,6 +72,7 @@ func to_home():
 	visible = false;
 
 func to_shop():
+	display();
 	visible = true;
 
 func _on_Next_pressed():
@@ -81,7 +81,6 @@ func _on_Next_pressed():
 	if index == description_array.size() - 3:
 		$Next.visible = false;
 	$Previous.visible = true;
-
 
 func _on_Previous_pressed():
 	index -= 1;
@@ -105,6 +104,7 @@ func buy_character(index):
 		Gamestate.player_coins -= price
 		Gamestate.player_chars[index] = true
 		Gamestate.save_progress()
+	display()
 
 func get_price(index) -> int:
 	match index:

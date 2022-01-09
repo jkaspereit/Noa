@@ -9,7 +9,7 @@ var processing_enabled = true
 
 func _on_Tent_input_event(camera, event, click_position, click_normal, shape_idx):
 	if is_valid(event):
-		get_tree().call_group('Interface','to_settings')
+		get_tree().call_group('Interface','to_selection')
 
 func _on_Shop_input_event(camera, event, click_position, click_normal, shape_idx):
 	if is_valid(event):
@@ -31,6 +31,12 @@ func game_over():
 
 func to_home():
 	processing_enabled = true
+
+func to_shop():
+	processing_enabled = false
+
+func to_selection():
+	processing_enabled = false
 
 func to_settings():
 	processing_enabled = false
