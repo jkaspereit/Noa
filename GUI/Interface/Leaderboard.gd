@@ -96,7 +96,6 @@ func _on_FetchData_request_completed(result, response_code, headers, body):
 			var entry = leaderboard[i].fields
 			if str(leaderboard[i].name).ends_with(Firebase.user_info.id):
 				rank = i;
-			print(entry)
 			# append the entry to the leaderboard display data
 			display_data.append({
 				'highscore': entry.highscore.integerValue,

@@ -75,9 +75,9 @@ func get_direction():
 	return direction
 
 func look_forward():
-	if velocity.x > SPEED:
+	if velocity.x > SPEED - 1:
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_RIGHT
-	elif velocity.x < -SPEED:
+	elif velocity.x < - SPEED + 1:
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_LEFT
 	else: 
 		$MeshInstance.mesh.material.albedo_texture = TEXTURE_FORWARD

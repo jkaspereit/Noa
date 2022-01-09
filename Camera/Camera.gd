@@ -27,6 +27,9 @@ func game_over():
 func to_shop():
 	$AnimationPlayer.play("ToSettings");
 
+func to_leaderboard():
+	$AnimationPlayer.play("ToSettings");
+
 func to_selection():
 	$AnimationPlayer.play("ToSettings");
 
