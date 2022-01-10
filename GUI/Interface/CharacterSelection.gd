@@ -14,13 +14,11 @@ const char_array = [
 	Mamoru
 ]
 
-const ButtonTextureNormalNoa = preload("res://Assets/GFX/Characters/Noa/ButtonNormalTexture.png")
-const ButtonTextureNormalArun = preload("res://Assets/GFX/Characters/Arun/ButtonNormalTexture.png")
-const ButtonTextureNormalIsra = preload("res://Assets/GFX/Characters/Isra/ButtonNormalTexture.png")
-const ButtonTextureNormalKaida = preload("res://Assets/GFX/Characters/Kaida/ButtonNormalTexture.png")
-const ButtonTextureNormalMamoru = preload("res://Assets/GFX/Characters/Mamoru/ButtonNormalTexture.png")
-
-const ButtonTextureCharLocked = preload("res://Assets/GFX/Interface/CharacterPngs/CharLocked.png") 
+const ButtonTextureNormalNoa = preload("res://Assets/GFX/Interface/CharacterPngs/Noa.png")
+const ButtonTextureNormalArun = preload("res://Assets/GFX/Interface/CharacterPngs/Arun.png")
+const ButtonTextureNormalIsra = preload("res://Assets/GFX/Interface/CharacterPngs/Isra.png")
+const ButtonTextureNormalKaida = preload("res://Assets/GFX/Interface/CharacterPngs/Kaida.png")
+const ButtonTextureNormalMamoru = preload("res://Assets/GFX/Interface/CharacterPngs/Mamoru.png")
 
 const texture_array = [
 	ButtonTextureNormalNoa,
@@ -28,6 +26,20 @@ const texture_array = [
 	ButtonTextureNormalIsra,
 	ButtonTextureNormalKaida,
 	ButtonTextureNormalMamoru,
+]
+
+const ButtonTextureNoaLocked = preload("res://Assets/GFX/Interface/CharacterPngs/Noa.png") 
+const ButtonTextureArunLocked = preload("res://Assets/GFX/Interface/CharacterPngs/ArunDisabled.png") 
+const ButtonTextureKaidaLocked = preload("res://Assets/GFX/Interface/CharacterPngs/KaidaDisabled.png") 
+const ButtonTextureMamoruLocked = preload("res://Assets/GFX/Interface/CharacterPngs/MamoruDisabled.png") 
+const ButtonTextureIsraLocked = preload("res://Assets/GFX/Interface/CharacterPngs/IsraDisabled.png") 
+
+const texture_locked_array = [
+	ButtonTextureNoaLocked,
+	ButtonTextureArunLocked,
+	ButtonTextureKaidaLocked,
+	ButtonTextureMamoruLocked,
+	ButtonTextureIsraLocked,
 ]
 
 const description_array = [
@@ -41,10 +53,7 @@ const description_array = [
 var index = 0
 
 func _ready():
-	$Previous.disabled = true;
-	$CharButtonLeft.texture_disabled = ButtonTextureCharLocked
-	$CharButtonMid.texture_disabled = ButtonTextureCharLocked
-	$CharButtonRight.texture_disabled = ButtonTextureCharLocked
+	$Previous.visible = false;
 
 func display_chars():
 	# load button textures
@@ -55,6 +64,10 @@ func display_chars():
 	$CharLabelLeft.text = description_array[index]
 	$CharLabelMid.text = description_array[index+1]
 	$CharLabelRight.text = description_array[index+2]
+	# only enable chars the player owns
+	$CharButtonLeft.texture_disabled = texture_locked_array[index];
+	$CharButtonMid.texture_disabled = texture_locked_array[index+1];
+	$CharButtonRight.texture_disabled = texture_locked_array[index+2];
 	# only enable chars the player owns
 	$CharButtonLeft.disabled = not Gamestate.player_chars[index];
 	$CharButtonMid.disabled = not Gamestate.player_chars[index+1];
@@ -75,16 +88,16 @@ func _on_Next_pressed():
 	index += 1;
 	display_chars();
 	if index == texture_array.size() - 3:
-		$Next.disabled = true;
-	$Previous.disabled = false;
+		$Next.visible = false;
+	$Previous.visible = true;
 
 
 func _on_Previous_pressed():
 	index -= 1;
 	display_chars();
 	if index == 0:
-		$Previous.disabled = true;
-	$Next.disabled = false;
+		$Previous.visible = false;
+	$Next.visible = true;
 
 
 func _on_CharButtonLeft_pressed():
