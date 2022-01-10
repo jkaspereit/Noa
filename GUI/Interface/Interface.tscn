@@ -4,7 +4,7 @@
 [ext_resource path="res://GUI/Interface/Interface.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Interface/CharacterShop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GUI/Interface/Leaderboard.tscn" type="PackedScene" id=4]
-[ext_resource path="res://GUI/Interface/CharacterSelection.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI/Interface/TestCharacterSelection.tscn" type="PackedScene" id=5]
 
 [node name="Interface" type="CanvasLayer" groups=[
 "Interface",
@@ -13,10 +13,10 @@ script = ExtResource( 2 )
 
 [node name="DeadScreen" parent="." instance=ExtResource( 1 )]
 
-[node name="CharacterSelection" parent="." instance=ExtResource( 6 )]
-visible = false
-
 [node name="CharacterShop" parent="." instance=ExtResource( 3 )]
 
 [node name="Leaderboard" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="CharacterSelection" parent="." instance=ExtResource( 5 )]
 visible = false

@@ -110,6 +110,9 @@ custom_fonts/font = SubResource( 2 )
 text = "FillText"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Return" type="TextureButton" parent="."]
 margin_left = 100.0
@@ -128,6 +131,9 @@ margin_right = 2180.0
 margin_bottom = 980.0
 texture_normal = ExtResource( 6 )
 texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Previous" type="TextureButton" parent="."]
 margin_left = 100.0
@@ -136,6 +142,9 @@ margin_right = 250.0
 margin_bottom = 980.0
 texture_normal = ExtResource( 8 )
 texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="CharButtonLeft" to="." method="_on_CharButtonLeft_pressed"]
 [connection signal="pressed" from="CharButtonMid" to="." method="_on_CharButtonMid_pressed"]
