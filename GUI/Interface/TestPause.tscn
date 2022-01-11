@@ -1,0 +1,88 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Next.png" type="Texture" id=1]
+[ext_resource path="res://GUI/Interface/DeadScreen.gd" type="Script" id=2]
+[ext_resource path="res://Assets/GFX/Interface/Ground.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Again.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Home.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Interface/Loadingscreen/LoadingTent.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 5 )
+
+[node name="TestPause" type="Control" groups=[
+"Interface",
+]]
+margin_left = -1.17615
+margin_top = 2.41286
+margin_right = 2278.83
+margin_bottom = 1082.41
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 179.825, 850.851, 980.302, 99.8141, 904.946, 755.294 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 120.447, 2160.41, 1140.12 ]
+}
+
+[node name="Home" type="TextureButton" parent="."]
+margin_left = 97.0
+margin_top = 744.0
+margin_right = 410.0
+margin_bottom = 1057.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 1876.0
+margin_top = 744.0
+margin_right = 2189.0
+margin_bottom = 1057.0
+texture_normal = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.003
+margin_top = -399.999
+margin_right = 259.997
+margin_bottom = -324.999
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Verschnaufspause"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Again" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -1043.0
+margin_top = -22.9986
+margin_right = -730.003
+margin_bottom = 290.001
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ground" type="Sprite" parent="."]
+position = Vector2( 1141.05, 522.467 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 3 )
+
+[node name="Tent" type="Sprite" parent="."]
+position = Vector2( 1155.33, 527.225 )
+scale = Vector2( 1.6, 1.6 )
+texture = ExtResource( 7 )

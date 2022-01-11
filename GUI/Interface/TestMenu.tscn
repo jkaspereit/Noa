@@ -1,0 +1,151 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Assets/Fonts/Quicksand-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://GUI/Interface/CharacterSelection.gd" type="Script" id=3]
+[ext_resource path="res://GUI/Interface/DeadScreenFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Assets/GFX/Interface/Disabled.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Home.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Interface/MenuPngs/TextFieldBig.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Previous.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Next.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Fonts/Quicksand-SemiBold.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonConture.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 10 )
+
+[node name="TestMenu" type="Control" groups=[
+"Interface",
+]]
+margin_left = 0.352052
+margin_top = 3.17078
+margin_right = 2280.35
+margin_bottom = 1083.18
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 100.442, 980.871, 179.676, 849.592, 760.285, 333.931 ],
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ 119.642, 2160.0, 1140.75 ]
+}
+
+[node name="TextFieldBig" type="Sprite" parent="."]
+position = Vector2( 1139.61, 600.18 )
+scale = Vector2( 2.5, 2.5 )
+texture = ExtResource( 7 )
+
+[node name="Heading" type="Label" parent="."]
+margin_left = 725.974
+margin_top = 106.0
+margin_right = 1556.97
+margin_bottom = 246.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Einstellungen"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SubHeading" type="Label" parent="."]
+margin_left = 894.053
+margin_top = 410.226
+margin_right = 985.053
+margin_bottom = 460.226
+rect_min_size = Vector2( 50, 50 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Musik"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ton" type="Label" parent="."]
+anchor_left = -0.00039812
+anchor_right = -0.00039812
+margin_left = 1287.95
+margin_top = 408.565
+margin_right = 1349.95
+margin_bottom = 499.565
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Ton
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Home" type="TextureButton" parent="."]
+margin_left = 94.0
+margin_top = 18.0
+margin_right = 407.0
+margin_bottom = 331.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Next" type="TextureButton" parent="."]
+margin_left = 1870.0
+margin_top = 742.0
+margin_right = 2183.0
+margin_bottom = 1055.0
+texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Previous" type="TextureButton" parent="."]
+margin_left = 90.0
+margin_top = 740.0
+margin_right = 403.0
+margin_bottom = 1053.0
+texture_normal = ExtResource( 8 )
+texture_disabled = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartNewButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -217.375
+margin_top = -8.37061
+margin_right = 95.6252
+margin_bottom = 304.629
+rect_scale = Vector2( 1.4, 1.4 )
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartNewText" type="Label" parent="."]
+anchor_left = -0.000445021
+anchor_right = 0.0899058
+margin_left = 971.512
+margin_top = 693.594
+margin_right = 1100.51
+margin_bottom = 784.594
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.713726, 0.521569, 0.372549, 1 )
+text = "Beginne 
+von Neuem"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
