@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Assets/Fonts/Quicksand-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=2]
@@ -11,6 +11,10 @@
 [ext_resource path="res://Assets/GFX/Interface/Buttons/Next.png" type="Texture" id=9]
 [ext_resource path="res://Assets/Fonts/Quicksand-SemiBold.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonConture.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Ton.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Music.png" type="Texture" id=13]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/TonDisabled.png" type="Texture" id=14]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/MusicDisabled.png" type="Texture" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -146,6 +150,30 @@ text = "Beginne
 von Neuem"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MusicButton" type="TextureButton" parent="."]
+margin_left = 884.0
+margin_top = 480.0
+margin_right = 1034.0
+margin_bottom = 630.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 13 )
+texture_disabled = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioButton" type="TextureButton" parent="."]
+margin_left = 1262.0
+margin_top = 480.0
+margin_right = 1412.0
+margin_bottom = 630.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 12 )
+texture_disabled = ExtResource( 14 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

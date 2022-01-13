@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Death12.png-c7177599fa868888dc708b55c6411bae.stex"
+path="res://.import/Death12.png-d54432232518f87d03842604812ed7ea.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Characters/Noa/Noa Death/Death12.png"
-dest_files=[ "res://.import/Death12.png-c7177599fa868888dc708b55c6411bae.stex" ]
+source_file="res://Assets/GFX/Characters/Noa/NoaDeath/Death12.png"
+dest_files=[ "res://.import/Death12.png-d54432232518f87d03842604812ed7ea.stex" ]
 
 [params]
 
