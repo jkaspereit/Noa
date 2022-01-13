@@ -160,12 +160,34 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="SelectedButton" type="TextureButton" parent="."]
-margin_left = 466.0
-margin_top = 796.0
-margin_right = 616.0
-margin_bottom = 946.0
-rect_scale = Vector2( 2.2, 1 )
+[node name="SelectedNoa" type="TextureButton" parent="."]
+margin_left = 457.0
+margin_top = 795.0
+margin_right = 957.0
+margin_bottom = 945.0
+rect_scale = Vector2( 0.7, 1 )
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedKaida" type="TextureButton" parent="."]
+margin_left = 935.0
+margin_top = 795.0
+margin_right = 1435.0
+margin_bottom = 945.0
+rect_scale = Vector2( 0.8, 1 )
+texture_normal = ExtResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectedMamoru" type="TextureButton" parent="."]
+margin_left = 1451.45
+margin_top = 795.0
+margin_right = 1951.45
+margin_bottom = 945.0
+rect_scale = Vector2( 0.8, 1 )
 texture_normal = ExtResource( 11 )
 __meta__ = {
 "_edit_use_anchors_": false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/GFX/Interface/Buttons/LineExtraBold.png" type="Texture" id=1]
 [ext_resource path="res://GUI/Interface/DeadScreen.gd" type="Script" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://Assets/GFX/Interface/Coins/GlowCoin.png" type="Texture" id=6]
 [ext_resource path="res://Assets/GFX/Interface/Buttons/LineMedium.png" type="Texture" id=7]
 [ext_resource path="res://Assets/Fonts/Quicksand-Regular.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ArrowL.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ArrowR.png" type="Texture" id=10]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -44,6 +46,7 @@ __meta__ = {
 }
 
 [node name="BG" type="Sprite" parent="."]
+visible = false
 position = Vector2( 1188, 561 )
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 4 )
@@ -217,18 +220,18 @@ position = Vector2( 1145, 420 )
 scale = Vector2( 1.6, 1 )
 texture = ExtResource( 7 )
 
-[node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 908.267
-margin_top = 787.306
-margin_right = 1308.27
-margin_bottom = 1100.31
+[node name="TapButton" type="TextureButton" parent="."]
+margin_left = 908.0
+margin_top = 787.0
+margin_right = 1308.0
+margin_bottom = 1100.0
 rect_scale = Vector2( 1.5, 0.8 )
 texture_normal = ExtResource( 6 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="Tap" type="Label" parent="."]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -243,3 +246,13 @@ text = "Tippe zum Loslaufen"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ArrowL" type="Sprite" parent="."]
+position = Vector2( 925, 902 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 9 )
+
+[node name="ArrowR" type="Sprite" parent="."]
+position = Vector2( 1358.35, 903.033 )
+scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 10 )
