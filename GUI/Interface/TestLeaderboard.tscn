@@ -1,0 +1,363 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Assets/GFX/Interface/Buttons/Home.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Fonts/Quicksand-SemiBold.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/GFX/Interface/BgInterface.png" type="Texture" id=6]
+[ext_resource path="res://GUI/Interface/LeaderboardFont.tres" type="DynamicFont" id=7]
+[ext_resource path="res://GUI/Interface/Leaderboard.gd" type="Script" id=8]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/LineMedium.png" type="Texture" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="TestLeaderboard" type="Control" groups=[
+"Interface",
+]]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.37842
+margin_right = 2.37842
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BG" type="Sprite" parent="."]
+position = Vector2( 1185, 561 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="Line" type="Sprite" parent="."]
+position = Vector2( 1180.37, 244.267 )
+scale = Vector2( 2.2, 1 )
+texture = ExtResource( 9 )
+
+[node name="Home" type="TextureButton" parent="."]
+margin_left = 97.0
+margin_top = 744.0
+margin_right = 410.0
+margin_bottom = 1057.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 540.0
+margin_top = 150.0
+margin_right = 1740.0
+margin_bottom = 950.0
+grow_horizontal = 2
+rect_min_size = Vector2( 1200, 800 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect"]
+anchor_right = 1.0
+margin_left = 50.0
+margin_top = 25.0
+margin_right = -50.0
+margin_bottom = 280.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Header" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 119.0
+margin_right = 1770.0
+margin_bottom = 219.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rang" type="Label" parent="Header"]
+margin_right = 250.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 250, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Rang"
+valign = 1
+
+[node name="Highscore" type="Label" parent="Header"]
+margin_left = 254.0
+margin_right = 704.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 450, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Highscore"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="Label" parent="Header"]
+margin_left = 708.0
+margin_right = 904.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 150, 100 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Spieler"
+valign = 1
+
+[node name="Rang1" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 279.0
+margin_right = 1770.0
+margin_bottom = 379.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="Rang1"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "1."
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Rang1"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Rang1"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Rang2" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 383.0
+margin_right = 1770.0
+margin_bottom = 483.0
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rang" type="Label" parent="Rang2"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "2."
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Rang2"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Rang2"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Rang3" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 487.0
+margin_right = 1770.0
+margin_bottom = 587.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="Rang3"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "3."
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Rang3"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Rang3"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Rang4" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 591.0
+margin_right = 1770.0
+margin_bottom = 691.0
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rang" type="Label" parent="Rang4"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "4."
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Rang4"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Rang4"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Rang5" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 695.0
+margin_right = 1770.0
+margin_bottom = 795.0
+custom_constants/separation = 100
+
+[node name="Rang" type="Label" parent="Rang5"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "5."
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Rang5"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Rang5"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Player" type="HBoxContainer" parent="."]
+margin_left = 670.0
+margin_top = 799.0
+margin_right = 1770.0
+margin_bottom = 899.0
+custom_constants/separation = 100
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Rank" type="Label" parent="Player"]
+margin_top = 12.0
+margin_right = 150.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 150, 75 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "-"
+valign = 1
+uppercase = true
+
+[node name="Highscore" type="Label" parent="Player"]
+margin_left = 250.0
+margin_right = 600.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "777"
+valign = 1
+uppercase = true
+
+[node name="Player" type="Label" parent="Player"]
+margin_left = 700.0
+margin_right = 1050.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 350, 100 )
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Username"
+valign = 1
+
+[node name="FetchData" type="HTTPRequest" parent="."]
+
+[node name="UpdateHighscore" type="HTTPRequest" parent="."]
+
+[connection signal="request_completed" from="FetchData" to="." method="_on_FetchData_request_completed"]
+[connection signal="request_completed" from="UpdateHighscore" to="." method="_on_UpdateHighscore_request_completed"]
