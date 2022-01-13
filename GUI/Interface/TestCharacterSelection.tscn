@@ -10,7 +10,7 @@
 [ext_resource path="res://Assets/GFX/Interface/Buttons/Home.png" type="Texture" id=8]
 [ext_resource path="res://Assets/GFX/Interface/Buttons/Next.png" type="Texture" id=9]
 [ext_resource path="res://Assets/GFX/Interface/Buttons/Previous.png" type="Texture" id=10]
-[ext_resource path="res://Assets/GFX/Interface/Buttons/LineBold.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/LineExtraBold.png" type="Texture" id=11]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -161,9 +161,9 @@ __meta__ = {
 }
 
 [node name="SelectedButton" type="TextureButton" parent="."]
-margin_left = 468.0
+margin_left = 466.0
 margin_top = 796.0
-margin_right = 618.0
+margin_right = 616.0
 margin_bottom = 946.0
 rect_scale = Vector2( 2.2, 1 )
 texture_normal = ExtResource( 11 )
