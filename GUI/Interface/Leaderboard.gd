@@ -101,7 +101,9 @@ func _on_FetchData_request_completed(result, response_code, headers, body):
 				'highscore': entry.highscore.integerValue,
 				'username': entry.username.stringValue,
 			})
-			display_data.sort_custom(LeaderboardSorter,"sort_descending")
+#			TODO: NULLPOINTER EXCEPTION
+#			display_data = display_data.sort_custom(LeaderboardSorter,"sort_descending"))
+
 	else:
 		print('Error fetching leaderboard data:')
 		print(result_body);

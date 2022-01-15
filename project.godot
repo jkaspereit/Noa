@@ -12,6 +12,8 @@ config_version=4
 
 config/name="Noa"
 run/main_scene="res://Authentification/Authentification.tscn"
+boot_splash/image="res://Assets/GFX/BG/blue-pink.png"
+boot_splash/bg_color=Color( 0.12549, 0.145098, 0.192157, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -87,15 +89,14 @@ quality/intended_usage/framebuffer_allocation.mobile=2
 vram_compression/import_bptc=true
 vram_compression/import_etc=true
 vram_compression/import_pvrtc=true
-quality/directional_shadow/size=8192
+quality/shadow_atlas/size=2048
 quality/shadow_atlas/size.mobile=1024
-quality/shadows/filter_mode=2
 quality/reflections/texture_array_reflections.mobile=true
 quality/reflections/high_quality_ggx.mobile=true
 quality/shading/force_vertex_shading=true
 quality/shading/force_vertex_shading.mobile=false
 quality/depth_prepass/disable_for_vendors=""
 quality/lightmapping/use_bicubic_sampling.mobile=true
-quality/filters/msaa=4
+quality/filters/msaa=2
 quality/depth/hdr.mobile=true
 quality/dynamic_fonts/use_oversampling=false

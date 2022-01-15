@@ -34,8 +34,8 @@ custom_constants/separation = 5
 alignment = 1
 
 [node name="Distance" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 912.0
-margin_right = 1312.0
+margin_left = 887.0
+margin_right = 1337.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 400, 50 )
 custom_fonts/font = ExtResource( 3 )
@@ -46,10 +46,9 @@ __meta__ = {
 }
 
 [node name="DistanceValue" type="Label" parent="VBoxContainer/HBoxContainer"]
-margin_left = 1317.0
-margin_top = 3.0
-margin_right = 1367.0
-margin_bottom = 47.0
+margin_left = 1342.0
+margin_right = 1392.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 50, 0 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -80,9 +79,8 @@ __meta__ = {
 
 [node name="CoinValue" type="Label" parent="VBoxContainer/HBoxContainer2"]
 margin_left = 1317.0
-margin_top = 3.0
 margin_right = 1367.0
-margin_bottom = 47.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 50, 0 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -100,8 +98,8 @@ custom_constants/separation = 5
 alignment = 1
 
 [node name="Gaps" type="Label" parent="VBoxContainer/HBoxContainer3"]
-margin_left = 912.0
-margin_right = 1312.0
+margin_left = 898.0
+margin_right = 1326.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 400, 50 )
 custom_fonts/font = ExtResource( 3 )
@@ -112,10 +110,9 @@ __meta__ = {
 }
 
 [node name="GapsValue" type="Label" parent="VBoxContainer/HBoxContainer3"]
-margin_left = 1317.0
-margin_top = 3.0
-margin_right = 1367.0
-margin_bottom = 47.0
+margin_left = 1331.0
+margin_right = 1381.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 50, 0 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
@@ -133,8 +130,8 @@ custom_constants/separation = 5
 alignment = 1
 
 [node name="Obstacle" type="Label" parent="VBoxContainer/HBoxContainer4"]
-margin_left = 912.0
-margin_right = 1312.0
+margin_left = 853.0
+margin_right = 1371.0
 margin_bottom = 50.0
 rect_min_size = Vector2( 400, 50 )
 custom_fonts/font = ExtResource( 3 )
@@ -145,10 +142,9 @@ __meta__ = {
 }
 
 [node name="ObstacleValue" type="Label" parent="VBoxContainer/HBoxContainer4"]
-margin_left = 1317.0
-margin_top = 3.0
-margin_right = 1367.0
-margin_bottom = 47.0
+margin_left = 1376.0
+margin_right = 1426.0
+margin_bottom = 50.0
 rect_min_size = Vector2( 50, 0 )
 custom_fonts/font = ExtResource( 3 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )

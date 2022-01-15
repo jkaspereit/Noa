@@ -77,7 +77,7 @@ tracks/1/keys = {
 }
 
 [node name="Camera" type="Camera"]
-transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 1.5, 6.4, 25 )
+transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 2.5, 8, 25 )
 projection = 1
 current = true
 size = 5.2
