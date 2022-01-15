@@ -1,8 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/GFX/Interface/Buttons/Home.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Fonts/Quicksand-SemiBold.ttf" type="DynamicFontData" id=5]
-[ext_resource path="res://Assets/GFX/Interface/BgInterface.png" type="Texture" id=6]
 [ext_resource path="res://GUI/Interface/LeaderboardFont.tres" type="DynamicFont" id=7]
 [ext_resource path="res://GUI/Interface/Leaderboard.gd" type="Script" id=8]
 [ext_resource path="res://Assets/GFX/Interface/Buttons/LineMedium.png" type="Texture" id=9]
@@ -23,11 +22,6 @@ script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="BG" type="Sprite" parent="."]
-position = Vector2( 1185, 561 )
-scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 6 )
 
 [node name="Line" type="Sprite" parent="."]
 position = Vector2( 1180.37, 244.267 )
@@ -145,7 +139,6 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "-"
 valign = 1
-uppercase = true
 
 [node name="Rang2" type="HBoxContainer" parent="."]
 margin_left = 670.0
@@ -188,7 +181,6 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "-"
 valign = 1
-uppercase = true
 
 [node name="Rang3" type="HBoxContainer" parent="."]
 margin_left = 670.0
@@ -228,7 +220,6 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "-"
 valign = 1
-uppercase = true
 
 [node name="Rang4" type="HBoxContainer" parent="."]
 margin_left = 670.0
@@ -271,7 +262,6 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "-"
 valign = 1
-uppercase = true
 
 [node name="Rang5" type="HBoxContainer" parent="."]
 margin_left = 670.0
@@ -311,7 +301,6 @@ custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "-"
 valign = 1
-uppercase = true
 
 [node name="Player" type="HBoxContainer" parent="."]
 margin_left = 670.0
