@@ -1,11 +1,12 @@
 extends Control
 
-signal regestration_successful;
-
 onready var HTTP = $HTTPRequest;
 onready var Username: LineEdit = $Username
 onready var Email: LineEdit = $Email
 onready var Password: LineEdit = $Password
+
+func to_register():
+	visible = true
 
 func _on_RegisterButton_button_down():
 	Firebase.register(Username.text,Email.text,Password.text,HTTP)
@@ -27,4 +28,4 @@ func _on_Registration_completed(result, response_code, headers, body):
 	if response_code != 200:
 		print('Error by registration: %s' % response_body.result.error.message)
 	else:
-		emit_signal("regestration_successful")
+		get_tree().call_group('Auth','login',Email.text,Password.text)

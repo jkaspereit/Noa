@@ -11,11 +11,11 @@
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=3]
 size = 35
 font_data = ExtResource( 3 )
 
@@ -79,7 +79,7 @@ margin_left = 793.223
 margin_top = 198.984
 margin_right = 1069.22
 margin_bottom = 248.984
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Benutzername"
 __meta__ = {
@@ -102,7 +102,7 @@ margin_left = 792.404
 margin_top = 391.088
 margin_right = 1028.4
 margin_bottom = 482.088
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Email-Adresse
 "
@@ -126,7 +126,7 @@ margin_left = 792.404
 margin_top = 581.548
 margin_right = 1028.4
 margin_bottom = 672.548
-custom_fonts/font = SubResource( 4 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Passwort"
 __meta__ = {

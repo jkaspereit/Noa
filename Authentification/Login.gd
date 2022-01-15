@@ -1,9 +1,8 @@
 extends Control
 
 onready var http: HTTPRequest = $HTTPRequest
-onready var username: LineEdit = $ManualLogin/Username
-onready var email: LineEdit = $ManualLogin/Email
-onready var password: LineEdit = $ManualLogin/Password
+onready var Email: LineEdit = $Email
+onready var Password: LineEdit = $Password
 
 var play_services
 
@@ -13,13 +12,13 @@ func _ready():
 
 func _on_Register_button_down():
 	visible = false
-	get_tree().call_group('Auth','register')
+	get_tree().call_group('Auth','to_register')
 
-func login():
-	Firebase.login(email.text,password.text,http)
+func login(email: String, password: String):
+	Firebase.login(email,password,http)
 
 func _on_Login_button_down():
-	login()
+	login(Email.text,Password.text)
 
 func _on_Login_request_completed(result, response_code, headers, body):
 	var response_body := JSON.parse(body.get_string_from_ascii())
@@ -46,7 +45,7 @@ func gplay_sign_in():
 	if play_services:
 		play_services.signIn()
 	else:
-		$ManualLogin/ErrorLabel.set_text('Google Play Services not found. Manual Login required.')
+		print('Google Play Services not found. Manual Login required.')
 
 # Callback sign_in() success
 func _on_sign_in_success(userProfile_json: String) -> void:
@@ -74,4 +73,4 @@ func _on_Password_text_changed(new_text):
 	$LoginButton.disabled = is_login_disabled()
 
 func is_login_disabled():
-	return username.text.empty() or password.text.empty()
+	return Email.text.empty() or Password.text.empty()
