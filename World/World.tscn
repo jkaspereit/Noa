@@ -26,6 +26,7 @@ directional_shadow_bias_split_scale = 0.0
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.53344, 2.23836, 18.0457 )
+visible = false
 light_color = Color( 0.94902, 0.870588, 0.568627, 1 )
 light_energy = 1.6
 light_specular = 0.0

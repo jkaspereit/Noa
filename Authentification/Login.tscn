@@ -1,12 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Authentification/Login.gd" type="Script" id=1]
-[ext_resource path="res://Authentification/AuthFont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Assets/GFX/Interface/Login/LoginField.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonLogin.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonRegister.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonGreyNew.png" type="Texture" id=7]
+
+[sub_resource type="DynamicFont" id=3]
+size = 35
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=7]
+size = 42
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 35
+font_data = ExtResource( 3 )
 
 [node name="Login" type="Control"]
 margin_right = 2280.0
 margin_bottom = 1080.0
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -15,103 +33,113 @@ __meta__ = {
 
 [node name="HTTPRequest2" type="HTTPRequest" parent="."]
 
-[node name="ManualLogin" type="VBoxContainer" parent="."]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -270.0
-margin_top = -50.0
-margin_right = 270.0
-margin_bottom = 50.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 19
-alignment = 1
+[node name="UsernameLabel" type="Label" parent="."]
+margin_left = 775.0
+margin_top = 265.0
+margin_right = 1050.0
+margin_bottom = 315.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Benutzername"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Username" type="LineEdit" parent="ManualLogin"]
-margin_right = 540.0
-margin_bottom = 48.0
-rect_min_size = Vector2( 0, 40 )
-custom_fonts/font = ExtResource( 2 )
-text = "username"
-align = 1
+[node name="Username" type="LineEdit" parent="."]
+show_behind_parent = true
+margin_left = 775.0
+margin_top = 315.0
+margin_right = 1475.0
+margin_bottom = 465.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_styles/read_only = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Email" type="LineEdit" parent="ManualLogin"]
-margin_top = 67.0
-margin_right = 540.0
-margin_bottom = 115.0
-rect_min_size = Vector2( 0, 40 )
-custom_fonts/font = ExtResource( 2 )
-text = "test@test.de"
-align = 1
+[node name="UsernameBackground" type="TextureRect" parent="Username"]
+show_behind_parent = true
+margin_right = 700.0
+margin_bottom = 150.0
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Password" type="LineEdit" parent="ManualLogin"]
-margin_top = 134.0
-margin_right = 540.0
-margin_bottom = 182.0
-rect_min_size = Vector2( 0, 40 )
-custom_fonts/font = ExtResource( 2 )
-text = "test1234"
-align = 1
+[node name="PasswordLabel" type="Label" parent="."]
+margin_left = 792.404
+margin_top = 458.149
+margin_right = 943.404
+margin_bottom = 549.149
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Passwort
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Password" type="LineEdit" parent="."]
+show_behind_parent = true
+margin_left = 775.0
+margin_top = 315.0
+margin_right = 1475.0
+margin_bottom = 465.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_styles/read_only = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 secret = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HBoxContainer" type="HBoxContainer" parent="ManualLogin"]
-margin_top = 201.0
-margin_right = 540.0
-margin_bottom = 245.0
-rect_min_size = Vector2( 0, 40 )
-size_flags_horizontal = 3
-size_flags_vertical = 3
-custom_constants/separation = 12
-
-[node name="Register" type="Button" parent="ManualLogin/HBoxContainer"]
-margin_right = 264.0
-margin_bottom = 44.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 2 )
-text = "REGISTER"
+[node name="PasswordBackground" type="TextureRect" parent="Password"]
+show_behind_parent = true
+margin_top = 190.0
+margin_right = 700.0
+margin_bottom = 340.0
+texture = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Login" type="Button" parent="ManualLogin/HBoxContainer"]
-margin_left = 276.0
-margin_right = 540.0
-margin_bottom = 44.0
-size_flags_horizontal = 3
-custom_fonts/font = ExtResource( 2 )
-text = "LOGIN"
+[node name="LoginButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = 130.0
+margin_right = 335.0
+margin_bottom = 280.0
+texture_normal = ExtResource( 2 )
+texture_disabled = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ErrorLabel" type="Label" parent="ManualLogin"]
-margin_top = 264.0
-margin_right = 540.0
-margin_bottom = 302.0
-custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
-text = "Test"
-align = 1
+[node name="RegisterButton" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -365.0
+margin_top = 130.0
+margin_right = -40.0
+margin_bottom = 280.0
+texture_normal = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
 [connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
-[connection signal="button_down" from="ManualLogin/HBoxContainer/Register" to="." method="_on_Register_button_down"]
-[connection signal="button_down" from="ManualLogin/HBoxContainer/Login" to="." method="_on_Login_button_down"]
+[connection signal="button_down" from="LoginButton" to="." method="_on_Login_button_down"]
+[connection signal="button_down" from="RegisterButton" to="." method="_on_Register_button_down"]
