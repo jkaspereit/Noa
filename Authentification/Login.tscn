@@ -1,11 +1,11 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Authentification/Login.gd" type="Script" id=1]
-[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonLogin.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GFX/Interface/Login/RegisterButton.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonRegister.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Interface/Login/LoginButtonDisabled.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GFX/Interface/Login/InputBackground.png" type="Texture" id=5]
-[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonGreyNew.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GFX/Interface/Login/LoginButton.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -23,7 +23,9 @@ font_data = ExtResource( 3 )
 size = 35
 font_data = ExtResource( 3 )
 
-[node name="Login" type="Control"]
+[node name="Login" type="Control" groups=[
+"Auth",
+]]
 margin_right = 2280.0
 margin_bottom = 1080.0
 script = ExtResource( 1 )
@@ -32,8 +34,6 @@ __meta__ = {
 }
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
-
-[node name="HTTPRequest2" type="HTTPRequest" parent="."]
 
 [node name="UsernameLabel" type="Label" parent="."]
 margin_left = 775.0
@@ -121,8 +121,9 @@ margin_left = 10.0
 margin_top = 130.0
 margin_right = 335.0
 margin_bottom = 280.0
-texture_normal = ExtResource( 2 )
-texture_disabled = ExtResource( 7 )
+disabled = true
+texture_normal = ExtResource( 6 )
+texture_disabled = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -136,12 +137,13 @@ margin_left = -365.0
 margin_top = 130.0
 margin_right = -40.0
 margin_bottom = 280.0
-texture_normal = ExtResource( 4 )
+texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="request_completed" from="HTTPRequest" to="." method="_on_HTTPRequest_request_completed"]
-[connection signal="request_completed" from="HTTPRequest2" to="." method="_on_HTTPRequest2_request_completed"]
+[connection signal="request_completed" from="HTTPRequest" to="." method="_on_Login_request_completed"]
+[connection signal="text_changed" from="Username" to="." method="_on_Username_text_changed"]
+[connection signal="text_changed" from="Password" to="." method="_on_Password_text_changed"]
 [connection signal="button_down" from="LoginButton" to="." method="_on_Login_button_down"]
 [connection signal="button_down" from="RegisterButton" to="." method="_on_Register_button_down"]

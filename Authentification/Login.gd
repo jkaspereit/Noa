@@ -1,7 +1,6 @@
 extends Control
 
 onready var http: HTTPRequest = $HTTPRequest
-onready var http2: HTTPRequest = $HTTPRequest2
 onready var username: LineEdit = $ManualLogin/Username
 onready var email: LineEdit = $ManualLogin/Email
 onready var password: LineEdit = $ManualLogin/Password
@@ -13,33 +12,22 @@ func _ready():
 	gplay_sign_in();
 
 func _on_Register_button_down():
-	if email.text.empty() or password.text.empty():
-		$ManualLogin/ErrorLabel.set_text('invalid input')
-		return
-	Firebase.register(username.text,email.text,password.text,http)
+	visible = false
+	get_tree().call_group('Auth','register')
 
+func login():
+	Firebase.login(email.text,password.text,http)
 
 func _on_Login_button_down():
-	if email.text.empty() or password.text.empty():
-		$ManualLogin/ErrorLabel.set_text('invalid input')
-		return
-	Firebase.login(email.text,password.text,http2)
+	login()
 
-
-func _on_HTTPRequest_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray):
+func _on_Login_request_completed(result, response_code, headers, body):
 	var response_body := JSON.parse(body.get_string_from_ascii())
 	if response_code != 200:
-		$ManualLogin/ErrorLabel.set_text(response_body.result.error.message)
-	else:
-		$ManualLogin/ErrorLabel.set_text('Registration successful!')
-
-
-func _on_HTTPRequest2_request_completed(result: int, response_code: int, headers: PoolStringArray, body: PoolByteArray):
-	var response_body := JSON.parse(body.get_string_from_ascii())
-	if response_code != 200:
-		$ManualLogin/ErrorLabel.set_text(response_body.result.error.message)
+		print('Login Error: %s' % response_body.result.error.message)
 	else:
 		get_tree().change_scene("res://Noa.tscn")
+	
 
 func init_play_services():
 	if Engine.has_singleton("GodotPlayGamesServices"):
@@ -78,3 +66,12 @@ func _on_sign_in_failed(error_code: int) -> void:
 	$ManualLogin.visible = true;
 	$ManualLogin/ErrorLabel.set_text('Google Play Login failed.')
 	print("Error signing in: %s" % error_code)
+
+func _on_Username_text_changed(new_text):
+	$LoginButton.disabled = is_login_disabled()
+
+func _on_Password_text_changed(new_text):
+	$LoginButton.disabled = is_login_disabled()
+
+func is_login_disabled():
+	return username.text.empty() or password.text.empty()
