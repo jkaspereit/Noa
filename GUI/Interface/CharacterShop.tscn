@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://GUI/Interface/CharacterShop.gd" type="Script" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Assets/GFX/Interface/Shop/Button300Coins.png" type="Texture" id=10]
 [ext_resource path="res://Assets/GFX/Interface/Shop/Button450Coins.png" type="Texture" id=11]
 [ext_resource path="res://Assets/GFX/Interface/CharacterPngs/Malu.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GFX/Interface/Shop/ButtonUnlocked.png" type="Texture" id=13]
 
 [sub_resource type="DynamicFont" id=1]
 size = 42
@@ -103,6 +104,7 @@ margin_top = 770.0
 margin_right = 865.0
 margin_bottom = 870.0
 texture_normal = ExtResource( 9 )
+texture_disabled = ExtResource( 13 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -116,6 +118,7 @@ rect_min_size = Vector2( 250, 100 )
 size_flags_horizontal = 0
 size_flags_vertical = 0
 texture_normal = ExtResource( 10 )
+texture_disabled = ExtResource( 13 )
 
 [node name="PriceRight" type="TextureButton" parent="."]
 margin_left = 1415.0
@@ -123,6 +126,7 @@ margin_top = 770.0
 margin_right = 1665.0
 margin_bottom = 870.0
 texture_normal = ExtResource( 11 )
+texture_disabled = ExtResource( 13 )
 
 [node name="Return" type="TextureButton" parent="."]
 margin_left = 95.0
