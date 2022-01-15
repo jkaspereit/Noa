@@ -55,7 +55,7 @@ func get_direction():
 	# when we are close, we go on with the next waypoint
 	if abs(length_2d) < 0.25:
 		Pathfinder.path.remove(0)
-		Gamestate.raise_distance()
+		get_tree().call_group('Interface','raise_distance')
 	# don't divide by zero
 	if not length_2d == 0 and not direction.length() == 0:
 		# normalize x, z as in 2d, so that jumping doesn't affect the velocity
