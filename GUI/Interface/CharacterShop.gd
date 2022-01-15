@@ -27,7 +27,7 @@ const Price300 = preload("res://Assets/GFX/Interface/Shop/Button300Coins.png")
 const Price450 = preload("res://Assets/GFX/Interface/Shop/Button450Coins.png")
 const Price777 = preload("res://Assets/GFX/Interface/Shop/Button777Coins.png")
 
-const Unlocked = preload("res://Assets/GFX/Interface/Shop/CharacterUnlocked.PNG")
+const Unlocked = preload("res://Assets/GFX/Interface/Shop/ButtonUnlocked.png")
 
 var price_texture_array = [
 	Unlocked,
