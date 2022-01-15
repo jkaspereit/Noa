@@ -10,6 +10,9 @@ func _ready():
 	init_play_services();
 	gplay_sign_in();
 
+func to_login():
+	visible = true
+
 func _on_Register_button_down():
 	visible = false
 	get_tree().call_group('Auth','to_register')

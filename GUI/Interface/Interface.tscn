@@ -17,7 +17,8 @@ visible = false
 [node name="Leaderboard" parent="." instance=ExtResource( 4 )]
 visible = false
 
-[node name="CharacterSelection" parent="." instance=ExtResource( 5 )]
+[node name="CharacterShop" parent="." instance=ExtResource( 3 )]
 visible = false
 
-[node name="CharacterShop" parent="." instance=ExtResource( 3 )]
+[node name="CharacterSelection" parent="." instance=ExtResource( 5 )]
+visible = false

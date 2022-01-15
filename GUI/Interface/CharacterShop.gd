@@ -22,10 +22,10 @@ const char_texture_array = [
 	TextureMamoru,
 ]
 
-const Price150 = preload("res://Assets/GFX/Interface/Shop/CoinPrice150.PNG")
-const Price300 = preload("res://Assets/GFX/Interface/Shop/CoinPrice300.PNG")
-const Price450 = preload("res://Assets/GFX/Interface/Shop/CoinPrice450.PNG")
-const Price777 = preload("res://Assets/GFX/Interface/Shop/CoinPrice777.PNG")
+const Price150 = preload("res://Assets/GFX/Interface/Shop/Button150Coins.png")
+const Price300 = preload("res://Assets/GFX/Interface/Shop/Button300Coins.png")
+const Price450 = preload("res://Assets/GFX/Interface/Shop/Button450Coins.png")
+const Price777 = preload("res://Assets/GFX/Interface/Shop/Button777Coins.png")
 
 const Unlocked = preload("res://Assets/GFX/Interface/Shop/CharacterUnlocked.PNG")
 

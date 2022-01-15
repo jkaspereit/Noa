@@ -29,11 +29,11 @@ const texture_locked_array = [
 ]
 
 const description_array = [
-	'Noa',
-	'Arun',
-	'Isra',
-	'Kaida',
-	'Mamoru'
+	'Noa // Fährtenleser',
+	'Arun // Sonnenanbeter',
+	'Isra // Katzenauge',
+	'Kaida // Bergbezwinger',
+	'Mamoru // Beschützer'
 ]
 
 var index = 0
