@@ -60,10 +60,11 @@ func display_chars():
 	$CharButtonRight.disabled = not Gamestate.player_chars[index+2];
 
 func _on_Return_pressed():
-	get_tree().call_group("Interface", "to_home");
+	switch_to_home()
 
-func to_home():
+func switch_to_home():
 	visible = false;
+	get_tree().call_group("Interface", "to_home", 'Selection');
 
 func to_selection():
 	display_chars();
@@ -88,15 +89,15 @@ func _on_Previous_pressed():
 
 func _on_CharButtonLeft_pressed():
 	swap_charactere(index);
-	get_tree().call_group("Interface", "to_home");
+	switch_to_home()
 
 func _on_CharButtonMid_pressed():
 	swap_charactere(index+1);
-	get_tree().call_group("Interface", "to_home");
+	switch_to_home()
 
 func _on_CharButtonRight_pressed():
 	swap_charactere(index+2);
-	get_tree().call_group("Interface", "to_home");
+	switch_to_home()
 
 func swap_charactere(i):
 	CharacterTextureLoader.switch_char(CharacterTextureLoader.NOA)

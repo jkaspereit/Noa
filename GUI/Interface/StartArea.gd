@@ -12,7 +12,8 @@ func _on_Play_input_event(viewport, event, shape_idx):
 		if event.pressed:
 			get_tree().call_group('Interface','play')
 
-func to_home():
+func to_home(from):
+	print('hello worldd')
 	visible = true
 
 func to_settings():

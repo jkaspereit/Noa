@@ -39,9 +39,6 @@ func to_leaderboard():
 	display_player();
 	visible = true;
 
-func to_home():
-	visible = false
-
 func game_over():
 	var new_score = Gamestate.calculate_score();
 	# It's possible that Gamestate updates the player_highscore earlier
@@ -81,7 +78,8 @@ func display_player():
 	$TextureRect/VBoxContainer/Player/Highscore.text = str(Gamestate.player_highscore);
 
 func _on_Return_pressed():
-	get_tree().call_group('Interface','to_home')
+	visible = false
+	get_tree().call_group('Interface','to_home','Leaderboard')
 
 func _on_UpdateHighscore_request_completed(result, response_code, headers, body):
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary

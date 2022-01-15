@@ -1,6 +1,4 @@
-[gd_scene load_steps=3 format=2]
-
-[ext_resource path="res://GUI/Interface/StartArea.gd" type="Script" id=1]
+[gd_scene load_steps=2 format=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 1140, 540 )
@@ -10,7 +8,6 @@ extents = Vector2( 1140, 540 )
 ]]
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

@@ -36,8 +36,12 @@ func to_selection():
 func to_settings():
 	$AnimationPlayer.play("ToSettings");
 
-func to_home():
-	$AnimationPlayer.play("FromShopToHome")
+func to_home(from):
+	match from:
+		'Shop': $AnimationPlayer.play("FromShopToHome")
+		'Selection': $AnimationPlayer.play("FromSelectionToHome")
+		'Leaderboard': $AnimationPlayer.play("FromLeaderboardToHome")
+	
 
 func play_again():
 	$Tween.interpolate_property(self,"translation",

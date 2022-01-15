@@ -30,7 +30,7 @@ func is_valid(event):
 func game_over():
 	processing_enabled = true
 
-func to_home():
+func to_home(from):
 	processing_enabled = true
 
 func to_shop():

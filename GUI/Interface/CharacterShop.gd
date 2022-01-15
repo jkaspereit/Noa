@@ -66,10 +66,11 @@ func display():
 	$PriceRight.disabled = Gamestate.player_chars[index+2];
 
 func _on_Return_pressed():
-	get_tree().call_group("Interface", "to_home");
+	switch_to_home()
 
-func to_home():
+func switch_to_home():
 	visible = false;
+	get_tree().call_group("Interface", "to_home",'Shop');
 
 func to_shop():
 	display();
@@ -104,7 +105,18 @@ func buy_character(index):
 		Gamestate.player_coins -= price
 		Gamestate.player_chars[index] = true
 		Gamestate.save_progress()
-	display()
+	switch_char(index)
+	switch_to_home()
+
+func switch_char(index):
+	var temp = [
+		CharacterTextureLoader.NOA,
+		CharacterTextureLoader.ARUN,
+		CharacterTextureLoader.ISRA,
+		CharacterTextureLoader.KAIDA,
+		CharacterTextureLoader.MAMORU
+	]
+	CharacterTextureLoader.switch_char(temp[index])
 
 func get_price(index) -> int:
 	match index:
