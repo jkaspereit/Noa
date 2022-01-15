@@ -34,6 +34,7 @@ Gamestate="*res://Gamestate.gd"
 Generator="*res://Generator/Generator.gd"
 Firebase="*res://Authentification/firebase.gd"
 PlayIntegration="*res://Authentification/PlayIntegration.gd"
+CharacterTextureLoader="*res://Characters/CharacterTextureLoader.gd"
 
 [display]
 

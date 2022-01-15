@@ -1,19 +1,5 @@
 extends Control
 
-const Noa = preload("res://Characters/Noa/Noa.tscn")
-const Arun = preload("res://Characters/Arun/Arun.tscn")
-const Isra = preload("res://Characters/Isra/Isra.tscn")
-const Kaida = preload("res://Characters/Kaida/Kaida.tscn")
-const Mamoru = preload("res://Characters/Mamoru/Mamoru.tscn")
-
-const char_array = [
-	Noa,
-	Arun,
-	Isra,
-	Kaida,
-	Mamoru
-]
-
 const ButtonTextureNormalNoa = preload("res://Assets/GFX/Interface/CharacterPngs/Noa.png")
 const ButtonTextureNormalArun = preload("res://Assets/GFX/Interface/CharacterPngs/Arun.png")
 const ButtonTextureNormalIsra = preload("res://Assets/GFX/Interface/CharacterPngs/Isra.png")
@@ -113,8 +99,7 @@ func _on_CharButtonRight_pressed():
 	get_tree().call_group("Interface", "to_home");
 
 func swap_charactere(i):
-	remove_char();
-	instance_char_node(char_array[i])
+	CharacterTextureLoader.switch_char(CharacterTextureLoader.NOA)
 
 func remove_char():
 	var char_node = get_tree().get_root().find_node("Char",true,false);

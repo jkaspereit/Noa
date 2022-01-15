@@ -1,14 +1,5 @@
 extends KinematicBody
 
-var TEXTURE_FORWARD = preload("res://Characters/Noa/WalkForward.tres")
-var TEXTURE_FORWARD_JUMP = preload("res://Characters/Noa/WalkForwardJump.tres")
-var TEXTURE_LEFT = preload("res://Characters/Noa/WalkLeft.tres")
-var TEXTURE_LEFT_JUMP = preload("res://Characters/Noa/WalkLeftJump.tres")
-var TEXTURE_RIGHT = preload("res://Characters/Noa/WalkRight.tres")
-var TEXTURE_RIGHT_JUMP = preload("res://Characters/Noa/WalkRightJump.tres")
-var TEXTURE_HOME = preload("res://Characters/Noa/Home.tres")
-var DEATH = preload("res://Characters/Noa/Death.tres")
-
 const SPEED = 6.5
 
 const STARTING_POS = Vector3(-5.5,-1,17)
@@ -76,11 +67,11 @@ func get_direction():
 
 func look_forward():
 	if velocity.x > SPEED - 1:
-		$MeshInstance.mesh.material.albedo_texture = TEXTURE_RIGHT
+		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_right()
 	elif velocity.x < - SPEED + 1:
-		$MeshInstance.mesh.material.albedo_texture = TEXTURE_LEFT
+		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_left()
 	else: 
-		$MeshInstance.mesh.material.albedo_texture = TEXTURE_FORWARD
+		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_forward()
 
 func has_fallen():
 	var CharHeight = translation.y
@@ -101,4 +92,4 @@ func reset():
 	set_translation(STARTING_POS)
 
 func load_home_texture():
-	$MeshInstance.mesh.material.albedo_texture = TEXTURE_HOME
+	$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_home()
