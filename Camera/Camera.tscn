@@ -4,8 +4,8 @@
 
 [sub_resource type="Animation" id=1]
 resource_name = "FromLeaderboardToHome"
-length = 3.0
-step = 1.0
+length = 1.5
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:translation")
 tracks/0/interp = 1
@@ -13,10 +13,10 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1.5, 1 ),
 "update": 0,
-"values": [ Vector3( -2.9, 6, 17.7 ), Vector3( 1.5, 6.4, 25 ) ]
+"values": [ Vector3( -2.9, 5.9, 17.7 ), Vector3( 1.5, 6.4, 25 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:size")
@@ -25,13 +25,13 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 0.5, 1 ),
 "update": 0,
-"values": [ 1.8, 5.2 ]
+"values": [ 1.55, 5.2 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 resource_name = "FromSelectionToHome"
 length = 1.5
 tracks/0/type = "value"
@@ -59,7 +59,7 @@ tracks/1/keys = {
 "values": [ Vector3( -7.25, 5.85, 25 ), Vector3( 1.5, 6.4, 25 ) ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=3]
 resource_name = "FromShopToHome"
 length = 1.5
 step = 0.5
@@ -88,8 +88,7 @@ tracks/1/keys = {
 "values": [ 1.6, 5.2 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "ToLeaderboard"
+[sub_resource type="Animation" id=4]
 length = 1.5
 step = 0.5
 tracks/0/type = "value"
@@ -102,7 +101,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 0.5, 1 ),
 "update": 0,
-"values": [ Vector3( 1.5, 6.4, 25 ), Vector3( -2.9, 6, 17.7 ) ]
+"values": [ Vector3( 1.5, 6.4, 25 ), Vector3( -2.9, 5.9, 17.7 ) ]
 }
 tracks/1/type = "value"
 tracks/1/path = NodePath(".:size")
@@ -114,10 +113,10 @@ tracks/1/keys = {
 "times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1.5, 1 ),
 "update": 0,
-"values": [ 5.2, 1.8 ]
+"values": [ 5.2, 1.55 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=5]
 resource_name = "ToSelection"
 length = 1.5
 step = 0.5
@@ -146,8 +145,7 @@ tracks/1/keys = {
 "values": [ 5.2, 1.1 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "ToShop"
+[sub_resource type="Animation" id=6]
 length = 1.5
 step = 0.5
 tracks/0/type = "value"
@@ -188,11 +186,11 @@ smooth_speed = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/FromLeaderboardToHome = SubResource( 1 )
-anims/FromSelectionToHome = SubResource( 4 )
-anims/FromShopToHome = SubResource( 5 )
-anims/ToLeaderboard = SubResource( 2 )
-anims/ToSelection = SubResource( 6 )
-anims/ToShop = SubResource( 3 )
+anims/FromSelectionToHome = SubResource( 2 )
+anims/FromShopToHome = SubResource( 3 )
+anims/ToLeaderboard = SubResource( 4 )
+anims/ToSelection = SubResource( 5 )
+anims/ToShop = SubResource( 6 )
 
 [node name="Tween" type="Tween" parent="."]
 

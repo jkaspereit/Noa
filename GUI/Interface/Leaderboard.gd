@@ -7,19 +7,19 @@ class LeaderboardSorter:
 		return false
 
 onready var highscore_array = [
-	$TextureRect/VBoxContainer/Rang1/Highscore,
-	$TextureRect/VBoxContainer/Rang2/Highscore,
-	$TextureRect/VBoxContainer/Rang3/Highscore,
-	$TextureRect/VBoxContainer/Rang4/Highscore,
-	$TextureRect/VBoxContainer/Rang5/Highscore,
+	$Rang1/Highscore,
+	$Rang2/Highscore,
+	$Rang3/Highscore,
+	$Rang4/Highscore,
+	$Rang5/Highscore,
 ]
 
 onready var player_array = [
-	$TextureRect/VBoxContainer/Rang1/Player,
-	$TextureRect/VBoxContainer/Rang2/Player,
-	$TextureRect/VBoxContainer/Rang3/Player,
-	$TextureRect/VBoxContainer/Rang4/Player,
-	$TextureRect/VBoxContainer/Rang5/Player,
+	$Rang1/Player,
+	$Rang2/Player,
+	$Rang3/Player,
+	$Rang4/Player,
+	$Rang5/Player,
 ]
 
 onready var httpFetchData = $FetchData
@@ -73,13 +73,9 @@ func display_leaderboard():
 
 func display_player():
 	if rank != -1:
-		$TextureRect/VBoxContainer/Player/Rank.text = str(rank);
-	$TextureRect/VBoxContainer/Player/Player.text = Firebase.user_info.username;
-	$TextureRect/VBoxContainer/Player/Highscore.text = str(Gamestate.player_highscore);
-
-func _on_Return_pressed():
-	visible = false
-	get_tree().call_group('Interface','to_home','Leaderboard')
+		$Player/Rank.text = str(rank+1);
+	$Player/Player.text = Firebase.user_info.username;
+	$Player/Highscore.text = str(Gamestate.player_highscore);
 
 func _on_UpdateHighscore_request_completed(result, response_code, headers, body):
 	var result_body := JSON.parse(body.get_string_from_ascii()).result as Dictionary
@@ -111,3 +107,8 @@ func reset():
 	for i in range(5):
 		highscore_array[i].text = "-";
 		player_array[i].text = "-";
+
+
+func _on_Home_pressed():
+	visible = false
+	get_tree().call_group('Interface','to_home','Leaderboard')
