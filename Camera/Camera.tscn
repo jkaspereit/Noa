@@ -1,26 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Camera/Camera.gd" type="Script" id=1]
 
 [sub_resource type="Animation" id=1]
-resource_name = "FocusChar"
-length = 3.0
-step = 1.5
-tracks/0/type = "value"
-tracks/0/path = NodePath(".:translation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
-"transitions": PoolRealArray( 1, 1 ),
-"update": 0,
-"values": [ Vector3( 2.5, 8, 25 ), Vector3( 2.5, 8, 25 ) ]
-}
-
-[sub_resource type="Animation" id=2]
-resource_name = "ToHome"
+resource_name = "FromLeaderboardToHome"
 length = 3.0
 step = 1.0
 tracks/0/type = "value"
@@ -48,9 +31,38 @@ tracks/1/keys = {
 "values": [ 1.8, 5.2 ]
 }
 
-[sub_resource type="Animation" id=3]
-length = 3.0
-step = 1.0
+[sub_resource type="Animation" id=4]
+resource_name = "FromSelectionToHome"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:size")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.1, 5.2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:translation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( -7.25, 5.85, 25 ), Vector3( 1.5, 6.4, 25 ) ]
+}
+
+[sub_resource type="Animation" id=5]
+resource_name = "FromShopToHome"
+length = 1.5
+step = 0.5
 tracks/0/type = "value"
 tracks/0/path = NodePath(".:translation")
 tracks/0/interp = 1
@@ -58,7 +70,36 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 4.2, 3, 28 ), Vector3( 1.5, 6.4, 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.6, 5.2 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "ToLeaderboard"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 0.5, 1 ),
 "update": 0,
 "values": [ Vector3( 1.5, 6.4, 25 ), Vector3( -2.9, 6, 17.7 ) ]
@@ -70,14 +111,72 @@ tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0, 3 ),
+"times": PoolRealArray( 0, 1.5 ),
 "transitions": PoolRealArray( 1.5, 1 ),
 "update": 0,
 "values": [ 5.2, 1.8 ]
 }
 
+[sub_resource type="Animation" id=6]
+resource_name = "ToSelection"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.5, 6.4, 25 ), Vector3( -7.25, 5.85, 25 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 5.2, 1.1 ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "ToShop"
+length = 1.5
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:translation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector3( 1.5, 6.4, 25 ), Vector3( 4.2, 3, 28 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:size")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 5.2, 1.6 ]
+}
+
 [node name="Camera" type="Camera"]
-transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 2.5, 8, 25 )
+transform = Transform( 0.707107, -0.408244, 0.577353, 0, 0.816501, 0.577345, -0.707107, -0.408244, 0.577353, 1.5, 6.4, 25 )
 projection = 1
 current = true
 size = 5.2
@@ -88,9 +187,12 @@ offset = Vector3( 10, 10, 5 )
 smooth_speed = 1.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/FocusChar = SubResource( 1 )
-anims/ToHome = SubResource( 2 )
-anims/ToSettings = SubResource( 3 )
+anims/FromLeaderboardToHome = SubResource( 1 )
+anims/FromSelectionToHome = SubResource( 4 )
+anims/FromShopToHome = SubResource( 5 )
+anims/ToLeaderboard = SubResource( 2 )
+anims/ToSelection = SubResource( 6 )
+anims/ToShop = SubResource( 3 )
 
 [node name="Tween" type="Tween" parent="."]
 

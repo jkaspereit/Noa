@@ -63,6 +63,7 @@ custom_styles/read_only = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "test@test.de"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -101,6 +102,7 @@ custom_styles/read_only = SubResource( 6 )
 custom_styles/normal = SubResource( 7 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "test1234"
 secret = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -124,7 +126,6 @@ margin_left = 10.0
 margin_top = 130.0
 margin_right = 335.0
 margin_bottom = 280.0
-disabled = true
 texture_normal = ExtResource( 6 )
 texture_disabled = ExtResource( 4 )
 __meta__ = {

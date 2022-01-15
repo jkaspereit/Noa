@@ -25,19 +25,19 @@ func game_over():
 	processing_enabled = false;
 
 func to_shop():
-	$AnimationPlayer.play("ToSettings");
+	$AnimationPlayer.play("ToShop");
 
 func to_leaderboard():
-	$AnimationPlayer.play("ToSettings");
+	$AnimationPlayer.play("ToLeaderboard");
 
 func to_selection():
-	$AnimationPlayer.play("ToSettings");
+	$AnimationPlayer.play("ToSelection");
 
 func to_settings():
 	$AnimationPlayer.play("ToSettings");
 
 func to_home():
-	$AnimationPlayer.play("ToHome")
+	$AnimationPlayer.play("FromShopToHome")
 
 func play_again():
 	$Tween.interpolate_property(self,"translation",
