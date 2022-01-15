@@ -17,3 +17,6 @@ firebase.gd
 
 # Don't push project configuration, due to apk keys
 project.godot
+
+# Android Build Files are to large
+android/*
