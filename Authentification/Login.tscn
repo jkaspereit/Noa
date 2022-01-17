@@ -30,7 +30,8 @@ font_data = ExtResource( 3 )
 [node name="Login" type="Control" groups=[
 "Auth",
 ]]
-margin_right = 2280.0
+margin_left = 0.885498
+margin_right = 2280.89
 margin_bottom = 1080.0
 script = ExtResource( 1 )
 __meta__ = {
@@ -53,7 +54,7 @@ __meta__ = {
 
 [node name="Email" type="LineEdit" parent="."]
 show_behind_parent = true
-margin_left = 775.0
+margin_left = 795.0
 margin_top = 315.0
 margin_right = 1475.0
 margin_bottom = 465.0
@@ -70,7 +71,8 @@ __meta__ = {
 
 [node name="UsernameBackground" type="TextureRect" parent="Email"]
 show_behind_parent = true
-margin_right = 700.0
+margin_left = -20.0
+margin_right = 680.0
 margin_bottom = 150.0
 texture = ExtResource( 5 )
 __meta__ = {
@@ -79,9 +81,9 @@ __meta__ = {
 
 [node name="PasswordLabel" type="Label" parent="."]
 margin_left = 775.0
-margin_top = 460.0
+margin_top = 480.0
 margin_right = 926.0
-margin_bottom = 551.0
+margin_bottom = 571.0
 custom_fonts/font = SubResource( 5 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Passwort
@@ -92,10 +94,10 @@ __meta__ = {
 
 [node name="Password" type="LineEdit" parent="."]
 show_behind_parent = true
-margin_left = 775.0
-margin_top = 500.0
+margin_left = 795.0
+margin_top = 530.0
 margin_right = 1475.0
-margin_bottom = 650.0
+margin_bottom = 680.0
 grow_horizontal = 0
 grow_vertical = 0
 custom_styles/read_only = SubResource( 6 )
@@ -110,7 +112,8 @@ __meta__ = {
 
 [node name="PasswordBackground" type="TextureRect" parent="Password"]
 show_behind_parent = true
-margin_right = 700.0
+margin_left = -20.0
+margin_right = 680.0
 margin_bottom = 150.0
 texture = ExtResource( 5 )
 __meta__ = {
@@ -123,9 +126,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = 10.0
-margin_top = 130.0
+margin_top = 174.06
 margin_right = 335.0
-margin_bottom = 280.0
+margin_bottom = 324.06
 texture_normal = ExtResource( 6 )
 texture_disabled = ExtResource( 4 )
 __meta__ = {
@@ -138,9 +141,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -365.0
-margin_top = 130.0
+margin_top = 175.0
 margin_right = -40.0
-margin_bottom = 280.0
+margin_bottom = 325.0
 texture_normal = ExtResource( 2 )
 __meta__ = {
 "_edit_use_anchors_": false
