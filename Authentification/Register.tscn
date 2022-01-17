@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Assets/GFX/Interface/Login/InputBackground.png" type="Texture" id=2]
 [ext_resource path="res://Authentification/Register.gd" type="Script" id=3]
 [ext_resource path="res://Assets/GFX/Interface/Login/RegisterButton.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GFX/Interface/Login/RegisterButtonDisabled.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Interface/Buttons/ButtonBack.png" type="Texture" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 35
@@ -168,6 +169,16 @@ __meta__ = {
 }
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="BackButton" type="TextureButton" parent="."]
+margin_left = 775.0
+margin_top = 825.0
+margin_right = 1100.0
+margin_bottom = 975.0
+texture_normal = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="text_changed" from="Username" to="." method="_on_Username_text_changed"]
 [connection signal="text_changed" from="Email" to="." method="_on_Email_text_changed"]
