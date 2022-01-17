@@ -30,9 +30,9 @@ __meta__ = {
 
 [node name="TapButton" type="TextureButton" parent="."]
 margin_left = 908.0
-margin_top = 787.0
+margin_top = 819.0
 margin_right = 1308.0
-margin_bottom = 1100.0
+margin_bottom = 1132.0
 rect_scale = Vector2( 1.5, 0.8 )
 texture_normal = ExtResource( 6 )
 __meta__ = {
@@ -45,9 +45,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -170.003
-margin_top = 337.001
+margin_top = 369.001
 margin_right = 166.997
-margin_bottom = 381.001
+margin_bottom = 413.001
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Tippe zum Loslaufen"
@@ -56,11 +56,11 @@ __meta__ = {
 }
 
 [node name="ArrowL" type="Sprite" parent="."]
-position = Vector2( 925, 902 )
+position = Vector2( 925, 934 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 9 )
 
 [node name="ArrowR" type="Sprite" parent="."]
-position = Vector2( 1358.35, 903.033 )
+position = Vector2( 1358.35, 935.033 )
 scale = Vector2( 1.2, 1.2 )
 texture = ExtResource( 10 )
