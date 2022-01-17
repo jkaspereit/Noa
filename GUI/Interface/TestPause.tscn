@@ -57,7 +57,7 @@ margin_right = 259.997
 margin_bottom = -324.999
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
-text = "Verschnaufspause"
+text = "Verschnaufpause"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
