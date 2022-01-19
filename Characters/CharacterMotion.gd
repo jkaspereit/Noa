@@ -69,11 +69,21 @@ func get_direction():
 
 func look_forward():
 	if velocity.x > SPEED - 1:
-		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_right()
+		if is_on_floor():
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_right()
+		else:
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_jump_right()
 	elif velocity.x < - SPEED + 1:
-		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_left()
-	else: 
-		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_forward()
+		if is_on_floor():
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_left()
+		else:
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_jump_left()
+	else:
+		if is_on_floor(): 
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_forward()
+		else:
+			$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_jump_forward()
+
 
 func look_at_campfire():
 	$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_idle()

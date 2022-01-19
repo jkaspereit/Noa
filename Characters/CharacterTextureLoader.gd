@@ -56,6 +56,15 @@ var active = NOA
 func switch_char(character):
 	active = character
 
+func get_jump_forward():
+	return NOA_TEXTURE_FORWARD_JUMP
+
+func get_jump_left():
+	return NOA_TEXTURE_LEFT_JUMP
+
+func get_jump_right():
+	return NOA_TEXTURE_RIGHT_JUMP
+
 func get_forward():
 	return NOA_TEXTURE_FORWARD
 
