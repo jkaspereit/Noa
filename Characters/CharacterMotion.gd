@@ -16,6 +16,8 @@ func _physics_process(delta):
 	if processing_enabled:
 		move()
 		look_forward()
+	else:
+		look_at_campfire()
 
 func _input(event):
 	if processing_enabled and event.is_action_pressed('click'):
@@ -72,6 +74,9 @@ func look_forward():
 		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_left()
 	else: 
 		$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_forward()
+
+func look_at_campfire():
+	$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_idle()
 
 func has_fallen():
 	var CharHeight = translation.y

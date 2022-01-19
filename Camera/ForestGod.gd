@@ -28,3 +28,6 @@ func play():
 
 func game_over():
 	processing_enabled = false
+
+func play_again():
+	visible = false

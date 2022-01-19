@@ -12,13 +12,14 @@ func to_selection():
 func to_settings():
 	$AnimationPlayer.play("Blur");
 
-func to_home(from):
+func to_home(from):	
 	$AnimationPlayer.play_backwards("Blur")
 
 func game_over():
 	blur_on()
 
 func at_home():
+	environment.adjustment_saturation = 1
 	blur_off()
 
 func forest_god_off():

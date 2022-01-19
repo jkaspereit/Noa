@@ -67,3 +67,6 @@ func get_right():
 
 func get_home():
 	return NOA_TEXTURE_HOME
+
+func get_idle():
+	return NOA_TEXTURE_HOME
