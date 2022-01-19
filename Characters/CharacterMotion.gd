@@ -83,6 +83,10 @@ func has_fallen():
 func play():
 	processing_enabled = true
 
+func restart():
+	reset()
+	processing_enabled = false
+
 func game_over():
 	reset()
 	processing_enabled = false

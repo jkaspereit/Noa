@@ -1,0 +1,101 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Assets/Fonts/Quicksand-Medium.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Assets/Fonts/Quicksand-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Assets/Fonts/Quicksand-Bold.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://GUI/Interface/PauseContinue.gd" type="Script" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 35
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 260
+font_data = ExtResource( 3 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "Countdown"
+length = 3.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath("CountdownLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1, 2 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ "3", "2", "1" ]
+}
+
+[node name="PauseContinue" type="Control" groups=[
+"Interface",
+]]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Heading" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -260.003
+margin_top = -399.999
+margin_right = 259.997
+margin_bottom = -324.999
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Rastplatz"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Subtext" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -145.003
+margin_top = 272.001
+margin_right = 144.997
+margin_bottom = 322.001
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Halt dich bereit!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CountdownLabel" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -70.0032
+margin_top = -189.999
+margin_right = 69.9968
+margin_bottom = 135.001
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.807843, 0.580392, 0.407843, 1 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Countdown = SubResource( 4 )
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]

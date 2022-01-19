@@ -47,3 +47,6 @@ func to_leaderboard():
 
 func play():
 	processing_enabled = false
+
+func restart():
+	processing_enabled = true

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LineNEW.png-3e5fbdccf03f32ead3fc1ae9f2045357.stex"
+path="res://.import/IsraRunForward12.png-fe55fe8d260a8c9f855613dd38744e97.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Interface/Buttons/LineNEW.png"
-dest_files=[ "res://.import/LineNEW.png-3e5fbdccf03f32ead3fc1ae9f2045357.stex" ]
+source_file="res://Assets/GFX/Characters/Isra/RunForward/IsraRunForward12.png"
+dest_files=[ "res://.import/IsraRunForward12.png-fe55fe8d260a8c9f855613dd38744e97.stex" ]
 
 [params]
 

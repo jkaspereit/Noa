@@ -1,19 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://GUI/Interface/DeadScreen.tscn" type="PackedScene" id=1]
+[ext_resource path="res://GUI/Interface/TestDeadScreen.tscn" type="PackedScene" id=1]
 [ext_resource path="res://GUI/Interface/Interface.gd" type="Script" id=2]
 [ext_resource path="res://GUI/Interface/CharacterShop.tscn" type="PackedScene" id=3]
 [ext_resource path="res://GUI/Interface/Leaderboard.tscn" type="PackedScene" id=4]
 [ext_resource path="res://GUI/Interface/TestCharacterSelection.tscn" type="PackedScene" id=5]
 [ext_resource path="res://GUI/Interface/InGame.tscn" type="PackedScene" id=6]
+[ext_resource path="res://GUI/Interface/PauseMenu.tscn" type="PackedScene" id=7]
+[ext_resource path="res://GUI/Interface/PauseContinue.tscn" type="PackedScene" id=8]
 
 [node name="Interface" type="CanvasLayer" groups=[
 "Interface",
 ]]
+layer = 2
 script = ExtResource( 2 )
-
-[node name="DeadScreen" parent="." instance=ExtResource( 1 )]
-visible = false
 
 [node name="Leaderboard" parent="." instance=ExtResource( 4 )]
 visible = false
@@ -25,4 +25,13 @@ visible = false
 visible = false
 
 [node name="InGame" parent="." instance=ExtResource( 6 )]
+visible = false
+
+[node name="PauseMenu" parent="." instance=ExtResource( 7 )]
+visible = false
+
+[node name="PauseContinue" parent="." instance=ExtResource( 8 )]
+visible = false
+
+[node name="TestDeadScreen" parent="." instance=ExtResource( 1 )]
 visible = false
