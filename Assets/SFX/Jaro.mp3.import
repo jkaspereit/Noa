@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jaro.mp3-1a179e5d8a63ec815473583f6fa38b69.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Jaro.mp3"
+dest_files=[ "res://.import/Jaro.mp3-1a179e5d8a63ec815473583f6fa38b69.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

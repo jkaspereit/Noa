@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/CharacterPurchased.mp3-1be5bab97927ffdfa3d04535cf1203c4.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/CharacterPurchased.mp3"
+dest_files=[ "res://.import/CharacterPurchased.mp3-1be5bab97927ffdfa3d04535cf1203c4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

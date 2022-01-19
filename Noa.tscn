@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://World/World.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Characters/Noa/Noa.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/SFX/Music.mp3" type="AudioStream" id=3]
 [ext_resource path="res://Camera/Camera.tscn" type="PackedScene" id=4]
 [ext_resource path="res://StartArea/StartArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Noa.gd" type="Script" id=6]
@@ -55,3 +56,9 @@ script = ExtResource( 9 )
 
 [node name="Char" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.5, -1, 17 )
+
+[node name="BG_Sound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+unit_db = -10.0
+max_db = 2.0
+autoplay = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Loss.mp3-66329d8a8f619c49621a56250b237c8f.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Loss.mp3"
+dest_files=[ "res://.import/Loss.mp3-66329d8a8f619c49621a56250b237c8f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

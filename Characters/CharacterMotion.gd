@@ -97,6 +97,7 @@ func has_fallen():
 
 func play():
 	processing_enabled = true
+	$Footsteps.play(0)
 
 func restart():
 	reset()
@@ -107,6 +108,7 @@ func game_over():
 	processing_enabled = false
 
 func reset():
+	$Footsteps.stop()
 	load_home_texture()
 	set_translation(STARTING_POS)
 
