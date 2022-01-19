@@ -21,6 +21,12 @@ func game_over():
 func at_home():
 	blur_off()
 
+func forest_god_off():
+	$AnimationPlayer.play_backwards("ForestGod")
+
+func forest_god_on():
+	$AnimationPlayer.play("ForestGod")
+
 func blur_on():
 	environment.dof_blur_far_amount = 0.13
 	environment.dof_blur_near_amount = 0.13

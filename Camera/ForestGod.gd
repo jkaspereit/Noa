@@ -12,8 +12,12 @@ func _process(delta):
 		return
 	var section_pos = int(Character.translation.z) % section_range
 	if is_forestgod_section(section_pos):
+		if not visible:
+			get_tree().call_group('Interface','forest_god_on')
 		visible = true
 	else:
+		if visible:
+			get_tree().call_group('Interface','forest_god_off')
 		visible = false
 
 func is_forestgod_section(z_pos: float):
