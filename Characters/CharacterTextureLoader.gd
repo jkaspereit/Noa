@@ -57,25 +57,58 @@ func switch_char(character):
 	active = character
 
 func get_jump_forward():
-	return NOA_TEXTURE_FORWARD_JUMP
+	match active:
+		NOA: return NOA_TEXTURE_FORWARD_JUMP
+		ARUN: return ARUN_TEXTURE_FORWARD_JUMP
+		ISRA: return ISRA_TEXTURE_FORWARD_JUMP
+		KAIDA: return KAIDA_TEXTURE_FORWARD_JUMP
+		MAMORU: return MAMORU_TEXTURE_FORWARD_JUMP
 
 func get_jump_left():
-	return NOA_TEXTURE_LEFT_JUMP
+	match active:
+		NOA: return NOA_TEXTURE_LEFT_JUMP
+		ARUN: return ARUN_TEXTURE_LEFT_JUMP
+		ISRA: return ISRA_TEXTURE_LEFT_JUMP
+		KAIDA: return KAIDA_TEXTURE_LEFT_JUMP
+		MAMORU: return MAMORU_TEXTURE_LEFT_JUMP
 
 func get_jump_right():
-	return NOA_TEXTURE_RIGHT_JUMP
+	match active:
+		NOA: return NOA_TEXTURE_RIGHT_JUMP
+		ARUN: return ARUN_TEXTURE_RIGHT_JUMP
+		ISRA: return ISRA_TEXTURE_RIGHT_JUMP
+		KAIDA: return KAIDA_TEXTURE_RIGHT_JUMP
+		MAMORU: return MAMORU_TEXTURE_RIGHT_JUMP
+
 
 func get_forward():
-	return NOA_TEXTURE_FORWARD
+	match active:
+		NOA: return NOA_TEXTURE_FORWARD
+		ARUN: return ARUN_TEXTURE_FORWARD
+		ISRA: return ISRA_TEXTURE_FORWARD
+		KAIDA: return KAIDA_TEXTURE_FORWARD
+		MAMORU: return MAMORU_TEXTURE_FORWARD
 
 func get_left():
-	return NOA_TEXTURE_LEFT
+	match active:
+		NOA: return NOA_TEXTURE_LEFT
+		ARUN: return ARUN_TEXTURE_LEFT
+		ISRA: return ISRA_TEXTURE_LEFT
+		KAIDA: return KAIDA_TEXTURE_LEFT
+		MAMORU: return MAMORU_TEXTURE_LEFT
 
 func get_right():
-	return NOA_TEXTURE_RIGHT
-
-func get_home():
-	return NOA_TEXTURE_HOME
+	match active:
+		NOA: return NOA_TEXTURE_RIGHT
+		ARUN: return ARUN_TEXTURE_RIGHT
+		ISRA: return ISRA_TEXTURE_RIGHT
+		KAIDA: return KAIDA_TEXTURE_RIGHT
+		MAMORU: return MAMORU_TEXTURE_RIGHT
 
 func get_idle():
-	return NOA_TEXTURE_HOME
+	match active:
+		NOA: return NOA_TEXTURE_HOME
+		ARUN: return ARUN_TEXTURE_HOME
+		ISRA: return ISRA_TEXTURE_HOME
+		KAIDA: return KAIDA_TEXTURE_HOME
+		MAMORU: return MAMORU_TEXTURE_HOME

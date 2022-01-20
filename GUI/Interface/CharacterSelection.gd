@@ -23,9 +23,9 @@ const ButtonTextureIsraLocked = preload("res://Assets/GFX/Interface/CharacterPng
 const texture_locked_array = [
 	ButtonTextureNoaLocked,
 	ButtonTextureArunLocked,
+	ButtonTextureIsraLocked,
 	ButtonTextureKaidaLocked,
 	ButtonTextureMamoruLocked,
-	ButtonTextureIsraLocked,
 ]
 
 const description_array = [
@@ -100,7 +100,13 @@ func _on_CharButtonRight_pressed():
 	switch_to_home()
 
 func swap_charactere(i):
-	CharacterTextureLoader.switch_char(CharacterTextureLoader.NOA)
+	match i:
+		0:	CharacterTextureLoader.switch_char(CharacterTextureLoader.NOA)
+		1:	CharacterTextureLoader.switch_char(CharacterTextureLoader.ARUN)
+		2:	CharacterTextureLoader.switch_char(CharacterTextureLoader.ISRA)
+		3:	CharacterTextureLoader.switch_char(CharacterTextureLoader.KAIDA)
+		4:	CharacterTextureLoader.switch_char(CharacterTextureLoader.MAMORU)
+
 
 func remove_char():
 	var char_node = get_tree().get_root().find_node("Char",true,false);
