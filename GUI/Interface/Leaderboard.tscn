@@ -348,5 +348,6 @@ valign = 1
 
 [node name="UpdateHighscore" type="HTTPRequest" parent="."]
 
+[connection signal="pressed" from="Home" to="." method="_on_Home_pressed"]
 [connection signal="request_completed" from="FetchData" to="." method="_on_FetchData_request_completed"]
 [connection signal="request_completed" from="UpdateHighscore" to="." method="_on_UpdateHighscore_request_completed"]

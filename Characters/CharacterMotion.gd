@@ -113,4 +113,4 @@ func reset():
 	set_translation(STARTING_POS)
 
 func load_home_texture():
-	$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_home()
+	$MeshInstance.mesh.material.albedo_texture = CharacterTextureLoader.get_idle()
