@@ -14,9 +14,11 @@ func _process(delta):
 	if is_forestgod_section(section_pos):
 		if not visible:
 			get_tree().call_group('Interface','forest_god_on')
+			$AudioStreamPlayer3D.play(0)
 		visible = true
 	else:
 		if visible:
+			$AudioStreamPlayer3D.stop()
 			get_tree().call_group('Interface','forest_god_off')
 		visible = false
 
@@ -30,4 +32,5 @@ func game_over():
 	processing_enabled = false
 
 func play_again():
+	$AudioStreamPlayer3D.stop()
 	visible = false

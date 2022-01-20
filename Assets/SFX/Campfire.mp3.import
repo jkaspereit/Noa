@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Campfire.mp3-dfa16f4c61ba53f43e321001fa354b4c.mp3str"
+
+[deps]
+
+source_file="res://Assets/SFX/Campfire.mp3"
+dest_files=[ "res://.import/Campfire.mp3-dfa16f4c61ba53f43e321001fa354b4c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

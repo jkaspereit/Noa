@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/SFX/Music.mp3" type="AudioStream" id=1]
+[ext_resource path="res://World/AmbientSounds/AmbientSounds.gd" type="Script" id=2]
+[ext_resource path="res://Assets/SFX/Loss.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Assets/SFX/Forest.mp3" type="AudioStream" id=4]
+
+[node name="AmbientSounds" type="Spatial" groups=[
+"Interface",
+]]
+script = ExtResource( 2 )
+
+[node name="BG_Music" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 1 )
+unit_db = -10.0
+max_db = 2.0
+autoplay = true
+
+[node name="Game_Over" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="BG_Forest" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 4 )
+unit_db = 10.0
+autoplay = true
