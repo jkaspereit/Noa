@@ -71,12 +71,12 @@ func _on_Return_pressed():
 	switch_to_home()
 
 func switch_to_home():
-	visible = false;
+	$AnimationPlayer.play_backwards("BlendIn")
 	get_tree().call_group("Interface", "to_home",'Shop');
 
 func to_shop():
 	display();
-	visible = true;
+	$AnimationPlayer.play("BlendIn")
 
 func _on_Next_pressed():
 	index += 1;

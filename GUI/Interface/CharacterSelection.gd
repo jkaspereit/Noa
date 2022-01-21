@@ -63,12 +63,12 @@ func _on_Return_pressed():
 	switch_to_home()
 
 func switch_to_home():
-	visible = false;
+	$AnimationPlayer.play_backwards("BlendIn")
 	get_tree().call_group("Interface", "to_home", 'Selection');
 
 func to_selection():
 	display_chars();
-	visible = true;
+	$AnimationPlayer.play("BlendIn")
 
 
 func _on_Next_pressed():

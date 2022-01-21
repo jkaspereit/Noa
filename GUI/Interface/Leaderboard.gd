@@ -35,7 +35,7 @@ func to_leaderboard():
 	yield(httpFetchData,"request_completed")
 	display_leaderboard();
 	display_player();
-	visible = true;
+	$AnimationPlayer.play("BlendIn")
 
 func game_over():
 	var new_score = Gamestate.calculate_score();
@@ -112,5 +112,5 @@ func reset():
 
 
 func _on_Home_pressed():
-	visible = false
+	$AnimationPlayer.play_backwards("BlendIn")
 	get_tree().call_group('Interface','to_home','Leaderboard')
