@@ -24,7 +24,6 @@ onready var player_array = [
 onready var httpFetchData = $FetchData
 onready var httpUpdateHighscore = $UpdateHighscore
 
-var rank = -1;
 var display_data = [];
 
 func _ready():
@@ -51,7 +50,7 @@ func update_highscore(new_score):
 		"username": {"stringValue": Firebase.user_info.username}
 	}
 	# couldn't find highscore in leaderboard, so a create new one.
-	if rank == -1:
+	if get_player_rank() == -1:
 		Firebase.save_document("leaderboard?documentId=%s" % Firebase.user_info.id,entry,httpUpdateHighscore)
 	# update highscore
 	else:
@@ -71,8 +70,8 @@ func display_leaderboard():
 			player_array[i].text = display_data[i].username;
 
 func display_player():
-	if rank != -1:
-		$Player/Rank.text = str(rank+1);
+	if get_player_rank() != -1:
+		$Player/Rank.text = str(get_player_rank());
 	$Player/Player.text = Firebase.user_info.username;
 	$Player/Highscore.text = str(Gamestate.player_highscore);
 
@@ -87,18 +86,23 @@ func _on_FetchData_request_completed(result, response_code, headers, body):
 		var leaderboard: Array = result_body.documents
 		for i in range (leaderboard.size()):
 			var entry = leaderboard[i].fields
-			if str(leaderboard[i].name).ends_with(Firebase.user_info.id):
-				rank = i;
 			# append the entry to the leaderboard display data
 			display_data.append({
 				'highscore': entry.highscore.integerValue,
 				'username': entry.username.stringValue,
+				'id': str(leaderboard[i].name)
 			})
 			display_data.sort_custom(self,"sort_descending")
-
 	else:
 		print('Error fetching leaderboard data:')
 		print(result_body);
+
+func get_player_rank():
+	for i in range (display_data.size()):
+		# the display data id has prefix
+		if display_data[i].id.ends_with(Firebase.user_info.id):
+			return i + 1
+	return -1;
 
 func reset():
 	display_data = []
