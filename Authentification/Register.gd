@@ -17,7 +17,8 @@ func is_Registration_disabled():
 func _on_Registration_completed(result, response_code, headers, body):
 	var response_body := JSON.parse(body.get_string_from_ascii())
 	if response_code != 200:
-		print('Error by registration: %s' % response_body.result.error.message)
+		visible = false
+		get_tree().call_group('Auth','to_error','register',response_body.result.error.message)
 	else:
 		get_tree().call_group('Auth','login',Email.text,Password.text)
 

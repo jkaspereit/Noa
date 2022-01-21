@@ -26,7 +26,8 @@ func _on_Login_button_down():
 func _on_Login_request_completed(result, response_code, headers, body):
 	var response_body := JSON.parse(body.get_string_from_ascii())
 	if response_code != 200:
-		print('Login Error: %s' % response_body.result.error.message)
+		visible = false;
+		get_tree().call_group('Auth','to_error','login',response_body.result.error.message)
 	else:
 		get_tree().change_scene("res://Noa.tscn")
 	
