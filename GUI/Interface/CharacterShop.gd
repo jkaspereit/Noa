@@ -64,6 +64,8 @@ func display():
 	$PriceLeft.disabled = Gamestate.player_chars[index];
 	$PriceMid.disabled = Gamestate.player_chars[index+1];
 	$PriceRight.disabled = Gamestate.player_chars[index+2];
+	# set the player coins
+	$CoinValue.text = str(Gamestate.player_coins)
 
 func _on_Return_pressed():
 	switch_to_home()
@@ -105,8 +107,8 @@ func buy_character(index):
 		Gamestate.player_coins -= price
 		Gamestate.player_chars[index] = true
 		Gamestate.save_progress()
-	switch_char(index)
-	switch_to_home()
+		switch_char(index)
+		switch_to_home()
 
 func switch_char(index):
 	var temp = [
