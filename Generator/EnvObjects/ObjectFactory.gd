@@ -29,10 +29,15 @@ func init():
 	# empty environment elements
 	for child in env_objects.get_children():
 		env_objects.remove_child(child)
+	# reset position values
+	x_range = 8
+	y_range = 4
+	z_range = 4
+	zpos = -2
 
 func calculate_next_position():
 	var x = (randi() % x_range) - (x_range/2)
-	var y = (randi() % y_range) - (y_range/2)
+	var y = (randi() % y_range) - y_range
 	zpos = (zpos- z_range)
 	return Vector3(x,y,zpos)
 

@@ -11,25 +11,26 @@
 size = 35
 font_data = ExtResource( 1 )
 
-[sub_resource type="StyleBoxTexture" id=7]
+[sub_resource type="StyleBoxTexture" id=2]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 700, 150 )
 margin_left = 10.0
 
-[sub_resource type="StyleBoxTexture" id=8]
+[sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 2 )
 region_rect = Rect2( 0, 0, 700, 150 )
 margin_left = 10.0
 
-[sub_resource type="StyleBoxTexture" id=6]
+[sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 700, 150 )
 margin_left = 10.0
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="DynamicFont" id=5]
 size = 42
 font_data = ExtResource( 1 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 35
 font_data = ExtResource( 1 )
 
@@ -64,10 +65,10 @@ margin_right = 1475.0
 margin_bottom = 350.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_styles/read_only = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/selection_color = Color( 0, 0, 0, 0 )
 custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
@@ -95,10 +96,10 @@ margin_right = 1475.0
 margin_bottom = 565.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_styles/read_only = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/selection_color = Color( 0, 0, 0, 0 )
 custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
@@ -111,7 +112,7 @@ margin_left = 775.0
 margin_top = 585.0
 margin_right = 926.0
 margin_bottom = 676.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Passwort
 "
@@ -127,10 +128,10 @@ margin_right = 1475.0
 margin_bottom = 785.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_styles/read_only = SubResource( 7 )
-custom_styles/focus = SubResource( 8 )
-custom_styles/normal = SubResource( 6 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
 custom_colors/selection_color = Color( 0, 0, 0, 0 )
 custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )

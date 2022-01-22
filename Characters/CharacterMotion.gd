@@ -1,5 +1,7 @@
 extends KinematicBody
 
+const PAUSE_POSITION = Vector2(120,980)
+
 const SPEED = 6.5
 
 const STARTING_POS = Vector3(-5.5,-1,17)
@@ -21,7 +23,8 @@ func _physics_process(delta):
 
 func _input(event):
 	if processing_enabled and event.is_action_pressed('click'):
-		jump()
+		if not (event.position - PAUSE_POSITION).length() < 70:
+			jump()
 
 func move():
 	var direction = get_direction()

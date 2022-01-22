@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Authentification/Login.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GFX/Interface/Login/RegisterButton.png" type="Texture" id=2]
@@ -11,28 +11,36 @@
 size = 35
 font_data = ExtResource( 3 )
 
-[sub_resource type="StyleBoxEmpty" id=2]
+[sub_resource type="StyleBoxTexture" id=2]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+margin_left = 10.0
 
-[sub_resource type="StyleBoxEmpty" id=3]
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+margin_left = 10.0
 
-[sub_resource type="DynamicFont" id=4]
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+margin_left = 10.0
+
+[sub_resource type="DynamicFont" id=5]
 size = 42
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=5]
+[sub_resource type="DynamicFont" id=6]
 size = 35
 font_data = ExtResource( 3 )
-
-[sub_resource type="StyleBoxEmpty" id=6]
-
-[sub_resource type="StyleBoxEmpty" id=7]
 
 [node name="Login" type="Control" groups=[
 "Auth",
 ]]
-margin_left = 0.885498
-margin_right = 2280.89
-margin_bottom = 1080.0
+margin_left = 208.538
+margin_top = 20.7652
+margin_right = 2488.54
+margin_bottom = 1100.77
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,27 +62,19 @@ __meta__ = {
 
 [node name="Email" type="LineEdit" parent="."]
 show_behind_parent = true
-margin_left = 795.0
-margin_top = 315.0
+margin_left = 775.0
+margin_top = 325.0
 margin_right = 1475.0
-margin_bottom = 465.0
+margin_bottom = 475.0
 grow_horizontal = 0
 grow_vertical = 0
 custom_styles/read_only = SubResource( 2 )
-custom_styles/normal = SubResource( 3 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/selection_color = Color( 0, 0, 0, 0 )
+custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
-text = "test@test.de"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="UsernameBackground" type="TextureRect" parent="Email"]
-show_behind_parent = true
-margin_left = -20.0
-margin_right = 680.0
-margin_bottom = 150.0
-texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -84,7 +84,7 @@ margin_left = 775.0
 margin_top = 480.0
 margin_right = 926.0
 margin_bottom = 571.0
-custom_fonts/font = SubResource( 5 )
+custom_fonts/font = SubResource( 6 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Passwort
 "
@@ -94,28 +94,20 @@ __meta__ = {
 
 [node name="Password" type="LineEdit" parent="."]
 show_behind_parent = true
-margin_left = 795.0
+margin_left = 775.0
 margin_top = 530.0
 margin_right = 1475.0
 margin_bottom = 680.0
 grow_horizontal = 0
 grow_vertical = 0
-custom_styles/read_only = SubResource( 6 )
-custom_styles/normal = SubResource( 7 )
-custom_fonts/font = SubResource( 4 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/selection_color = Color( 0, 0, 0, 0 )
+custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
-text = "test1234"
 secret = true
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PasswordBackground" type="TextureRect" parent="Password"]
-show_behind_parent = true
-margin_left = -20.0
-margin_right = 680.0
-margin_bottom = 150.0
-texture = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -150,7 +142,5 @@ __meta__ = {
 }
 
 [connection signal="request_completed" from="HTTPRequest" to="." method="_on_Login_request_completed"]
-[connection signal="text_changed" from="Email" to="." method="_on_Username_text_changed"]
-[connection signal="text_changed" from="Password" to="." method="_on_Password_text_changed"]
 [connection signal="button_down" from="LoginButton" to="." method="_on_Login_button_down"]
 [connection signal="button_down" from="RegisterButton" to="." method="_on_Register_button_down"]

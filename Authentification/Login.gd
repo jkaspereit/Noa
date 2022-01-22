@@ -70,10 +70,7 @@ func _on_sign_in_failed(error_code: int) -> void:
 	$ManualLogin/ErrorLabel.set_text('Google Play Login failed.')
 	print("Error signing in: %s" % error_code)
 
-func _on_Username_text_changed(new_text):
-	$LoginButton.disabled = is_login_disabled()
-
-func _on_Password_text_changed(new_text):
+func _input(event):
 	$LoginButton.disabled = is_login_disabled()
 
 func is_login_disabled():
