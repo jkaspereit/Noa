@@ -2,23 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.s3tc.stex"
-path.etc2="res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.etc2.stex"
-path.etc="res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.etc.stex"
-path.pvrtc="res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.pvrtc.stex"
+path="res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/GFX/Characters/Mamoru/Mamoru.png"
-dest_files=[ "res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.s3tc.stex", "res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.etc2.stex", "res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.etc.stex", "res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.pvrtc.stex" ]
+dest_files=[ "res://.import/Mamoru.png-c9e4d2ed99bffaa50991fddb3e114b01.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

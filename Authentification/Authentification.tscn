@@ -9,8 +9,7 @@
 [node name="Authentification" type="Node"]
 
 [node name="BackgroundImage" type="Sprite" parent="."]
-position = Vector2( 1188, 562 )
-scale = Vector2( 0.5, 0.5 )
+position = Vector2( 1140, 540 )
 texture = ExtResource( 3 )
 
 [node name="Intro" parent="." instance=ExtResource( 4 )]
