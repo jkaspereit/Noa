@@ -1,42 +1,42 @@
 [gd_resource type="AnimatedTexture" load_steps=13 format=2]
 
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft10.png" type="Texture" id=1]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft09.png" type="Texture" id=2]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft07.png" type="Texture" id=3]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft08.png" type="Texture" id=4]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft06.png" type="Texture" id=5]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft04.png" type="Texture" id=6]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft05.png" type="Texture" id=7]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft02.png" type="Texture" id=8]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft11.png" type="Texture" id=9]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft12.png" type="Texture" id=10]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft03.png" type="Texture" id=11]
-[ext_resource path="res://Assets/GFX/Characters/Mamoru/RunLeft/MamoruRunLeft01.png" type="Texture" id=12]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft04.png" type="Texture" id=1]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft02.png" type="Texture" id=2]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft12.png" type="Texture" id=3]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft07.png" type="Texture" id=4]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft09.png" type="Texture" id=5]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft08.png" type="Texture" id=6]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft05.png" type="Texture" id=7]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft10.png" type="Texture" id=8]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft03.png" type="Texture" id=9]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft01.png" type="Texture" id=10]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft11.png" type="Texture" id=11]
+[ext_resource path="res://Assets/GFX/Characters/Malu/RunLeft/MaluRunLeft06.png" type="Texture" id=12]
 
 [resource]
 flags = 4
 frames = 12
 fps = 24.0
-frame_0/texture = ExtResource( 12 )
-frame_1/texture = ExtResource( 8 )
+frame_0/texture = ExtResource( 10 )
+frame_1/texture = ExtResource( 2 )
 frame_1/delay_sec = 0.0
-frame_2/texture = ExtResource( 11 )
+frame_2/texture = ExtResource( 9 )
 frame_2/delay_sec = 0.0
-frame_3/texture = ExtResource( 6 )
+frame_3/texture = ExtResource( 1 )
 frame_3/delay_sec = 0.0
 frame_4/texture = ExtResource( 7 )
 frame_4/delay_sec = 0.0
-frame_5/texture = ExtResource( 5 )
+frame_5/texture = ExtResource( 12 )
 frame_5/delay_sec = 0.0
-frame_6/texture = ExtResource( 3 )
+frame_6/texture = ExtResource( 4 )
 frame_6/delay_sec = 0.0
-frame_7/texture = ExtResource( 4 )
+frame_7/texture = ExtResource( 6 )
 frame_7/delay_sec = 0.0
-frame_8/texture = ExtResource( 2 )
+frame_8/texture = ExtResource( 5 )
 frame_8/delay_sec = 0.0
-frame_9/texture = ExtResource( 1 )
+frame_9/texture = ExtResource( 8 )
 frame_9/delay_sec = 0.0
-frame_10/texture = ExtResource( 9 )
+frame_10/texture = ExtResource( 11 )
 frame_10/delay_sec = 0.0
-frame_11/texture = ExtResource( 10 )
+frame_11/texture = ExtResource( 3 )
 frame_11/delay_sec = 0.0
