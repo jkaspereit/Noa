@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Authentification/Login.gd" type="Script" id=1]
 [ext_resource path="res://Assets/GFX/Interface/Login/RegisterButton.png" type="Texture" id=2]
@@ -6,8 +6,21 @@
 [ext_resource path="res://Assets/GFX/Interface/Login/LoginButtonDisabled.png" type="Texture" id=4]
 [ext_resource path="res://Assets/GFX/Interface/Login/InputBackground.png" type="Texture" id=5]
 [ext_resource path="res://Assets/GFX/Interface/Login/LoginButton.png" type="Texture" id=6]
+[ext_resource path="res://Authentification/LoginRegFont.tres" type="DynamicFont" id=7]
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 5 )
+region_rect = Rect2( 0, 0, 700, 150 )
+
+[sub_resource type="DynamicFont" id=4]
 size = 35
 font_data = ExtResource( 3 )
 
@@ -21,26 +34,17 @@ texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 700, 150 )
 margin_left = 10.0
 
-[sub_resource type="StyleBoxTexture" id=4]
+[sub_resource type="StyleBoxTexture" id=8]
 texture = ExtResource( 5 )
 region_rect = Rect2( 0, 0, 700, 150 )
-margin_left = 10.0
-
-[sub_resource type="DynamicFont" id=5]
-size = 42
-font_data = ExtResource( 3 )
-
-[sub_resource type="DynamicFont" id=6]
-size = 35
-font_data = ExtResource( 3 )
 
 [node name="Login" type="Control" groups=[
 "Auth",
 ]]
-margin_left = 208.538
-margin_top = 20.7652
-margin_right = 2488.54
-margin_bottom = 1100.77
+margin_left = 0.649811
+margin_top = 4.62833
+margin_right = 2280.65
+margin_bottom = 1084.63
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -48,12 +52,25 @@ __meta__ = {
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 
+[node name="PasswordLabel" type="Label" parent="."]
+margin_left = 775.0
+margin_top = 480.0
+margin_right = 926.0
+margin_bottom = 571.0
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
+text = "Passwort
+"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="EmailLabel" type="Label" parent="."]
 margin_left = 775.0
 margin_top = 265.0
 margin_right = 1050.0
 margin_bottom = 315.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 7 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
 text = "Email"
 __meta__ = {
@@ -63,31 +80,18 @@ __meta__ = {
 [node name="Email" type="LineEdit" parent="."]
 show_behind_parent = true
 margin_left = 775.0
-margin_top = 325.0
+margin_top = 322.755
 margin_right = 1475.0
-margin_bottom = 475.0
+margin_bottom = 472.755
 grow_horizontal = 0
 grow_vertical = 0
-custom_styles/read_only = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 5 )
+custom_styles/read_only = SubResource( 5 )
+custom_styles/focus = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/selection_color = Color( 0, 0, 0, 0 )
 custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="PasswordLabel" type="Label" parent="."]
-margin_left = 775.0
-margin_top = 480.0
-margin_right = 926.0
-margin_bottom = 571.0
-custom_fonts/font = SubResource( 6 )
-custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )
-text = "Passwort
-"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -102,8 +106,8 @@ grow_horizontal = 0
 grow_vertical = 0
 custom_styles/read_only = SubResource( 2 )
 custom_styles/focus = SubResource( 3 )
-custom_styles/normal = SubResource( 4 )
-custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 8 )
+custom_fonts/font = SubResource( 4 )
 custom_colors/selection_color = Color( 0, 0, 0, 0 )
 custom_colors/cursor_color = Color( 0.721569, 0.517647, 0.360784, 1 )
 custom_colors/font_color = Color( 0.403922, 0.4, 0.4, 1 )

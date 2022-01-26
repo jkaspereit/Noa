@@ -67,6 +67,7 @@ tracks/1/keys = {
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
 "Interface",
 ]]
+pause_mode = 2
 environment = ExtResource( 5 )
 script = ExtResource( 2 )
 

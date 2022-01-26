@@ -2,23 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.s3tc.stex"
-path.etc2="res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.etc2.stex"
-path.etc="res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.etc.stex"
-path.pvrtc="res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.pvrtc.stex"
+path="res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/GFX/Characters/Noa/RunLeft/NoaRunLeft07.png"
-dest_files=[ "res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.s3tc.stex", "res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.etc2.stex", "res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.etc.stex", "res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.pvrtc.stex" ]
+dest_files=[ "res://.import/NoaRunLeft07.png-af08d30b940a49e30150664e8af696a8.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0

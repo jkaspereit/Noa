@@ -24,3 +24,6 @@ android/*
 # HTML Export Files are to large
 index.*
 favicon.*
+
+# No export files
+export/*

@@ -18,6 +18,12 @@ func to_home(from):
 func game_over():
 	blur_on()
 
+func pause_game():
+	$AnimationPlayer.play("Blur")
+
+func continue_game():
+	$AnimationPlayer.play_backwards("Blur")
+
 func at_home():
 	environment.adjustment_saturation = 1
 	blur_off()

@@ -2,23 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.s3tc.stex"
-path.etc2="res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.etc2.stex"
-path.etc="res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.etc.stex"
-path.pvrtc="res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.pvrtc.stex"
+path="res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.stex"
 metadata={
-"imported_formats": [ "bptc", "s3tc", "etc2", "etc", "pvrtc" ],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://Assets/GFX/BG/DunklerWaldgott.png"
-dest_files=[ "res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.s3tc.stex", "res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.etc2.stex", "res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.etc.stex", "res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.pvrtc.stex" ]
+dest_files=[ "res://.import/DunklerWaldgott.png-48b24243a5a06ddb90f3b1c59b09434f.stex" ]
 
 [params]
 
-compress/mode=2
+compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
