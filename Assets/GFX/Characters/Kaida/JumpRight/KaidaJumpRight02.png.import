@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/LineNew.png-b07f2eeb88d97e8b75f0349ffc31abba.stex"
+path="res://.import/KaidaJumpRight02.png-a7ccb2069047746c6729cb10ba792101.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GFX/Interface/Buttons/LineNew.png"
-dest_files=[ "res://.import/LineNew.png-b07f2eeb88d97e8b75f0349ffc31abba.stex" ]
+source_file="res://Assets/GFX/Characters/Kaida/JumpRight/KaidaJumpRight02.png"
+dest_files=[ "res://.import/KaidaJumpRight02.png-a7ccb2069047746c6729cb10ba792101.stex" ]
 
 [params]
 
